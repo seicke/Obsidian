@@ -2,3 +2,5 @@
 !.gitignore
 !.obsidian
 !.obsidian/**
+
+*/.DS_Store
