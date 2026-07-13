@@ -43,7 +43,7 @@
                     "state": {
                       "type": "backlink",
                       "state": {
-                        "file": "Tasks.md",
+                        "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
                         "collapseAll": false,
                         "extraContext": false,
                         "sortOrder": "alphabetical",
@@ -53,7 +53,7 @@
                         "unlinkedCollapsed": true
                       },
                       "icon": "links-coming-in",
-                      "title": "Backlinks for Tasks"
+                      "title": "Backlinks for 2026-07-13 Monday"
                     }
                   }
                 ]
@@ -68,12 +68,12 @@
                     "state": {
                       "type": "outgoing-link",
                       "state": {
-                        "file": "Tasks.md",
+                        "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
                         "linksCollapsed": false,
                         "unlinkedCollapsed": true
                       },
                       "icon": "links-going-out",
-                      "title": "Outgoing links from Tasks"
+                      "title": "Outgoing links from 2026-07-13 Monday"
                     }
                   }
                 ]
@@ -312,8 +312,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "53d278dd30d24cdb",
+  "active": "a128f351ff5662bb",
   "lastOpenFiles": [
+    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "Tasks.md",
     "08 People/Feulner, Dennis.md",
@@ -350,7 +351,6 @@
     "00 Inbox/651-0-12_2026-0002_FprEN_182392026-05__JT024007__D.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
-    "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go.png",
