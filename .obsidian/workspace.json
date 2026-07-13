@@ -70,6 +70,19 @@
               "icon": "notebook-navigator",
               "title": "Notebook Navigator"
             }
+          },
+          {
+            "id": "85d34257d90251d4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
           }
         ]
       }
@@ -239,7 +252,6 @@
       "graph:Open graph view": false,
       "daily-notes:Open today's daily note": false,
       "command-palette:Open command palette": false,
-      "random-note:Open random note": false,
       "bases:Create new base": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": false,
@@ -247,10 +259,10 @@
       "obsidian-shellcommands:Shell commands: Custom variables": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "note_uid_generator:Create uid if missing": false,
-      "periodic-notes:Open today": false,
       "canvas:Create new canvas": false,
       "obsidian-git:Open Git source control": false,
-      "notebook-navigator:Notebook Navigator": false
+      "notebook-navigator:Notebook Navigator": false,
+      "periodic-notes:Open today": false
     }
   },
   "active": "84018928a2888d9f",
