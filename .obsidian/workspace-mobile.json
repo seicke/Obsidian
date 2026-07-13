@@ -1,0 +1,178 @@
+{
+  "main": {
+    "id": "bc1f8ea6b9f69ea6",
+    "type": "split",
+    "children": [
+      {
+        "id": "04a89e8be7720075",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc4fe242c6640502",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1d2dd5f6c891d1be",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "915b85a6dcacbe21",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "d4264c2b69abfb38",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Suchen"
+        }
+      },
+      {
+        "id": "c73780d5af5b5520",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "b159515ce7cfdd1c",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "Alle Eigenschaften"
+        }
+      },
+      {
+        "id": "d2865d3b7a263ad9",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Lesezeichen"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "e09ccf7d698d876a",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "07d936d882fdf1be",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "e6e3b4d223587e50",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Ausgehende Links"
+        }
+      },
+      {
+        "id": "a1106b599c94c75e",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Gliederung"
+        }
+      },
+      {
+        "id": "00af7a908f1f87fd",
+        "type": "leaf",
+        "state": {
+          "type": "notebook-navigator-calendar",
+          "state": {},
+          "icon": "notebook-navigator",
+          "title": "Kalender"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templater-obsidian:Templater": false,
+      "notebook-navigator:Notebook Navigator": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "bc4fe242c6640502",
+  "lastOpenFiles": []
+}

@@ -1,0 +1,284 @@
+{
+  "main": {
+    "id": "97b9c1f716cca91b",
+    "type": "split",
+    "children": [
+      {
+        "id": "b393f11486bcbcdd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "755dff8563339f78",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "874ba7ff54b8180d",
+    "type": "split",
+    "children": [
+      {
+        "id": "33e419c17fadd0f2",
+        "type": "tabs",
+        "dimension": 75.58900523560209,
+        "children": [
+          {
+            "id": "c0ed982cd90a370c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "32c9f1cfa568ab01",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "875cfbd3ecac298b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "25d954ee1393db3a",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Notebook Navigator"
+            }
+          }
+        ],
+        "currentTab": 3
+      },
+      {
+        "id": "20b83836137bfbe7",
+        "type": "tabs",
+        "dimension": 24.410994764397905,
+        "children": [
+          {
+            "id": "133e810cd92ffa7a",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 487.5
+  },
+  "right": {
+    "id": "d9d76ebcb10674a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "3ee594a111855f8d",
+        "type": "tabs",
+        "dimension": 65.59278350515464,
+        "children": [
+          {
+            "id": "38374833c6d85056",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "157e92b829b11292",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Willkommen.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Ausgehende Links von Willkommen öffnen"
+            }
+          },
+          {
+            "id": "7c03aeaf45622461",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "47f331d6e519c41d",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "b2f362d090ab3225",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          },
+          {
+            "id": "bec869145549696b",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {},
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
+          }
+        ],
+        "currentTab": 4
+      },
+      {
+        "id": "43002b3dfd24eef6",
+        "type": "tabs",
+        "dimension": 34.40721649484536,
+        "children": [
+          {
+            "id": "36ac66699c451667",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator-calendar",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Calendar"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": true,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": true,
+      "command-palette:Open command palette": true,
+      "bases:Create new base": true,
+      "templater-obsidian:Templater": false,
+      "notebook-navigator:Notebook Navigator": false,
+      "obsidian-git:Open Git source control": false,
+      "daily-notes:Open today's daily note": false,
+      "periodic-notes:Open today": false
+    }
+  },
+  "active": "25d954ee1393db3a",
+  "lastOpenFiles": [
+    "Templater",
+    "07 Links",
+    "08 People",
+    "06 Areas",
+    "04 Resources",
+    "03 Tasks",
+    "1 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
+    "1 Journal/2026/2026-07 July/2026-07-01 Wednesday.md",
+    "09 Templates/Daily Template.md",
+    "01 Journal/2026/2026-07 July",
+    "04 Assets/Books/Calibre Library/Hugh Howey/Silo_ die komplette Saga (11)/Silo_ die komplette Saga - Hugh Howey.mobi",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 00] _ Miteinander reden von A bis Z (14)/[Miteinander reden 00] _ Miteinander reden - Schulz, Friedemann von Thun.mobi",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 03] _ Das Innere Team und situationsgerechte Kommunikation (13)/[Miteinander reden 03] _ Das Innere Team u - Schulz, Friedemann von Thun.mobi",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 02] _ Stile Werte und Personlichkeitsentwicklung (12)/[Miteinander reden 02] _ Stile Werte und P - Schulz, Friedemann von Thun.mobi",
+    "04 Assets/Books/Calibre Library/Navarro, Joe/Menschen lesen _ Ein FBI-Agent erklart wie man die Korpersprache entschlusselt (17)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Unknown/Daniel Kahneman Schnelles Denken, langsames Denken (16)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 03] _ Das Innere Team und situationsgerechte Kommunikation (13)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 02] _ Stile Werte und Personlichkeitsentwicklung (12)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 01] _ Storungen und Klarungen. Allgemeine Psychologie der Kommunikation (15)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Schulz, Friedemann von Thun/[Miteinander reden 00] _ Miteinander reden von A bis Z (14)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Hugh Howey/Silo_ die komplette Saga (11)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Grant, Adam/Hidden Potential - Die Wissenschaft des Erfolgs (10)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Adam Grant/NONKONFORMISTEN _ Warum Originalitat die Welt bewegt (9)/cover.jpg",
+    "04 Assets/Books/Calibre Library/Karin Kuschik/50 Satze, die das Leben leichter machen (8)/cover.jpg",
+    "02 Notes/Fragen zum Tag der Arbeit.md",
+    "1 Journal/2026.md",
+    "1 Journal/2026/2026-06 June/2026-06-30 Tuesday.md",
+    "1 Journal/2026/2026.md",
+    "1 Journal/2025.md",
+    "09 Templates/Yearly Template.md",
+    "02 Notes/Who–What–Why Template.md",
+    "02 Notes/Notizarten.md",
+    "02 Notes/Journaling with Obsidian.md",
+    "2 Notes/Test.md",
+    "Test.md",
+    "09 Templates/Note Template.md",
+    "9 Templates/Test.md",
+    "Journal/2026/2026-07 July/2026-07 July.md",
+    "Journal/2026/2026-07 July/2026-07-01 Wednesday.md",
+    "Journal/2026/2026-06 June/2026-06-30 Tuesday.md",
+    "Willkommen.md"
+  ]
+}
