@@ -2,5 +2,7 @@
 !.gitignore
 !.obsidian
 !.obsidian/**
+!09 Templates
+!09 Templates/**
 
 */.DS_Store
