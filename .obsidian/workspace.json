@@ -38,19 +38,6 @@
             "id": "84018928a2888d9f",
             "type": "leaf",
             "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
-            "id": "214dc99d9ca89bcb",
-            "type": "leaf",
-            "state": {
               "type": "search",
               "state": {
                 "query": "secured",
