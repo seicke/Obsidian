@@ -43,7 +43,7 @@
                     "state": {
                       "type": "backlink",
                       "state": {
-                        "file": "Tasks.md",
+                        "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
                         "collapseAll": false,
                         "extraContext": false,
                         "sortOrder": "alphabetical",
@@ -53,7 +53,7 @@
                         "unlinkedCollapsed": true
                       },
                       "icon": "links-coming-in",
-                      "title": "Backlinks for Tasks"
+                      "title": "Backlinks for 2026-07-13 Monday"
                     }
                   }
                 ]
@@ -68,12 +68,12 @@
                     "state": {
                       "type": "outgoing-link",
                       "state": {
-                        "file": "Tasks.md",
+                        "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
                         "linksCollapsed": false,
                         "unlinkedCollapsed": true
                       },
                       "icon": "links-going-out",
-                      "title": "Outgoing links from Tasks"
+                      "title": "Outgoing links from 2026-07-13 Monday"
                     }
                   }
                 ]
@@ -177,7 +177,6 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 43.17528735632184,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -239,7 +238,6 @@
       {
         "id": "d7cc1c0bfb18cfee",
         "type": "tabs",
-        "dimension": 23.49137931034483,
         "children": [
           {
             "id": "46a9a0cec6e7950d",
@@ -256,7 +254,6 @@
       {
         "id": "4910875ae564f333",
         "type": "tabs",
-        "dimension": 33.33333333333333,
         "children": [
           {
             "id": "53d278dd30d24cdb",
@@ -275,6 +272,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "7437754bc4502e38",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21d5464a4f1421fe",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator-calendar",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -284,7 +297,6 @@
     "hiddenItems": {
       "switcher:Open quick switcher": true,
       "omnisearch:Omnisearch": false,
-      "periodic-notes:Open today": false,
       "graph:Open graph view": true,
       "daily-notes:Open today's daily note": true,
       "command-palette:Open command palette": true,
@@ -296,18 +308,19 @@
       "note_uid_generator:Create uid if missing": true,
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
-      "notebook-navigator:Notebook Navigator": false
+      "notebook-navigator:Notebook Navigator": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "53d278dd30d24cdb",
+  "active": "a128f351ff5662bb",
   "lastOpenFiles": [
+    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "08 People/Feulner, Dennis.md",
     "08 People/Vollenbruch, Paul.md",
     "08 People/Schewzow, Andreas.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "Inbox.md",
-    "Tasks.md",
     "09 Templates",
     "01 Journal/2026/2026-07 July/2026-07-12 Sunday.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
