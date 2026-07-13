@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "304dbcaf518c3196",
+        "id": "85eb3f99bf31af69",
         "type": "tabs",
         "children": [
           {
-            "id": "494320b05cf5d107",
+            "id": "a128f351ff5662bb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inbox.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Inbox"
+              "title": "New tab"
             }
           }
         ]
@@ -33,6 +29,7 @@
       {
         "id": "59e62d438170d56c",
         "type": "tabs",
+        "dimension": 77.48148148148148,
         "children": [
           {
             "id": "84018928a2888d9f",
@@ -40,7 +37,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "secured",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -84,11 +81,29 @@
               "title": "Files"
             }
           }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "83495321bfc99a8c",
+        "type": "tabs",
+        "dimension": 22.51851851851852,
+        "children": [
+          {
+            "id": "494320b05cf5d107",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 295.5
+    "width": 657.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -97,6 +112,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
+        "dimension": 43.17528735632184,
         "children": [
           {
             "id": "6055644f98f66f49",
@@ -191,6 +207,7 @@
       {
         "id": "d7cc1c0bfb18cfee",
         "type": "tabs",
+        "dimension": 23.49137931034483,
         "children": [
           {
             "id": "46a9a0cec6e7950d",
@@ -207,6 +224,7 @@
       {
         "id": "4910875ae564f333",
         "type": "tabs",
+        "dimension": 33.33333333333333,
         "children": [
           {
             "id": "53d278dd30d24cdb",
@@ -225,36 +243,20 @@
             }
           }
         ]
-      },
-      {
-        "id": "4f5672c9b6c96ab2",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "2de989a9a15e633a",
-            "type": "leaf",
-            "state": {
-              "type": "notebook-navigator-calendar",
-              "state": {},
-              "icon": "notebook-navigator",
-              "title": "Calendar"
-            }
-          }
-        ]
       }
     ],
     "direction": "horizontal",
-    "width": 392.5
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
       "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
+      "graph:Open graph view": true,
       "daily-notes:Open today's daily note": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "templater-obsidian:Templater": false,
+      "command-palette:Open command palette": true,
+      "bases:Create new base": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": true,
+      "templater-obsidian:Templater": true,
       "omnisearch:Omnisearch": false,
       "obsidian-shellcommands:Shell commands: Custom variables": false,
       "obsidian-excalidraw-plugin:New drawing": false,
@@ -265,8 +267,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "84018928a2888d9f",
+  "active": "1d26ed02641f0f0f",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
+    "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
+    "Inbox.md",
     "Tasks.md",
     "09 Templates",
     "01 Journal/2026/2026-07 July/2026-07-12 Sunday.md",
@@ -274,7 +279,6 @@
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
     "03 Tasks/basyx-aas-gui - Module Company Descriptor View.md",
     "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
-    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "06 Areas/StudentTasks.md",
     "08 People/Schewzow, Andreas.md",
     "08 People/Thiessen, Nico.md",
@@ -306,7 +310,6 @@
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 AW Anschreiben___LinkedIn.png",
     "05 Projects/2025-2026 Railway-X/TP2 - Use Case - TP 3.2.1 Traceability/Product Change Notification/RwX - Traceability - PCN - EDC Push.md",
-    "05 Projects/2025-2026 Railway-X/TP2 - Use Case - TP 3.2.1 Traceability/Product Change Notification/RwX - Traceability - PCN.md",
     "02 Notes/IEC 61406 Identification Link/ISO 7000 - 3010/iso_grs_7000_3010.png",
     "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - Das Geniale an DeepSeeks 57-facher Effizienzsteigerung - Multi-head Latent Attention MLA/Welch Labs - Attention Head.png",
     "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - AI can't cross this line and we don't know why/Welch Labs - Entropy of Natural Language.png",
