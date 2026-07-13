@@ -43,7 +43,7 @@
                     "state": {
                       "type": "backlink",
                       "state": {
-                        "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
+                        "file": "Tasks.md",
                         "collapseAll": false,
                         "extraContext": false,
                         "sortOrder": "alphabetical",
@@ -53,7 +53,7 @@
                         "unlinkedCollapsed": true
                       },
                       "icon": "links-coming-in",
-                      "title": "Backlinks for 2026-07-13 Monday"
+                      "title": "Backlinks for Tasks"
                     }
                   }
                 ]
@@ -68,12 +68,12 @@
                     "state": {
                       "type": "outgoing-link",
                       "state": {
-                        "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
+                        "file": "Tasks.md",
                         "linksCollapsed": false,
                         "unlinkedCollapsed": true
                       },
                       "icon": "links-going-out",
-                      "title": "Outgoing links from 2026-07-13 Monday"
+                      "title": "Outgoing links from Tasks"
                     }
                   }
                 ]
@@ -185,13 +185,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
+                "file": "Tasks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-13 Monday"
+              "title": "Outline of Tasks"
             }
           },
           {
@@ -299,12 +299,12 @@
       "notebook-navigator:Notebook Navigator": false
     }
   },
-  "active": "a128f351ff5662bb",
+  "active": "53d278dd30d24cdb",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "08 People/Feulner, Dennis.md",
     "08 People/Vollenbruch, Paul.md",
     "08 People/Schewzow, Andreas.md",
-    "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "Inbox.md",
     "Tasks.md",
