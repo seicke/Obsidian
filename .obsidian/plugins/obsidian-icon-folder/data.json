@@ -1,0 +1,48 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "LiUser2",
+      "FasUser",
+      "LiInbox",
+      "LiCheck",
+      "FasPerson"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "01 Journal": "LiCalendar",
+  "03 Tasks": "LiCheck",
+  "05 Projects": "FasObjectGroup",
+  "06 Areas": "FasObjectUngroup",
+  "08 Links": "LiLink",
+  "07 Bases": "LiDatabase",
+  "00 Inbox": "LiInbox",
+  "08 People": "LiUser2",
+  "02 Notes": "LiNotebook",
+  "04 Assets": "LiFiles",
+  "07 Links": "LiLink"
+}

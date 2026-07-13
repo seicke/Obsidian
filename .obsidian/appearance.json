@@ -1,0 +1,10 @@
+{
+  "theme": "system",
+  "showRibbon": true,
+  "showViewHeader": true,
+  "nativeMenus": true,
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "cancelled-tasks"
+  ]
+}

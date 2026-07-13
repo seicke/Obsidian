@@ -1,0 +1,18 @@
+*
+!.gitignore
+!.obsidian
+!.obsidian/**
+!09 Templates
+!09 Templates/**
+
+# Folder view configuration files
+*/.DS_Store
+*/Desktop.ini
+
+# Thumbnail cache files
+._*
+*/Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes

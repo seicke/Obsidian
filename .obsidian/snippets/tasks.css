@@ -1,0 +1,9 @@
+.task-list-item[data-task="-"], .HyperMD-task-line[data-task="-"] {
+    text-decoration: line-through;
+    opacity: 0.2;
+}
+
+.task-list-item[data-task="x"], .HyperMD-task-line[data-task="x"] {
+    text-decoration: line-through;
+    opacity: 0.5;
+}

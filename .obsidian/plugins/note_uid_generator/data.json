@@ -1,0 +1,14 @@
+{
+  "uidKey": "uid",
+  "autoGenerateUid": false,
+  "uidGenerator": "nanoid",
+  "nanoidLength": 21,
+  "nanoidAlphabet": "0123456789abcdefghijklmnopqrstuvwxyz",
+  "nanoidSeparators": [],
+  "autoGenerationScope": "vault",
+  "autoGenerationFolder": "",
+  "autoGenerationExclusions": [],
+  "folderToClear": "",
+  "copyFormatString": "{title} - {uidKey}: {uid}",
+  "copyFormatStringMissingUid": "{title} - No {uidKey}"
+}
