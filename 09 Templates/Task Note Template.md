@@ -1,3 +1,7 @@
+---
+created: 2026-07-10 09:01:43
+updated: 2026-07-14 09:05:31
+---
 <%*
 moment.locale("en");
 
@@ -8,4 +12,4 @@ created:
 updated:
 ---
 # <% tp.file.title %>
-- [ ] <% tp.file.title %><% tp.file.cursor() %> ➕ <% today.format('YYYY-MM-DD') %> 📅 <% today.format('YYYY-MM-DD') %>
+- [ ] <% tp.file.title %><% tp.file.cursor() %> ➕ <% today.format('YYYY-MM-DD') %>

@@ -61,7 +61,7 @@
     "05 Projects/2026 AAS Infrastruktur/Neoception/Neoception.md": "6c67107b36595cf7aa252f9c8391fb7ce8aff4bde6ff59cdfe04e71cece4992e",
     "05 Projects/2026 AAS Infrastruktur/M&M/M&M.md": "a5fa9c8612ea5177b7f1182e4b0f7f64369bf04665cdbc66a506df9d8ce92662",
     "05 Projects/2025-2026 Railway-X/TP2 - Use Case - TP 3.2.1 Traceability/Product Change Notification/RwX - Traceability - PCN - EDC Push.md": "521628c8554d5726f8700a7f0278e950a0597bfc1fd392d3a618b1b613cf879e",
-    "Inbox.md": "2627e2fbb65aa2f80d392252abbd294451c7433358420372480caea1ff881a14",
+    "Inbox.md": "ce5d477e857e743152fa911bcd2589f429aad3292e8b1f242f1da57b50cf37ac",
     "01 Journal/2026/2026-06 June/2026-06-25 Thursday.md": "0f29fd110ba383a449cfc757654fdd188541960e962ad0d728a0ca2e9ee38d06",
     "05 Projects/2025-2026 Railway-X/RwX HARTING MX Ports.md": "b0682ffade574ae3c248e3b5df64e0a48eba2a60735b759bfd7fec4819d43309",
     "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md": "7fc22fa86138c4a9bcc1e5e30f17221347e7192be55ca8f889767d48ac205751",
@@ -77,7 +77,7 @@
     "01 Journal/2026/2026-07 July/2026-07-27 Monday.md": "5d1d45f0ef440495c20fc8d686c0aa772202e93cbe669efd1dbb2ae16f06921a",
     "Tasks.md": "5381e29b565f2260524aba4bdd6d6d533d5993de303d1ad5882dc09fcd43a333",
     "03 Tasks/basyx-aas-gui - Module Company Descriptor View.md": "6d231e3bee3622cd2a5b770e02f1a303235e606688021734922cf00fd4f6617f",
-    "08 People/Thiessen, Nico.md": "d5e145759d13cc2f99a42190af4ab7586be4ef769bcf9e4280960a675d66310b",
+    "08 People/Thiessen, Nico.md": "92828b50080b5cf2720c38acd7d1fb96bb17df66b17e5ee95176079d473fb37a",
     "08 People/Schewzow, Andreas.md": "5627365a9e5f214b5a50b45850317e7153ae18f988a88f2e9fb3c06d11c7e20a",
     "06 Areas/StudentTasks.md": "f05d8a0754840dc0256a9970e3834ff863c7dade68d81cdf4fb68188de8b8ad6",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md": "2e30b8cf346b7335b3ea04e92bd4b823966fd75a57617ad622ee9f24ac557ee6",
@@ -100,6 +100,10 @@
     "02 Notes/Volumes - Shares.md": "476ac1735eccd598a096da6e3bd16b5fb6bb1404372e39e10851f0cbe2ce447d",
     "02 Notes/IEC 61406 Identification Link/IEC 61406 Identification Link.md": "d657a95cdd50cdeae9e3c8139d726b7dd731a8ed8fb58ab56c92b8cf75fb98f5",
     "01 Journal/2026/2026-07 July/2026-07-13 Monday.md": "855bf1972c0f5dc3d462470cbcb909617ce3e1244b335d0b8fba0065063b0a1c",
-    "08 People/Feulner, Dennis.md": "77dcb4d899e7c163093dfb923a777f1deab34a7040bf38871d03928ce092684d"
+    "08 People/Feulner, Dennis.md": "77dcb4d899e7c163093dfb923a777f1deab34a7040bf38871d03928ce092684d",
+    "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md": "2ff3166eb1e00e18e289e35cc3f3cf81807dea1e4b5b0bab9fe3099a66338b71",
+    "03 Tasks/harting-aas-ui - ContentSquare integrieren und testen.md": "bea68fabcdaa68327cb0b7491785e74c9df025939ca7acb2cdaad9fc08788f8e",
+    "09 Templates/Task Note Template.md": "f8bbbf40bb32f719cb14004340305e5ad0369ed72788be3bfccf912c39fc343e",
+    "08 People/, Luke.md": "a8973959de4283e608816f0386dd38dd7e05ee901f06b197ef831e3e7e9682b9"
   }
 }

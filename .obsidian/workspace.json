@@ -4,70 +4,112 @@
     "type": "split",
     "children": [
       {
-        "id": "73096d2883f735ba",
+        "id": "883d974b14bde108",
         "type": "split",
         "children": [
           {
-            "id": "8a8bb843935af3ad",
-            "type": "tabs",
+            "id": "17c43da43a9aa3a8",
+            "type": "split",
+            "dimension": 75.3875968992248,
             "children": [
               {
-                "id": "6055644f98f66f49",
-                "type": "leaf",
-                "state": {
-                  "type": "backlink",
-                  "state": {
-                    "file": "Inbox.md",
-                    "collapseAll": false,
-                    "extraContext": false,
-                    "sortOrder": "alphabetical",
-                    "showSearch": false,
-                    "searchQuery": "",
-                    "backlinkCollapsed": false,
-                    "unlinkedCollapsed": true
-                  },
-                  "icon": "links-coming-in",
-                  "title": "Backlinks for Inbox"
-                }
+                "id": "8a8bb843935af3ad",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "682d72bb661f475a",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "Inbox.md",
+                        "mode": "source",
+                        "source": false
+                      },
+                      "icon": "lucide-file",
+                      "title": "Inbox"
+                    }
+                  }
+                ]
               },
               {
-                "id": "682d72bb661f475a",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "Inbox.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "Inbox"
-                }
+                "id": "40157742e13a52e6",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "50e09cff2c134e9d",
+                    "type": "leaf",
+                    "state": {
+                      "type": "markdown",
+                      "state": {
+                        "file": "08 People/, Luke.md",
+                        "mode": "source",
+                        "source": false
+                      },
+                      "icon": "lucide-file",
+                      "title": ", Luke"
+                    }
+                  }
+                ]
               }
-            ]
+            ],
+            "direction": "vertical"
           },
           {
-            "id": "c93bb884f5c23ed2",
-            "type": "tabs",
+            "id": "03192b94d45ff18c",
+            "type": "split",
+            "dimension": 24.61240310077519,
             "children": [
               {
-                "id": "111b1f1b558dd5b3",
-                "type": "leaf",
-                "state": {
-                  "type": "outgoing-link",
-                  "state": {
-                    "file": "Inbox.md",
-                    "linksCollapsed": false,
-                    "unlinkedCollapsed": true
-                  },
-                  "icon": "links-going-out",
-                  "title": "Outgoing links from Inbox"
-                }
+                "id": "1f4fcc07bad01dd2",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "6055644f98f66f49",
+                    "type": "leaf",
+                    "state": {
+                      "type": "backlink",
+                      "state": {
+                        "file": "08 People/, Luke.md",
+                        "collapseAll": false,
+                        "extraContext": false,
+                        "sortOrder": "alphabetical",
+                        "showSearch": false,
+                        "searchQuery": "",
+                        "backlinkCollapsed": false,
+                        "unlinkedCollapsed": true
+                      },
+                      "icon": "links-coming-in",
+                      "title": "Backlinks for , Luke"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "e4c1d3b31cf45818",
+                "type": "tabs",
+                "children": [
+                  {
+                    "id": "111b1f1b558dd5b3",
+                    "type": "leaf",
+                    "state": {
+                      "type": "outgoing-link",
+                      "state": {
+                        "file": "08 People/, Luke.md",
+                        "linksCollapsed": false,
+                        "unlinkedCollapsed": true
+                      },
+                      "icon": "links-going-out",
+                      "title": "Outgoing links from , Luke"
+                    }
+                  }
+                ]
               }
-            ]
+            ],
+            "direction": "vertical"
           }
         ],
-        "direction": "vertical"
+        "direction": "horizontal"
       }
     ],
     "direction": "vertical"
@@ -87,7 +129,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#aas4j-submodels",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -153,7 +195,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 657.5
+    "width": 341.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -276,7 +318,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 487.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -297,8 +340,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6055644f98f66f49",
+  "active": "50e09cff2c134e9d",
   "lastOpenFiles": [
+    "08 People/Thiessen, Nico.md",
+    "08 People/, Luke.md",
+    "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
+    "Inbox.md",
+    "09 Templates/Task Note Template.md",
+    "03 Tasks/harting-aas-ui - ContentSquare integrieren und testen.md",
     "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "Tasks.md",
     "00 Inbox/Nicht bestätigt 432403.crdownload",
@@ -313,7 +362,6 @@
     "08 People/Vollenbruch, Paul.md",
     "08 People/Schewzow, Andreas.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
-    "Inbox.md",
     "09 Templates",
     "01 Journal/2026/2026-07 July/2026-07-12 Sunday.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
@@ -321,19 +369,15 @@
     "03 Tasks/basyx-aas-gui - Module Company Descriptor View.md",
     "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
     "06 Areas/StudentTasks.md",
-    "08 People/Thiessen, Nico.md",
     "01 Journal/2026/2026-07 July/2026-07-10 Friday.md",
     "01 Journal/2026/2026-07 July/2026-07-08 Wednesday.md",
     "09 Templates/Journal Daily Note Template.md",
     "09 Templates/People Note Template.md",
     "09 Templates/Note Template.md",
     "01 Journal/2026/2026-02 February/2026-02-14 Saturday.md",
-    "09 Templates/Task Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-27 Monday.md",
-    "08 People/Krug, Christian.md",
     "Untitled/desktop.ini",
     "08 People",
-    "01 Journal/2026/2026-07 July/2026-07-06 Monday.md",
     "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
