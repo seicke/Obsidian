@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "1f4fcc07bad01dd2",
+        "id": "b06d556f2a2ec894",
         "type": "tabs",
         "children": [
           {
-            "id": "4fc550ea462ba9bc",
+            "id": "bb6c25359915da8b",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Project Lange Charge & Digitales Typenschild"
+              "title": "New tab"
             }
           }
         ]
@@ -116,7 +112,6 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 24.709302325581394,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -124,13 +119,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Project Lange Charge & Digitales Typenschild"
+              "title": "Outline"
             }
           },
           {
@@ -178,7 +172,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +181,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Project Lange Charge & Digitales Typenschild"
+              "title": "Backlinks"
             }
           },
           {
@@ -197,12 +190,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Project Lange Charge & Digitales Typenschild"
+              "title": "Outgoing links"
             }
           }
         ],
@@ -211,7 +203,6 @@
       {
         "id": "d7cc1c0bfb18cfee",
         "type": "tabs",
-        "dimension": 31.782945736434108,
         "children": [
           {
             "id": "46a9a0cec6e7950d",
@@ -228,7 +219,6 @@
       {
         "id": "4910875ae564f333",
         "type": "tabs",
-        "dimension": 43.507751937984494,
         "children": [
           {
             "id": "53d278dd30d24cdb",
@@ -263,6 +253,22 @@
             }
           }
         ]
+      },
+      {
+        "id": "5a1fa36fe4f36b85",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3fc1345a5d30209",
+            "type": "leaf",
+            "state": {
+              "type": "notebook-navigator-calendar",
+              "state": {},
+              "icon": "notebook-navigator",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
@@ -287,8 +293,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "4fc550ea462ba9bc",
+  "active": "1d26ed02641f0f0f",
   "lastOpenFiles": [
+    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "Tasks.md",
     "Inbox.md",
     "08 People/, Luke.md",
@@ -304,7 +311,6 @@
     "00 Inbox/The EU Digital Product Passport for Batteries.pdf",
     "00 Inbox/The EU Digital Product Passport for Batteries.pdf.crdownload",
     "00 Inbox/55d41333-36ad-4c92-ac6c-737273727910.tmp",
-    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "08 People/Feulner, Dennis.md",
     "08 People/Vollenbruch, Paul.md",
     "08 People/Schewzow, Andreas.md",
