@@ -195,12 +195,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
+                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-07-14 Tuesday"
+              "title": "Outgoing links from Tasks"
             }
           }
         ],
@@ -280,10 +280,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "53d278dd30d24cdb",
   "lastOpenFiles": [
-    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
+    "Tasks.md",
     "09 Templates/Journal Daily Note Startup.md",
     "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "Inbox.md",
