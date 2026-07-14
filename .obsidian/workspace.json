@@ -210,12 +210,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
+                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from dpp40tstDMZ01 BaSyx secured"
+              "title": "Outgoing links from Tasks"
             }
           }
         ],
@@ -295,10 +295,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c7e62e9d96c707aa",
+  "active": "53d278dd30d24cdb",
   "lastOpenFiles": [
-    "Tasks.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
+    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
     "09 Templates/Journal Daily Note Startup.md",
     "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
