@@ -201,22 +201,6 @@
         "currentTab": 5
       },
       {
-        "id": "d7cc1c0bfb18cfee",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "46a9a0cec6e7950d",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          }
-        ]
-      },
-      {
         "id": "4910875ae564f333",
         "type": "tabs",
         "children": [
