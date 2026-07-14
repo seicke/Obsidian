@@ -4,85 +4,70 @@
     "type": "split",
     "children": [
       {
-        "id": "dee7b23c86fcc5a8",
+        "id": "73096d2883f735ba",
         "type": "split",
         "children": [
           {
-            "id": "85eb3f99bf31af69",
+            "id": "8a8bb843935af3ad",
             "type": "tabs",
-            "dimension": 76.00574712643679,
             "children": [
               {
-                "id": "a128f351ff5662bb",
+                "id": "6055644f98f66f49",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Inbox.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Backlinks for Inbox"
+                }
+              },
+              {
+                "id": "682d72bb661f475a",
                 "type": "leaf",
                 "state": {
                   "type": "markdown",
                   "state": {
-                    "file": "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
+                    "file": "Inbox.md",
                     "mode": "source",
                     "source": false
                   },
                   "icon": "lucide-file",
-                  "title": "2026-07-13 Monday"
+                  "title": "Inbox"
                 }
               }
             ]
           },
           {
-            "id": "73096d2883f735ba",
-            "type": "split",
-            "dimension": 23.99425287356322,
+            "id": "c93bb884f5c23ed2",
+            "type": "tabs",
             "children": [
               {
-                "id": "8a8bb843935af3ad",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "6055644f98f66f49",
-                    "type": "leaf",
-                    "state": {
-                      "type": "backlink",
-                      "state": {
-                        "file": "Tasks.md",
-                        "collapseAll": false,
-                        "extraContext": false,
-                        "sortOrder": "alphabetical",
-                        "showSearch": false,
-                        "searchQuery": "",
-                        "backlinkCollapsed": false,
-                        "unlinkedCollapsed": true
-                      },
-                      "icon": "links-coming-in",
-                      "title": "Backlinks for Tasks"
-                    }
-                  }
-                ]
-              },
-              {
-                "id": "c93bb884f5c23ed2",
-                "type": "tabs",
-                "children": [
-                  {
-                    "id": "111b1f1b558dd5b3",
-                    "type": "leaf",
-                    "state": {
-                      "type": "outgoing-link",
-                      "state": {
-                        "file": "Tasks.md",
-                        "linksCollapsed": false,
-                        "unlinkedCollapsed": true
-                      },
-                      "icon": "links-going-out",
-                      "title": "Outgoing links from Tasks"
-                    }
-                  }
-                ]
+                "id": "111b1f1b558dd5b3",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Inbox.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "Outgoing links from Inbox"
+                }
               }
-            ],
-            "direction": "vertical"
+            ]
           }
         ],
-        "direction": "horizontal"
+        "direction": "vertical"
       }
     ],
     "direction": "vertical"
@@ -312,18 +297,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "53d278dd30d24cdb",
+  "active": "6055644f98f66f49",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
+    "Tasks.md",
     "00 Inbox/Nicht bestätigt 432403.crdownload",
     "00 Inbox/61001da4-2413-4730-ab42-ebd28e1988fb.tmp",
     "00 Inbox/Nicht bestätigt 240943.crdownload",
     "00 Inbox/984a9920-a90b-40c2-bbe0-c157b51aa97d.tmp",
-    "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "00 Inbox/The EU Digital Product Passport for Batteries.pdf",
     "00 Inbox/The EU Digital Product Passport for Batteries.pdf.crdownload",
     "00 Inbox/55d41333-36ad-4c92-ac6c-737273727910.tmp",
     "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
-    "Tasks.md",
     "08 People/Feulner, Dennis.md",
     "08 People/Vollenbruch, Paul.md",
     "08 People/Schewzow, Andreas.md",
@@ -349,7 +334,6 @@
     "Untitled/desktop.ini",
     "08 People",
     "01 Journal/2026/2026-07 July/2026-07-06 Monday.md",
-    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Resources/651-0-12_2026-0001_48_618_DC2026-04__48-618-DC__Do.pdf",
     "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
