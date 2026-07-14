@@ -36,7 +36,7 @@
     ""
   ],
   "startup_templates": [
-    "09 Templates/Journal Daily Note Template.md"
+    "09 Templates/Journal Daily Note Startup.md"
   ],
   "intellisense_render": 1
 }
