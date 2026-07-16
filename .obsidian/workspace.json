@@ -63,16 +63,6 @@
             }
           },
           {
-            "id": "1d26ed02641f0f0f",
-            "type": "leaf",
-            "state": {
-              "type": "notebook-navigator",
-              "state": {},
-              "icon": "notebook-navigator",
-              "title": "Notebook Navigator"
-            }
-          },
-          {
             "id": "85d34257d90251d4",
             "type": "leaf",
             "state": {
@@ -85,7 +75,8 @@
               "title": "Files"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "83495321bfc99a8c",
@@ -115,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 52.616279069767444,
+        "dimension": 25.260416666666668,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -194,32 +185,39 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
+                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-07-16 Thursday"
+              "title": "Outgoing links from Tasks"
             }
           }
         ],
         "currentTab": 5
       },
       {
-        "id": "4910875ae564f333",
+        "id": "2b36ae8bafc79e23",
         "type": "tabs",
-        "dimension": 47.383720930232556,
+        "dimension": 27.34375,
         "children": [
           {
-            "id": "a3fc1345a5d30209",
+            "id": "85c8dd9f7f8bdbfc",
             "type": "leaf",
             "state": {
-              "type": "notebook-navigator-calendar",
+              "type": "calendar",
               "state": {},
-              "icon": "notebook-navigator",
+              "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "4910875ae564f333",
+        "type": "tabs",
+        "dimension": 47.39583333333333,
+        "children": [
           {
             "id": "53d278dd30d24cdb",
             "type": "leaf",
@@ -250,8 +248,7 @@
               "title": "Inbox"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -273,14 +270,13 @@
       "note_uid_generator:Create uid if missing": true,
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
-      "notebook-navigator:Notebook Navigator": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "53d278dd30d24cdb",
   "lastOpenFiles": [
-    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
+    "Tasks.md",
     "05 Projects/2025-2026 Railway-X/Railway-X DataSpace.md",
     "01 Journal/2026/2026-07 July/2026-07-15 Wednesday.md",
     "06 Areas/StudentTasks.md",
