@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-16 Thursday"
+              "title": "2026-07-17 Friday"
             }
           }
         ]
@@ -106,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 25.260416666666668,
+        "dimension": 25.26041666666667,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -114,12 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2026-07-17 Friday"
             }
           },
           {
@@ -185,16 +186,15 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tasks.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Tasks"
+              "title": "Outgoing links from 2026-07-17 Friday"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -273,11 +273,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "53d278dd30d24cdb",
+  "active": "d3a3f042b66a2a8c",
   "lastOpenFiles": [
+    "Tasks.md",
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
-    "Tasks.md",
     "05 Projects/2025-2026 Railway-X/Railway-X DataSpace.md",
     "01 Journal/2026/2026-07 July/2026-07-15 Wednesday.md",
     "06 Areas/StudentTasks.md",
@@ -308,7 +309,6 @@
     "03 Tasks/basyx-aas-gui - Module Company Descriptor View.md",
     "01 Journal/2026/2026-07 July/2026-07-10 Friday.md",
     "01 Journal/2026/2026-07 July/2026-07-08 Wednesday.md",
-    "09 Templates/Journal Daily Note Template.md",
     "Untitled/desktop.ini",
     "08 People",
     "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
