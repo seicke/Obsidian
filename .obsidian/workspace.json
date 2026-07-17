@@ -267,8 +267,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5,
-    "collapsed": true
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -291,6 +290,8 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Tasks.md",
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "08 People/Thiessen, Nico.md",
     "08 People/Riwe, Roman.md",
     "08 People/Feulner, Dennis.md",
@@ -298,8 +299,6 @@
     "08 People/Schewzow, Andreas.md",
     "08 People/Krug, Christian.md",
     "08 People/Opitz, Karl Luke.md",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
-    "Tasks.md",
     "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "00 Inbox/eclipse-themes-updatesite-v1.1.0.zip",
     "00 Inbox/Nicht bestätigt 804661.crdownload",
