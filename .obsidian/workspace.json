@@ -35,8 +35,7 @@
               "title": "Project Lange Charge & Digitales Typenschild"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -129,13 +128,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Project Lange Charge & Digitales Typenschild"
+              "title": "Outline of 2026-07-17 Friday"
             }
           },
           {
@@ -201,12 +200,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Project Lange Charge & Digitales Typenschild"
+              "title": "Outgoing links from 2026-07-17 Friday"
             }
           }
         ]
@@ -288,8 +287,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "85d34257d90251d4",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "00 Inbox/eclipse-themes-updatesite-v1.1.0.zip",
     "00 Inbox/Nicht bestätigt 804661.crdownload",
@@ -310,7 +310,6 @@
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
     "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
     "09 Templates/Journal Daily Note Startup.md",
-    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "Inbox.md",
     "08 People/, Luke.md",
     "08 People/Thiessen, Nico.md",
