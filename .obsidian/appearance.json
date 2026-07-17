@@ -1,9 +1,9 @@
 {
-  "theme": "system",
+  "theme": "obsidian",
   "showRibbon": true,
   "showViewHeader": true,
   "nativeMenus": true,
-  "cssTheme": "",
+  "cssTheme": "GitHub Theme",
   "enabledCssSnippets": [
     "cancelled-tasks"
   ]

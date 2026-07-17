@@ -97,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.5,
-    "collapsed": true
+    "width": 341.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -115,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tasks.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Tasks"
+              "title": "Outline of 2026-07-17 Friday"
             }
           },
           {
@@ -187,12 +186,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tasks.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Tasks"
+              "title": "Outgoing links from 2026-07-17 Friday"
             }
           }
         ]
@@ -274,14 +273,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "53d278dd30d24cdb",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "00 Inbox/Nicht bestätigt 712750.crdownload",
     "00 Inbox/27476b01-41b0-4cef-b922-f60c5ea48b02.tmp",
     "00 Inbox/Nicht bestätigt 559413.crdownload",
     "00 Inbox/d656e79f-27ea-4daa-b5cc-21cca77bf5e7.tmp",
-    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
     "05 Projects/2025-2026 Railway-X/Railway-X DataSpace.md",
