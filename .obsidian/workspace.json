@@ -128,13 +128,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "Tasks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-17 Friday"
+              "title": "Outline of Tasks"
             }
           },
           {
@@ -200,12 +200,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-07-17 Friday"
+              "title": "Outgoing links from Tasks"
             }
           }
         ]
@@ -287,10 +287,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "53d278dd30d24cdb",
   "lastOpenFiles": [
-    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "00 Inbox/eclipse-themes-updatesite-v1.1.0.zip",
     "00 Inbox/Nicht bestätigt 804661.crdownload",
     "00 Inbox/ad195dc9-a744-466b-b673-5492404d8c82.tmp",
