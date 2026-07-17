@@ -97,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.5
+    "width": 341.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -252,7 +253,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 487.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -273,7 +275,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d3a3f042b66a2a8c",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
     "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
