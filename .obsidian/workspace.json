@@ -130,7 +130,7 @@
               "type": "outline",
               "state": {
                 "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
-                "followCursor": false,
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -288,7 +288,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "d3a3f042b66a2a8c",
   "lastOpenFiles": [
     "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
