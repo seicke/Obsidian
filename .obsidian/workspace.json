@@ -273,11 +273,11 @@
       "note_uid_generator:Create uid if missing": true,
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
-      "periodic-notes:Open today": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "a133e29936805f2c",
+  "active": "682d72bb661f475a",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "Inbox.md",
