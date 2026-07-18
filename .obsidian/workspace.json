@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "404a811d2f1972f0",
+            "id": "ef9ca44523b93e98",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,19 +20,23 @@
               "icon": "lucide-file",
               "title": "DKE AK 651.0.12"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "ea40e4b046d32625",
+        "type": "tabs",
+        "children": [
           {
-            "id": "77758a3664e84c33",
+            "id": "404a811d2f1972f0",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
-                "mode": "source",
-                "source": false
+                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf"
               },
-              "icon": "lucide-file",
-              "title": "2026-07-20 Monday"
+              "icon": "lucide-file-text",
+              "title": "651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl"
             }
           }
         ]
@@ -111,7 +115,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.5
+    "width": 422.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -264,7 +269,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 487.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -286,17 +292,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "404a811d2f1972f0",
+  "active": "ef9ca44523b93e98",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
-    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf",
+    "02 Notes/Obsidian/Journaling with Obsidian.md",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "00 Inbox/L_202601778.md",
     "00 Inbox/JRC145830_01.pdf",
-    "02 Notes/Obsidian/Journaling with Obsidian.md",
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
-    "00 Inbox/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf",
     "00 Inbox/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf.crdownload",
     "00 Inbox/3e36d63f-0f32-4577-8a54-238ce8537aec.tmp",
     "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
@@ -323,7 +329,6 @@
     "08 People/Opitz, Karl Luke.md",
     "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
-    "05 Projects/2025-2026 Railway-X/Railway-X DataSpace.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
