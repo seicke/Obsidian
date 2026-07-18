@@ -22,18 +22,6 @@
             }
           },
           {
-            "id": "52ce580f59ad958c",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0006_Export_CDD_AAA147/651.0.12_2026-0006_Export_CDD_AAA147.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "651.0.12_2026-0006_Export_CDD_AAA147"
-            }
-          },
-          {
             "id": "073b22dff2b4e5e7",
             "type": "leaf",
             "state": {
@@ -47,8 +35,7 @@
               "title": "DKE AK 651.0.12"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -124,7 +111,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 707.5
+    "width": 707.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -141,13 +129,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "file": "00 Inbox/L_202601778.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DKE AK 651.0.12"
+              "title": "Outline of L_202601778"
             }
           },
           {
@@ -195,7 +183,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "file": "00 Inbox/L_202601778.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -205,7 +193,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for DKE AK 651.0.12"
+              "title": "Backlinks for L_202601778"
             }
           },
           {
@@ -214,12 +202,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "file": "00 Inbox/L_202601778.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from DKE AK 651.0.12"
+              "title": "Outgoing links from L_202601778"
             }
           },
           {
@@ -232,8 +220,7 @@
               "title": "Notes Review Queue"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -300,11 +287,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "073b22dff2b4e5e7",
+  "active": "ef9ca44523b93e98",
   "lastOpenFiles": [
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0006_Export_CDD_AAA147/651.0.12_2026-0006_Export_CDD_AAA147.pdf",
     "00 Inbox/L_202601778.md",
-    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/~$651.0.12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_.tmp",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0001_48_618_DC2026-04__48-618-DC__Do.pdf",

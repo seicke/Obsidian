@@ -159,7 +159,6 @@ content_en = html_to_markdown(html_en)
 frontmatter = f"""---
 title: "{doc_title}"
 aliases:
-        - "{DOC_ID}"
 source_de: "{SOURCES['de']}"
 source_en: "{SOURCES['en']}"
 date_fetched: {date.today().isoformat()}
@@ -167,9 +166,6 @@ languages:
         - DE
         - EN
 tags:
-        - EU-Recht
-        - Verordnung
-        - bilingual
 created: {date.today().strftime("%Y-%m-%d %H:%M:%S")}
 updated: {date.today().strftime("%Y-%m-%d %H:%M:%S")}
 ---
