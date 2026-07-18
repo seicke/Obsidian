@@ -77,7 +77,8 @@ def html_to_markdown(html: str) -> str:
     """Convert HTML to clean Markdown.
 
     Pre-processes HTML to remove layout tables and horizontal rules.
-    Collapses three or more consecutive newlines to a single blank line.
+    Collapses excessive blank lines and merges dangling list markers with their content.
+    Normalises multiple spaces after list markers to a single space.
     Strips trailing whitespace from each line.
     """
     cleaned_html = preprocess_html(html)
@@ -86,10 +87,18 @@ def html_to_markdown(html: str) -> str:
     # Collapse 3+ consecutive newlines to one blank line
     result = re.sub(r"\n{3,}", "\n\n", raw)
 
+    # Merge dangling list markers with their content paragraph
+    result = re.sub(r"(?m)^([a-z]\)|\([0-9]+\)|[0-9]+\.)\s*\n\n+", r"\1 ", result)
+
+    # Collapse multiple spaces after list markers to a single space
+    result = re.sub(r"(?m)^([a-z]\)|\([0-9]+\)|[0-9]+\.)\s{2,}", r"\1 ", result)
+
     # Strip trailing whitespace per line
     result = "\n".join(line.rstrip() for line in result.split("\n"))
 
     return result.strip()
+
+
 
 
 html_de = fetch_html(SOURCES["de"])
