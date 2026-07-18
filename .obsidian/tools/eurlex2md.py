@@ -1,10 +1,7 @@
-import requests
-from requests_ntlm import HttpNtlmAuth 
+import urllib.request
 from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
-import os
-import getpass
 
 PROXIES = {
   "http": "http://proxyespel.harting.intra:80",
@@ -24,7 +21,11 @@ TARGET_DIR = (SCRIPT_DIR / "../../00 Inbox").resolve()
 OUTPUT_FILE = TARGET_DIR / f"{DOC_ID}.md"
 
 def fetch_as_markdown(url: str) -> str:
-    response = requests.get(url, proxies=PROXIES)
+    proxy_handler = urllib.request.ProxyHandler(PROXIES)
+    opener = urllib.request.build_opener(proxy_handler)
+    urllib.request.install_opener(opener)
+
+    response = urllib.request.urlopen(url)
     response.raise_for_status()
     return md(response.text, heading_style="ATX")
 
