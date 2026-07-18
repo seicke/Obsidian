@@ -3,6 +3,12 @@ from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
 
+PROXY_URL = "http://proxyespel.espel.harting.intra:80"
+PROXIES = {
+    "http": PROXY_URL,
+    "https": PROXY_URL,
+}
+
 DOC_ID = "L_202601778"
 
 SOURCES = {
@@ -10,10 +16,13 @@ SOURCES = {
     "en": f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:{DOC_ID}",
 }
 
-OUTPUT_FILE = Path(f"{DOC_ID}.md")
+SCRIPT_DIR = Path(__file__).parent  
+TARGET_DIR = (SCRIPT_DIR / "../../00 Inbox").resolve()
+
+OUTPUT_FILE = TARGET_DIR / f"{DOC_ID}.md"
 
 def fetch_as_markdown(url: str) -> str:
-    response = requests.get(url)
+    response = requests.get(url, proxies=PROXIES)
     response.raise_for_status()
     return md(response.text, heading_style="ATX")
 
