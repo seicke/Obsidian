@@ -28,6 +28,7 @@
     "Data volume (GB)": "number",
     "Data volume sent": "number",
     "Data volume received": "number",
-    "birthday": "date"
+    "birthday": "date",
+    "date": "date"
   }
 }
