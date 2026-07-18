@@ -55,22 +55,27 @@ def extract_title(html: str, fallback: str) -> str:
 def preprocess_html(html: str) -> str:
     """Strip EUR-Lex layout elements before markdown conversion.
 
+    Removes script, style and noscript tags including their content entirely.
     Unwraps all table-related tags so their content flows as plain blocks.
     Removes <hr> tags that produce spurious horizontal rules in markdown.
     """
     soup = BeautifulSoup(html, "html.parser")
 
-    # Remove <hr> tags — they produce stray --- lines in markdown
+    # Completely remove script, style and noscript tags including inner content
+    for tag in soup.find_all(["script", "style", "noscript"]):
+        tag.decompose()
+
+    # Remove <hr> tags
     for hr in soup.find_all("hr"):
         hr.decompose()
 
-    # Unwrap table structure tags in correct bottom-up order.
-    # EUR-Lex uses <table> for layout (recitals, numbered items), not data.
+    # Unwrap table structure tags
     for tag_name in ["td", "th", "tr", "tbody", "thead", "tfoot", "table"]:
         for tag in soup.find_all(tag_name):
             tag.unwrap()
 
     return str(soup)
+
 
 def html_to_markdown(html: str) -> str:
     """Convert HTML to clean Markdown.
