@@ -1,8 +1,10 @@
 import requests
+from requests_ntlm import HttpNtlmAuth 
 from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
 import os
+import getpass
 
 PROXY_URL = "http://proxyespel.harting.intra:80"
 
@@ -42,14 +44,8 @@ tags: [EU-Recht, Verordnung, bilingual]
 
 """
 
-print(os.environ.get("HTTPS_PROXY"))
-print(os.environ.get("HTTP_PROXY"))
-
-print("1")
 content_de = fetch_as_markdown(SOURCES["de"])
-print("2")
 content_en = fetch_as_markdown(SOURCES["en"])
-print("3")
 
 note = (
     frontmatter
