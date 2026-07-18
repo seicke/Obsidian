@@ -6,11 +6,9 @@ from datetime import date
 import os
 import getpass
 
-PROXY_URL = "http://proxyespel.harting.intra:80"
-
-PROXIES = {  
-    "http": PROXY_URL,  
-    "https": PROXY_URL,  
+PROXIES = {
+  "http": "http://proxyespel.harting.intra:80",
+  "https": "http://proxyespel.harting.intra:80",
 }
 
 DOC_ID = "L_202601778"
@@ -26,7 +24,7 @@ TARGET_DIR = (SCRIPT_DIR / "../../00 Inbox").resolve()
 OUTPUT_FILE = TARGET_DIR / f"{DOC_ID}.md"
 
 def fetch_as_markdown(url: str) -> str:
-    response = requests.get(url)
+    response = requests.get(url, proxies=PROXIES)
     response.raise_for_status()
     return md(response.text, heading_style="ATX")
 
