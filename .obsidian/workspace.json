@@ -6,6 +6,7 @@
       {
         "id": "4509724f8bf84da7",
         "type": "tabs",
+        "dimension": 59.069212410501194,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -26,6 +27,7 @@
       {
         "id": "5095a4e46010851e",
         "type": "tabs",
+        "dimension": 40.930787589498806,
         "children": [
           {
             "id": "c0313119a7c0b343",
@@ -117,7 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.5
+    "width": 353.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -292,11 +294,16 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "02 Notes/Obsidian/Journaling with Obsidian.md",
+    "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+    "05 Projects/2025 IDTA Asset Data eXchange Hub - IDTA AdX Hub.md",
+    "05 Projects/2026-05-22 Brief KI Linzenz an DIN Media.pdf",
+    "05 Projects/Untitled/desktop.ini",
+    "05 Projects/Archiv",
+    "02 Notes/Obsidian/Journaling with Obsidian.md",
     "03 Tasks/_MOC_Tasks.md",
     "02 Notes/Obsidian",
-    "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "03 Tasks/_MOC_StudentTasks.md",
     "02 Notes/Untitled/desktop.ini",
     "02 Notes/Blockbrain",
@@ -316,20 +323,15 @@
     "00 Inbox/Nicht bestätigt 804661.crdownload",
     "00 Inbox/ad195dc9-a744-466b-b673-5492404d8c82.tmp",
     "00 Inbox/Dark Pro Github.xml",
-    "00 Inbox/Nicht bestätigt 779898.crdownload",
-    "00 Inbox/ecedec4b-7580-41f0-ad96-3b579cedd7ed.tmp",
-    "00 Inbox/Nicht bestätigt 712750.crdownload",
     "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
     "05 Projects/2025-2026 Railway-X/Railway-X DataSpace.md",
     "01 Journal/2026/2026-07 July/2026-07-15 Wednesday.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
     "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
-    "09 Templates/Journal Daily Note Startup.md",
-    "09 Templates/Task Note Template.md",
-    "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
-    "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
-    "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
+    "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
+    "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 AW Anschreiben___LinkedIn.png",
     "02 Notes/IEC 61406 Identification Link/ISO 7000 - 3010/iso_grs_7000_3010.png",
