@@ -97,8 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.5,
-    "collapsed": true
+    "width": 341.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -115,13 +114,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-18 Saturday"
+              "title": "Outline"
             }
           },
           {
@@ -194,8 +192,19 @@
               "icon": "links-going-out",
               "title": "Outgoing links from 2026-07-17 Friday"
             }
+          },
+          {
+            "id": "a133e29936805f2c",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
           }
-        ]
+        ],
+        "currentTab": 6
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -234,18 +243,15 @@
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Inbox.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "pinned": true,
               "icon": "lucide-file",
-              "title": "Inbox"
+              "title": "New tab"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -267,12 +273,15 @@
       "note_uid_generator:Create uid if missing": true,
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "a133e29936805f2c",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
+    "Inbox.md",
+    "03 Tasks/Tasks.md",
     "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
     "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
@@ -301,13 +310,10 @@
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
     "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
     "09 Templates/Journal Daily Note Startup.md",
-    "Inbox.md",
     "09 Templates/Task Note Template.md",
     "03 Tasks/harting-aas-ui - ContentSquare integrieren und testen.md",
     "01 Journal/2026/2026-07 July/2026-07-13 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
-    "01 Journal/2026/2026-07 July/2026-07-12 Sunday.md",
-    "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
     "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
