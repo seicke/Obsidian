@@ -60,17 +60,22 @@ def preprocess_html(html: str) -> str:
 
     Removes XML processing instructions (e.g. <?xml version="1.0"?>).
     Removes script, style and noscript tags including their content entirely.
+    Removes all <img> tags to prevent stray image paths in markdown output.
     Unwraps all table-related tags so their content flows as plain blocks.
     Removes <hr> tags that produce spurious horizontal rules in markdown.
     """
     soup = BeautifulSoup(html, "html.parser")
 
-    # Remove XML processing instructions — these render as stray text in markdown
+    # Remove XML processing instructions
     for node in soup.find_all(string=lambda text: isinstance(text, ProcessingInstruction)):
         node.extract()
 
     # Completely remove script, style and noscript tags including inner content
     for tag in soup.find_all(["script", "style", "noscript"]):
+        tag.decompose()
+
+    # Remove all <img> tags — prevents stray file paths like europeanflag.gif in output
+    for tag in soup.find_all("img"):
         tag.decompose()
 
     # Remove <hr> tags
@@ -84,8 +89,6 @@ def preprocess_html(html: str) -> str:
 
     return str(soup)
 
-
-
 def html_to_markdown(html: str) -> str:
     """Convert HTML to clean Markdown.
 
@@ -95,13 +98,17 @@ def html_to_markdown(html: str) -> str:
     Removes blank lines between consecutive list items.
     Converts standalone 'Artikel N' / 'Article N' lines to #### headings.
     Merges article number heading with the following title line.
+    Removes stray .fmx.xml filename lines.
     Strips trailing whitespace from each line.
     """
     cleaned_html = preprocess_html(html)
-    raw = md(cleaned_html, heading_style="ATX", strip=["script", "style", "head"])
+    raw = md(cleaned_html, heading_style="ATX")
 
     # Collapse 3+ consecutive newlines to one blank line
     result = re.sub(r"\n{3,}", "\n\n", raw)
+
+    # Remove stray .fmx.xml filename lines
+    result = re.sub(r"(?m)^.+\.fmx\.xml\s*$", "", result)
 
     # Merge dangling list markers with their content paragraph
     result = re.sub(r"(?m)^([a-z]\)|\([0-9a-z]+\)|[0-9]+\.)\s*\n\n+", r"\1 ", result)
@@ -118,12 +125,13 @@ def html_to_markdown(html: str) -> str:
     # Merge article heading with the following title line
     result = re.sub(r"(?m)^(#### (?:Artikel|Article)\s[0-9a-z]+)\n\n(.+)$", r"\1 \2", result)
 
+    # Collapse again after removals to clean up leftover blank lines
+    result = re.sub(r"\n{3,}", "\n\n", result)
+
     # Strip trailing whitespace per line
     result = "\n".join(line.rstrip() for line in result.split("\n"))
 
     return result.strip()
-
-
 
 html_de = fetch_html(SOURCES["de"])
 html_en = fetch_html(SOURCES["en"])
@@ -156,10 +164,10 @@ updated: {date.today().strftime("%Y-%m-%d %H:%M:%S")}
 note = (
     frontmatter
         + f"# {doc_title}\n\n"
-        + "## 🇩🇪 Deutsch\n\n"
+        + "## 🇩🇪 - Deutsch\n\n"
         + content_de
         + "\n\n---\n\n"
-        + "## 🇬🇧 English\n\n"
+        + "## 🇬🇧 - English\n\n"
         + content_en
 )
 
