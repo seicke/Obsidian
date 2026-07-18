@@ -218,8 +218,21 @@
               "icon": "SpacedRepIcon",
               "title": "Notes Review Queue"
             }
+          },
+          {
+            "id": "cc04d15e9192173b",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "00 Inbox/Regulation EU 2026-1778.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
+            }
           }
-        ]
+        ],
+        "currentTab": 7
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -263,8 +276,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5,
-    "collapsed": true
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -286,7 +298,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "ef9ca44523b93e98",
+  "active": "cc04d15e9192173b",
   "lastOpenFiles": [
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0001_48_618_DC2026-04__48-618-DC__Do.pdf",
     "00 Inbox/Regulation EU 2026-1778.md",
