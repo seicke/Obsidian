@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Inbox/Regulation EU 2026-1778.md",
+                "file": "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.md",
                 "mode": "source",
                 "source": false
               },
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Inbox/Regulation EU 2026-1778.md",
+                "file": "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
@@ -182,7 +182,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00 Inbox/Regulation EU 2026-1778.md",
+                "file": "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -201,7 +201,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00 Inbox/Regulation EU 2026-1778.md",
+                "file": "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -225,7 +225,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "00 Inbox/Regulation EU 2026-1778.md"
+                "file": "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -298,21 +298,21 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "cc04d15e9192173b",
+  "active": "85d34257d90251d4",
   "lastOpenFiles": [
+    "00 Inbox/Regulation EU 2026-1778/Durchführungsverordnung EU 2026-1778.pdf",
+    "00 Inbox/99cd7a05-d234-4dc9-a90f-3486424511fc.tmp",
+    "00 Inbox/Regulation EU 2026-1778/Durchführungsverordnung EU 2026-1778.pdf.crdownload",
+    "00 Inbox/a97e6a96-7ed1-464a-b5ac-ee4243fe1843.tmp",
+    "00 Inbox/Untitled/desktop.ini",
+    "00 Inbox/Regulation EU 2026-1778",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+    "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.md",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0001_48_618_DC2026-04__48-618-DC__Do.pdf",
-    "00 Inbox/Regulation EU 2026-1778.md",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
     "00 Inbox/JRC145830_01.pdf",
     "00 Inbox/The EU Digital Product Passport for Batteries.pdf",
     "00 Inbox/090166e52cc5e3b2.pdf",
-    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
-    "00 Inbox/L_202601778DE.000101.fmx.xml.html",
-    "00 Inbox/L_202601778DE.000101.fmx.xml_files/config.js.Herunterladen",
-    "00 Inbox/L_202601778DE.000101.fmx.xml_files/TOC.js.Herunterladen",
-    "00 Inbox/L_202601778DE.000101.fmx.xml_files/cookieConsentKitUtils.js.Herunterladen",
-    "00 Inbox/L_202601778DE.000101.fmx.xml_files/eur-lex.js.Herunterladen",
-    "00 Inbox/L_202601778DE.000101.fmx.xml_files/eur-lex-sanitizer.js.Herunterladen",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
