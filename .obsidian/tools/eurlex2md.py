@@ -79,31 +79,33 @@ def html_to_markdown(html: str) -> str:
     Collapses excessive blank lines and merges dangling list markers with their content.
     Normalises multiple spaces after list markers to a single space.
     Removes blank lines between consecutive list items.
-    Converts 'Artikel ...' and 'Article ...' lines to #### headings [[1]](6a5b85f8434dbfbccdd8d476).
+    Converts 'Artikel ...' and 'Article ...' lines to #### headings.
     Strips trailing whitespace from each line.
     """
     cleaned_html = preprocess_html(html)
     raw = md(cleaned_html, heading_style="ATX", strip=["script", "style", "head"])
 
-    # Collapse 3+ consecutive newlines to one blank line
+    # Collapse 3+ consecutive newlines to one blank line [[3]](6a5b871856dca3056f2d42d0)
     result = re.sub(r"\n{3,}", "\n\n", raw)
 
     # Merge dangling list markers with their content paragraph
-    result = re.sub(r"(?m)^([a-z]\)|\([0-9]+\)|[0-9]+\.)\s*\n\n+", r"\1 ", result)
+    # Matches: a), (1), (a), (b), 1.
+    result = re.sub(r"(?m)^([a-z]\)|\([0-9a-z]+\)|[0-9]+\.)\s*\n\n+", r"\1 ", result)
 
     # Collapse multiple spaces after list markers to a single space
-    result = re.sub(r"(?m)^([a-z]\)|\([0-9]+\)|[0-9]+\.)\s{2,}", r"\1 ", result)
+    result = re.sub(r"(?m)^([a-z]\)|\([0-9a-z]+\)|[0-9]+\.)\s{2,}", r"\1 ", result)
 
     # Remove blank lines between consecutive list items
-    result = re.sub(r"\n\n(?=(?:[a-z]\)|\([0-9]+\)|[0-9]+\.) )", "\n", result)
+    result = re.sub(r"\n\n(?=(?:[a-z]\)|\([0-9a-z]+\)|[0-9]+\.) )", "\n", result)
 
-    # Convert 'Artikel ...' and 'Article ...' lines to #### 
-    result = re.sub(r"(?m)^(Artikel|Article) ([0-9]+)$", r"#### \1 \2", result)
+    # Convert 'Artikel ...' and 'Article ...' lines to #### headings
+    result = re.sub(r"(?m)^(Artikel|Article)\s([0-9a-z]+)$", r"#### \1 \2", result)
 
-    # Strip trailing whitespace per line
+    # Strip trailing whitespace per line [[2]](6a5b871956dca3056f2d42d5)
     result = "\n".join(line.rstrip() for line in result.split("\n"))
 
     return result.strip()
+
 
 html_de = fetch_html(SOURCES["de"])
 html_en = fetch_html(SOURCES["en"])
