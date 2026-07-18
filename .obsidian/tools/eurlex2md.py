@@ -79,17 +79,17 @@ def html_to_markdown(html: str) -> str:
     Collapses excessive blank lines and merges dangling list markers with their content.
     Normalises multiple spaces after list markers to a single space.
     Removes blank lines between consecutive list items.
-    Converts 'Artikel ...' and 'Article ...' lines to #### headings.
+    Converts standalone 'Artikel N' / 'Article N' lines to #### headings.
+    Merges article number heading with the following title line.
     Strips trailing whitespace from each line.
     """
     cleaned_html = preprocess_html(html)
     raw = md(cleaned_html, heading_style="ATX", strip=["script", "style", "head"])
 
-    # Collapse 3+ consecutive newlines to one blank line [[3]](6a5b871856dca3056f2d42d0)
+    # Collapse 3+ consecutive newlines to one blank line
     result = re.sub(r"\n{3,}", "\n\n", raw)
 
     # Merge dangling list markers with their content paragraph
-    # Matches: a), (1), (a), (b), 1.
     result = re.sub(r"(?m)^([a-z]\)|\([0-9a-z]+\)|[0-9]+\.)\s*\n\n+", r"\1 ", result)
 
     # Collapse multiple spaces after list markers to a single space
@@ -98,13 +98,17 @@ def html_to_markdown(html: str) -> str:
     # Remove blank lines between consecutive list items
     result = re.sub(r"\n\n(?=(?:[a-z]\)|\([0-9a-z]+\)|[0-9]+\.) )", "\n", result)
 
-    # Convert 'Artikel ...' and 'Article ...' lines to #### headings
+    # Convert standalone 'Artikel N' / 'Article N' lines to #### headings
     result = re.sub(r"(?m)^(Artikel|Article)\s([0-9a-z]+)$", r"#### \1 \2", result)
 
-    # Strip trailing whitespace per line [[2]](6a5b871956dca3056f2d42d5)
+    # Merge article heading with the following title line
+    result = re.sub(r"(?m)^(#### (?:Artikel|Article)\s[0-9a-z]+)\n\n(.+)$", r"\1 \2", result)
+
+    # Strip trailing whitespace per line
     result = "\n".join(line.rstrip() for line in result.split("\n"))
 
     return result.strip()
+
 
 
 html_de = fetch_html(SOURCES["de"])
