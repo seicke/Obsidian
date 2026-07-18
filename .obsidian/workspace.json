@@ -22,24 +22,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "ea40e4b046d32625",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "404a811d2f1972f0",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"

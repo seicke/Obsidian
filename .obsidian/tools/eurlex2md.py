@@ -112,6 +112,16 @@ def html_to_markdown(html: str) -> str:
     # Remove stray .fmx.xml filename lines
     result = re.sub(r"(?m)^.+\.fmx\.xml\s*$", "", result)
 
+    # Remove EUR-Lex document header metadata  
+    for pattern in [  
+        r"(?m)^Amtsblatt der Europäischen Union\s*$",  
+        r"(?m)^Official Journal of the European Union\s*$",  
+        r"(?m)^(DE|EN)\s*$",  
+        r"(?m)^(DE |EN )?(Reihe L|L series)\s*$",  
+        r"(?m)^ISSN \d+-\d+ \(electronic edition\)\s*$",  
+    ]:  
+        result = re.sub(pattern, "", result)
+
     # Merge dangling list markers with their content paragraph
     result = re.sub(r"(?m)^([a-z]\)|\([0-9a-z]+\)|[0-9]+\.)\s*\n\n+", r"\1 ", result)
 
@@ -126,6 +136,9 @@ def html_to_markdown(html: str) -> str:
 
     # Merge article heading with the following title line
     result = re.sub(r"(?m)^(#### (?:Artikel|Article)\s[0-9a-z]+)\n\n(.+)$", r"\1 \2", result)
+
+    # Fix escaped underscores in URLs  
+    result = re.sub(r"(?<=\S)\\_(?=\S)", "_", result)
 
     # Collapse again after removals to clean up leftover blank lines
     result = re.sub(r"\n{3,}", "\n\n", result)
