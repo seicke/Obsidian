@@ -52,14 +52,22 @@ def extract_title(html: str, fallback: str) -> str:
     return fallback
 
 
+from bs4 import BeautifulSoup, ProcessingInstruction
+
+
 def preprocess_html(html: str) -> str:
     """Strip EUR-Lex layout elements before markdown conversion.
 
+    Removes XML processing instructions (e.g. <?xml version="1.0"?>).
     Removes script, style and noscript tags including their content entirely.
     Unwraps all table-related tags so their content flows as plain blocks.
     Removes <hr> tags that produce spurious horizontal rules in markdown.
     """
     soup = BeautifulSoup(html, "html.parser")
+
+    # Remove XML processing instructions — these render as stray text in markdown
+    for node in soup.find_all(string=lambda text: isinstance(text, ProcessingInstruction)):
+        node.extract()
 
     # Completely remove script, style and noscript tags including inner content
     for tag in soup.find_all(["script", "style", "noscript"]):
@@ -75,6 +83,7 @@ def preprocess_html(html: str) -> str:
             tag.unwrap()
 
     return str(soup)
+
 
 
 def html_to_markdown(html: str) -> str:
