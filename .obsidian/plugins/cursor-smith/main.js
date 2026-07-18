@@ -1,0 +1,2319 @@
+const { Plugin, PluginSettingTab, Setting } = require("obsidian");
+
+const DEFAULT_SETTINGS = {
+  enabled: true,
+  cursorStyle: "Box", // "Line" | "Box" | "Underline"
+
+  // --- appearance color controls ---
+  colorDark: "#39ff14", 
+  colorLight: "#333333",
+
+  // --- CRT effect (trail + glow) ---
+  crtEffect: false,
+  glow: true, 
+
+  // --- torch spotlight effect (can run alongside any cursor style) ---
+  torchEffect: false,
+  overlaySpareSidebars: true,
+  overlayFollowMode: "caret", // caret | mouse | auto
+  overlayRadius: 250,
+  overlayDarkness: 0.7,
+  overlayIntensity: 0.1,
+  overlayColor: "#ff963c",
+  overlayFlicker: false,
+  overlaySpeed: 0.22, // lerp factor: how fast the torch chases its target
+
+  // --- global caret properties ---
+  caretWidthPx: 2,         
+  popLetters: true,        
+  flameTrail: true,        
+  cursorOpacity: 1,
+  energyEffect: false,
+  energySpeed: 1,
+
+  // --- shared canvas engine settings ---
+  trailLength: 10, 
+  trailFadeMs: 450, 
+  blinkingEnabled: true,
+  blinkSpeed: 1.2,       
+  blinkOnOffBalance: 0.5,
+  blinkDelayMs: 0,       // ms of full-on hold after any move/keystroke before blinking resumes
+  hideNativeCaret: true, 
+  showChar: true, 
+  moveDelayMs: 0,        
+  smear: true,           
+  smearStiffness: 0.6,
+  smearTrailingStiffness: 0.4,
+  smearDamping: 0.8,
+
+  // --- smooth cursor global category ---
+  smoothEnabled: false,
+  smoothStopBlinking: true, 
+  smoothness: 0.15,          // 5-30% range (0.05 - 0.30)
+  catchUpSpeed: 0.55,        // 30-80% range (0.30 - 0.80)
+  maxCatchUpSpeed: 0.85,     // 50-100% range (0.50 - 1.00)
+  smoothAdaptive: true,      // Adaptive speed toggle
+};
+
+function hexToRgba(hex, alpha) {
+  let h = (hex || "#39ff14").replace("#", "");
+  if (h.length === 3) {
+    h = h.split("").map((c) => c + c).join("");
+  }
+  const int = parseInt(h, 16) || 0;
+  const r = (int >> 16) & 255;
+  const g = (int >> 8) & 255;
+  const b = int & 255;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
+function hexToRgb(hex) {
+  let h = (hex || "#ff963c").replace("#", "");
+  if (h.length === 3) {
+    h = h.split("").map((c) => c + c).join("");
+  }
+  const n = parseInt(h, 16) || 0;
+  return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
+}
+
+function hexToRgbTuple(hex) {
+  let h = (hex || "#ffffff").replace("#", "");
+  if (h.length === 3) h = h.split("").map((c) => c + c).join("");
+  const int = parseInt(h, 16) || 0;
+  return [(int >> 16) & 255, (int >> 8) & 255, int & 255];
+}
+
+function invertColor(colorStr) {
+  const nums = (colorStr || "").match(/[\d.]+/g);
+  if (!nums || nums.length < 3) return "#000000";
+  const [r, g, b] = nums.map(Number);
+  return `rgb(${255 - r}, ${255 - g}, ${255 - b})`;
+}
+
+function easeInOutSine(x) {
+  return -(Math.cos(Math.PI * x) - 1) / 2;
+}
+
+// Returns true only for elements that actually host a blinking text caret.
+// contentEditable and <textarea> always qualify. For <input> we filter by
+// type: text/search/url/tel/email/password/number are text fields; checkbox,
+// radio, range, color, button, etc. don't have a caret and must be excluded
+// so clicking an Obsidian settings toggle (which is <input type="checkbox">)
+// doesn't cause the plugin to draw a cursor on top of it.
+function isTextCaretHost(el) {
+  if (!el) return false;
+  if (el.isContentEditable) return true;
+  const tag = el.tagName;
+  if (tag === "TEXTAREA") return true;
+  if (tag === "INPUT") {
+    const type = (el.type || "text").toLowerCase();
+    return (
+      type === "text" || type === "search" || type === "url" || type === "tel" ||
+      type === "email" || type === "password" || type === "number"
+    );
+  }
+  return false;
+}
+
+function blinkAlphaAt(nowMs, speed, onOffBalance = 0.5) {
+  if (speed <= 0) return 1;
+  const period = 2500 / speed; 
+  const phase = (nowMs % period) / period; 
+  const fade = 0.15; 
+  const balance = Math.max(0.1, Math.min(0.9, onOffBalance));
+  const hold = 1 - fade * 2; 
+  const onHold = hold * balance;
+  const offHold = hold * (1 - balance);
+  const p1 = onHold;
+  const p2 = p1 + fade;
+  const p3 = p2 + offHold;
+  let a;
+  if (phase < p1) a = 1;
+  else if (phase < p2) a = 1 - easeInOutSine((phase - p1) / fade);
+  else if (phase < p3) a = 0;
+  else a = easeInOutSine((phase - p3) / fade);
+  return a;
+}
+
+module.exports = class CursorSmithPlugin extends Plugin {
+  async onload() {
+    const saved = await this.loadData();
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, saved);
+
+    // Dynamic Multi-Window Tracking Engine
+    this._cleanups = [];
+    this.registeredDocuments = new Set();
+
+    // Engine Core States
+    this.canvasWrapper = null;
+    this.canvas = null;
+    this.ctx = null;
+    this.trail = []; 
+    this.particles = []; 
+    this.flamePixels = [];
+    this.secondaryCarets = []; // dashed 2px vertical lines for CM6 multi-cursor mode
+    this.lastActive = null; 
+    this.pending = null; 
+    this.smearQuad = null;
+    this.smearCenterPrev = null;
+    this.smearQuadLastT = 0;
+
+    this.animActive = null;
+    this.lastMoveTime = 0;
+    this.typingSpeedMod = 1;
+
+    this.overlay = null;
+    this.modalObserver = null;
+    this.modalOpen = false;
+    this.x = this.tx = window.innerWidth / 2;
+    this.y = this.ty = window.innerHeight / 2;
+    this.lastCaret = null;
+    this.lastCaretMove = 0;
+    this.mouseX = this.x;
+    this.mouseY = this.y;
+    this.lastMouseMove = 0;
+    
+    this.canvasEngineActive = false;
+    this.torchEngineActive = false;
+    this.canvasRaf = 0;
+    this.torchRaf = 0;
+
+    // Per-frame write-dedupe + chrome-inset cache (see _chromeInsets)
+    this._lastWrapperRect = "";
+    this._lastOverlayRect = "";
+    this._chromeCache = null;
+    this._tickErrorLogged = false;
+    this._torchErrorLogged = false;
+
+    this.addCommand({
+      id: "toggle-cursor-smith",
+      name: "Toggle custom cursor",
+      callback: () => this.toggle(),
+    });
+
+    this.addSettingTab(new CursorSmithSettingTab(this.app, this));
+
+    this.app.workspace.onLayoutReady(() => {
+      if (this.settings.enabled) this.enable();
+    });
+  }
+
+  onunload() {
+    this.disable();
+    if (this._cleanups) {
+      for (const cleanup of this._cleanups) cleanup();
+      this._cleanups = [];
+    }
+  }
+
+  injectStyles(doc) {
+    const id = "cursor-smith-dynamic-styles";
+    if (doc.getElementById(id)) return;
+    
+    const styleEl = doc.createElement("style");
+    styleEl.id = id;
+    styleEl.textContent = `
+      /* NO -webkit-app-region declaration on any of our layers.
+         Electron composes drag regions by unioning elements with
+         app-region:drag, then SUBTRACTING elements with app-region:no-drag
+         (alias: none). An element with NO declaration is completely neutral
+         - Electron ignores it for hit-testing. Setting app-region:none on
+         our layers was actively punching holes in the tab bar's drag rects
+         (confirmed: wrapper computed as "no-drag", killed dragging entirely
+         even though the wrapper rect was already below the tab bar). The
+         correct approach is: declare nothing, keep pointer-events:none so
+         clicks pass through, and rely on the physical rect not covering
+         the drag surface (enforced by _chromeInsets in the tick loops). */
+      .retro-box-cursor-canvas {
+        pointer-events: none;
+      }
+      /* Hide the primary cursor by BOTH position (first child of the
+         cursor layer) and class (.cm-cursor-primary), so this works whether
+         Obsidian's CM6 uses per-cursor class distinctions or not. */
+      .retro-box-cursor-hide-native .cm-cursorLayer > .cm-cursor:first-child,
+      .retro-box-cursor-hide-native .cm-cursor-primary,
+      .retro-box-cursor-hide-native .cm-fat-cursor,
+      .retro-box-cursor-hide-native .cm-dropCursor {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        border-color: transparent !important;
+        background-color: transparent !important;
+        animation: none !important;
+      }
+      /* Force every subsequent cursor visible for multi-cursor editing,
+         matched by both position and class name. */
+      .retro-box-cursor-hide-native .cm-cursorLayer > .cm-cursor:not(:first-child),
+      .retro-box-cursor-hide-native .cm-cursor-secondary {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      .torch-cursor-overlay {
+        position: fixed;
+        pointer-events: none;
+        /* Collapsed by default: the tick loop sizes this inline every
+           frame; these defaults only cover the gap between DOM insertion
+           and the first frame, so the overlay can never sit over the
+           drag surface during that window. */
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        z-index: 9990;
+        background: radial-gradient(
+          circle var(--torch-radius, 250px) at var(--torch-x, 50%) var(--torch-y, 50%),
+          rgba(var(--torch-warm, 255, 150, 60), var(--torch-intensity, 0.1)) 0%,
+          rgba(0, 0, 0, var(--torch-darkness, 0.7)) 100%
+        );
+        mix-blend-mode: multiply;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+      }
+      .torch-cursor-overlay.torch-cursor-hidden {
+        opacity: 0 !important;
+        display: none !important;
+      }
+      /* Opacity-only flicker: no transform/scale here. Scaling a hard-clipped
+         fixed-size overlay shifts its edges by a pixel or two every frame,
+         which is invisible against a dark background but reads as a visible
+         flashing seam against a light one. This is the single source of
+         truth for the flicker animation - do not duplicate this rule in
+         styles.css, since a more specific selector there will silently win
+         the cascade and ignore the "flicker" setting entirely. */
+      @keyframes torch-candle-flicker {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.93; }
+      }
+      .torch-cursor-overlay:not(.torch-no-flicker) {
+        animation: torch-candle-flicker 0.9s infinite ease-in-out;
+      }
+    `;
+    doc.head.appendChild(styleEl);
+  }
+
+  registerWindowEvents(doc) {
+    if (this.registeredDocuments.has(doc)) return;
+    this.registeredDocuments.add(doc);
+    
+    const onMouseMove = (e) => {
+      this.mouseX = e.clientX;
+      this.mouseY = e.clientY;
+      this.lastMouseMove = Date.now();
+    };
+    const onResize = () => {
+      // Chrome insets and the deduped wrapper/overlay rects are all stale
+      // after a resize - drop them so the next frame re-measures instead
+      // of waiting out the 500ms cache window.
+      this._chromeCache = null;
+      this._lastWrapperRect = "";
+      this._lastOverlayRect = "";
+      this.resizeCanvas();
+    };
+    
+    doc.addEventListener("mousemove", onMouseMove);
+    const win = doc.defaultView;
+    if (win) win.addEventListener("resize", onResize);
+    
+    this._cleanups.push(() => {
+      doc.removeEventListener("mousemove", onMouseMove);
+      if (win) win.removeEventListener("resize", onResize);
+    });
+  }
+
+  async saveSettings() {
+    await this.saveData(this.settings);
+    this.applyBodyClasses();
+    this.applyOverlayStyle();
+  }
+
+  toggle() {
+    const wasActive = !!(this.canvasEngineActive || this.torchEngineActive);
+    wasActive ? this.disable() : this.enable();
+    this.settings.enabled = !!(this.canvasEngineActive || this.torchEngineActive);
+    this.saveSettings();
+  }
+
+  getActiveColor() {
+    const doc = this.canvas ? this.canvas.ownerDocument : document;
+    const isDark = doc.body.classList.contains("theme-dark");
+    return isDark ? this.settings.colorDark : this.settings.colorLight;
+  }
+
+  applyBodyClasses() {
+    const engineActive = !!(this.canvasEngineActive || this.torchEngineActive);
+    // During a presentation the canvas clears itself and the torch hides, so
+    // there's no custom cursor visible - don't suppress the native caret then
+    // either (it stays hidden behind the Slides overlay anyway, but removing
+    // our class avoids any edge-case where the native cursor is needed and
+    // was globally suppressed by us).
+    const presenting = this.isPresentationModeActive();
+    const docs = [document, ...Array.from(this.registeredDocuments)];
+    for (const doc of docs) {
+      if (doc && doc.body) {
+        doc.body.classList.toggle(
+          "retro-box-cursor-hide-native",
+          !!(engineActive && this.settings.hideNativeCaret && !presenting)
+        );
+      }
+    }
+  }
+
+  applyOverlayStyle() {
+    if (!this.overlay) return;
+    const s = this.settings;
+    const o = this.overlay;
+    o.style.setProperty("--torch-radius", s.overlayRadius + "px");
+    o.style.setProperty("--torch-darkness", String(s.overlayDarkness));
+    o.style.setProperty("--torch-intensity", String(s.overlayIntensity));
+    o.style.setProperty("--torch-warm", hexToRgb(s.overlayColor));
+    o.classList.toggle("torch-no-flicker", !s.overlayFlicker);
+  }
+
+  ensureCanvasForView(view) {
+    // CRASH FIX: this used to read `this.overlay.ownerDocument` when there
+    // was no view - but this.overlay belongs to the torch engine and is
+    // null whenever the torch is off (and even briefly when it's on). On
+    // window refocus, activeEditor is momentarily null, so view is null,
+    // and the null-deref threw inside the rAF tick, killing the loop and
+    // making the cursor vanish until plugin reload. Fall back to the
+    // canvas's own current document (don't migrate anywhere while there's
+    // no view), then to Obsidian's activeDocument, then to the main doc.
+    const targetDoc =
+      (view && view.dom.ownerDocument) ||
+      (this.canvasWrapper && this.canvasWrapper.ownerDocument) ||
+      (typeof activeDocument !== "undefined" && activeDocument) ||
+      document;
+    if (this.canvasWrapper && this.canvasWrapper.ownerDocument !== targetDoc) {
+      this.canvasWrapper.remove();
+      this.canvasWrapper = null;
+      this.canvas = null;
+      this.ctx = null;
+    }
+    if (!this.canvasWrapper) {
+      targetDoc.body.classList.add("retro-box-cursor-active");
+      
+      // The wrapper creates a strict physical bounding box to unblock window
+      // dragging. See _chromeInsets / getFullViewportRect for the sizing
+      // logic - the wrapper is never sized to overlap the tab bar.
+      this.canvasWrapper = targetDoc.createElement("div");
+      this.canvasWrapper.style.position = "fixed";
+      this.canvasWrapper.style.overflow = "hidden";
+      this.canvasWrapper.style.pointerEvents = "none";
+      this.canvasWrapper.style.zIndex = "10000";
+      this.canvasWrapper.style.top = "0px";
+      this.canvasWrapper.style.left = "0px";
+      this.canvasWrapper.style.width = "0px";
+      this.canvasWrapper.style.height = "0px";
+      this._lastWrapperRect = "";
+      // Append inside .app-container rather than directly on body.
+      // Obsidian's app.css has: body.is-frameless > .app-container ~ * { app-region: no-drag }
+      // which targets every direct-body-child sibling of .app-container —
+      // exactly what we were. Inside .app-container that rule doesn't match
+      // and our elements stay neutral (no app-region) as intended.
+      const appContainer = targetDoc.querySelector(".app-container") || targetDoc.body;
+      appContainer.appendChild(this.canvasWrapper);
+
+      this.canvas = targetDoc.createElement("canvas");
+      this.canvas.className = "retro-box-cursor-canvas";
+      this.canvas.style.position = "absolute";
+      // NO app-region declaration (same rationale as wrapper above).
+      this.canvasWrapper.appendChild(this.canvas);
+      
+      this.ctx = this.canvas.getContext("2d");
+      this.injectStyles(targetDoc);
+      this.resizeCanvas();
+    }
+    if (!targetDoc.body.classList.contains("retro-box-cursor-active")) {
+      targetDoc.body.classList.add("retro-box-cursor-active");
+    }
+    targetDoc.body.classList.toggle("retro-box-cursor-hide-native", !!this.settings.hideNativeCaret);
+  }
+
+  ensureTorchOverlayForView(view) {
+    if (!this.settings.torchEffect) {
+      this.disableTorchOverlay();
+      return;
+    }
+    // CRASH FIX: same null-deref as ensureCanvasForView - this function
+    // exists to CREATE this.overlay, so it can't rely on this.overlay
+    // already existing to pick a document. With no view (refocus, no note
+    // open) and no overlay yet, the old code threw and the torch rAF loop
+    // died silently.
+    const targetDoc =
+      (view && view.dom.ownerDocument) ||
+      (this.overlay && this.overlay.ownerDocument) ||
+      (typeof activeDocument !== "undefined" && activeDocument) ||
+      document;
+    if (this.overlay && this.overlay.ownerDocument !== targetDoc) {
+      this.overlay.remove();
+      this.overlay = null;
+      this.modalObserver?.disconnect();
+      this.modalObserver = null;
+    }
+    if (!this.overlay) {
+      targetDoc.body.classList.add("torch-cursor-active");
+      // Same as canvas wrapper: append inside .app-container to avoid
+      // Obsidian's body.is-frameless > .app-container ~ * { no-drag } rule.
+      const appContainer = targetDoc.querySelector(".app-container") || targetDoc.body;
+      this.overlay = appContainer.createDiv({ cls: "torch-cursor-overlay" });
+      this.overlay.style.top = "0px";
+      this.overlay.style.left = "0px";
+      this.overlay.style.width = "0px";
+      this.overlay.style.height = "0px";
+      this._lastOverlayRect = "";
+      this.injectStyles(targetDoc);
+      this.applyOverlayStyle();
+      
+      this.modalOpen = !!targetDoc.querySelector(".modal-container");
+      this.modalObserver = new MutationObserver(() => {
+        this.modalOpen = !!targetDoc.querySelector(".modal-container");
+      });
+      this.modalObserver.observe(targetDoc.body, { childList: true });
+    }
+  }
+
+  // Returns true when Obsidian's Slides plugin is showing a presentation
+  // overlay. In that state the note editor is still technically "active" and
+  // hasFocus can still return true, so without this guard the canvas engine
+  // keeps drawing a blinking cursor over the slides - and keystrokes still
+  // reach the underlying CM editor, causing live edits during a presentation.
+  //
+  // Detection strategy (most-to-least specific):
+  //   1. A .slides-container element is present and visible (Slides plugin
+  //      presentation overlay - the most direct signal).
+  //   2. The active leaf's view type is "slides" (covers the same case via
+  //      Obsidian's own workspace API, without relying on DOM class names).
+  //   3. body.is-fullscreen alone is NOT used: other things (e.g. Obsidian's
+  //      native full-screen mode) also set it and would cause a false positive.
+  isPresentationModeActive() {
+    try {
+      // 1. DOM-level check: Slides plugin injects a .slides-container element
+      //    into the active leaf while presenting. It's removed when the
+      //    presentation ends, so presence + visibility = presenting now.
+      const doc = (this.canvas?.ownerDocument) ??
+        (typeof activeDocument !== "undefined" && activeDocument) ?? document;
+      const slidesContainer = doc.querySelector(".slides-container");
+      if (slidesContainer && this._isVisiblyRendered(slidesContainer)) return true;
+
+      // 2. Workspace API check: the active leaf's view type becomes "slides"
+      //    for the duration of the presentation.
+      const activeLeaf = this.app.workspace.activeLeaf;
+      if (activeLeaf?.view?.getViewType?.() === "slides") return true;
+    } catch {
+      // Never crash the tick loop over a failed presentation check.
+    }
+    return false;
+  }
+
+  enable() {
+    this.disable(); 
+    this.enableCanvasEngine();
+    if (this.settings.torchEffect) this.enableTorchOverlay();
+  }
+
+  disable() {
+    this.disableCanvasEngine();
+    this.disableTorchOverlay();
+  }
+
+  disableCanvasEngine() {
+    this.canvasEngineActive = false;
+    if (this.canvasRaf) {
+      cancelAnimationFrame(this.canvasRaf);
+      this.canvasRaf = 0;
+    }
+    const docs = [document, ...Array.from(this.registeredDocuments)];
+    for (const doc of docs) {
+      if (doc && doc.body) {
+        doc.body.classList.remove("retro-box-cursor-active", "retro-box-cursor-hide-native");
+        const canvas = doc.querySelector(".retro-box-cursor-canvas");
+        if (canvas) {
+          if (canvas.parentElement && canvas.parentElement.style.overflow === "hidden") {
+            canvas.parentElement.remove();
+          } else {
+            canvas.remove();
+          }
+        }
+      }
+    }
+    this.canvasWrapper = null;
+    this.canvas = null;
+    this.ctx = null;
+    this.pending = null;
+    this.smearQuad = null;
+    this.smearCenterPrev = null;
+    this.smearQuadLastT = 0;
+    this.particles = [];
+    this.flamePixels = [];
+    this.secondaryCarets = [];
+    this.animActive = null;
+    this._formMirror?.remove();
+    this._formMirror = null;
+  }
+
+  disableTorchOverlay() {
+    this.torchEngineActive = false;
+    if (this.torchRaf) {
+      cancelAnimationFrame(this.torchRaf);
+      this.torchRaf = 0;
+    }
+    const docs = [document, ...Array.from(this.registeredDocuments)];
+    for (const doc of docs) {
+      if (doc && doc.body) {
+        doc.body.classList.remove("torch-cursor-active", "torch-no-flicker");
+        doc.querySelector(".torch-cursor-overlay")?.remove();
+      }
+    }
+    this.overlay = null;
+    this.modalObserver?.disconnect();
+    this.modalObserver = null;
+    this.modalOpen = false;
+  }
+
+  enableCanvasEngine() {
+    this.canvasEngineActive = true;
+    this.trail = [];
+    this.particles = [];
+    this.flamePixels = [];
+    this.secondaryCarets = [];
+    this.lastActive = null;
+    this.pending = null;
+    this.smearQuad = null;
+    this.smearCenterPrev = null;
+    this.smearQuadLastT = 0;
+    this.animActive = null;
+    this.lastMoveTime = 0;
+    this.typingSpeedMod = 1;
+
+    const tick = () => {
+      if (!this.canvasEngineActive) return;
+      // The whole frame is wrapped so a single bad frame (e.g. a transient
+      // null during window refocus, a detached node mid-layout) can never
+      // kill the rAF loop permanently - that's exactly the "cursor
+      // disappears until plugin reload" failure mode. We log the first
+      // error to the console for debugging and keep ticking.
+      try {
+        // Don't draw anything during a Slides presentation. The note editor
+        // stays open underneath the presentation overlay and its CM view
+        // can still report hasFocus, so without this guard the cursor keeps
+        // blinking over the slides and keystrokes still reach the editor.
+        if (this.isPresentationModeActive()) {
+          // Clear whatever was on canvas from the previous frame and park.
+          if (this.ctx && this.canvas) {
+            const win = this.canvas.ownerDocument.defaultView || window;
+            this.ctx.clearRect(0, 0, win.innerWidth, win.innerHeight);
+          }
+          this.canvasRaf = requestAnimationFrame(tick);
+          return;
+        }
+
+        const view = this.app.workspace.activeEditor?.editor?.cm;
+        this.ensureCanvasForView(view);
+        if (view) this.registerWindowEvents(view.dom.ownerDocument);
+
+        if (this.canvasWrapper && this.canvas) {
+          // Only clip to the editor pane while the note editor is the thing
+          // actually focused. The moment focus moves anywhere else - file
+          // tree rename box, Command Palette, Settings, other modals - there's
+          // no reason to keep the canvas boxed inside the pane, and doing so
+          // is exactly what made the cursor invisible outside the editor.
+          const r = (view && view.hasFocus ? this.getPaneRect(view) : null) ||
+            // Never 100vw/100vh here: a full-viewport layer over the
+            // titlebar kills Electron's window-drag hit-testing on
+            // Linux/Windows (drag regions compose in DOM order; z-index
+            // and pointer-events are irrelevant to them).
+            this.getFullViewportRect(this.canvas.ownerDocument);
+
+          // Round and dedupe: writing identical style values every frame
+          // still costs style-recalc work in Blink, and fractional pixel
+          // sizes force continuous compositor re-uploads - both showed up
+          // as stutter with the smear effect on (worst on weak GPUs, e.g.
+          // ChromeOS Crostini's virtualized one).
+          const top = Math.round(r.top);
+          const left = Math.round(r.left);
+          const width = Math.round(r.width);
+          const height = Math.round(r.height);
+          const key = top + "," + left + "," + width + "," + height;
+          if (key !== this._lastWrapperRect) {
+            this._lastWrapperRect = key;
+            this.canvasWrapper.style.top = top + "px";
+            this.canvasWrapper.style.left = left + "px";
+            this.canvasWrapper.style.width = width + "px";
+            this.canvasWrapper.style.height = height + "px";
+            // Shift the canvas backward so absolute screen coordinates draw
+            // perfectly. transform: none when there's no offset avoids
+            // promoting the canvas to a separate compositor layer for
+            // nothing.
+            this.canvas.style.transform =
+              top === 0 && left === 0 ? "none" : `translate(${-left}px, ${-top}px)`;
+          }
+        }
+
+        this.updateActivePoint();
+        this.updateSmoothCursor();
+        // Multi-cursor: gather all non-primary carets so draw() can stamp a
+        // dashed line at each. Independent of the smoothing/smearing pipeline
+        // that only tracks the primary caret.
+        this.secondaryCarets = this.secondaryCaretCoords(view);
+        this.updateSmearQuad();
+        this.draw();
+      } catch (e) {
+        if (!this._tickErrorLogged) {
+          this._tickErrorLogged = true;
+          console.error("[cursor-smith] canvas tick error (loop kept alive):", e);
+        }
+      }
+      this.canvasRaf = requestAnimationFrame(tick);
+    };
+    this.canvasRaf = requestAnimationFrame(tick);
+  }
+
+  resizeCanvas() {
+    if (!this.canvas) return;
+    const win = this.canvas.ownerDocument.defaultView || window;
+    const dpr = win.devicePixelRatio || 1;
+    const w = win.innerWidth;
+    const h = win.innerHeight;
+    this.canvas.style.width = w + "px";
+    this.canvas.style.height = h + "px";
+    this.canvas.width = Math.max(1, Math.round(w * dpr));
+    this.canvas.height = Math.max(1, Math.round(h * dpr));
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  caretCoords() {
+    const view = this.app.workspace.activeEditor?.editor?.cm;
+
+    // The note editor (CodeMirror) itself has focus - use the precise,
+    // CodeMirror-aware caret info (real glyph metrics, table handling, etc).
+    if (view && view.hasFocus) {
+      return this.cmCaretCoords(view);
+    }
+
+    // Focus is somewhere else in the app that isn't CodeMirror at all - the
+    // file-tree rename box, the Command Palette / Quick Switcher input,
+    // Settings text fields, other plugins' modals, and so on. These never
+    // had a caret to draw before, which is why the custom cursor (and the
+    // native one, hidden globally by our CSS) both went missing there.
+    // Fall back to a generic caret built from the browser's own selection/
+    // element rect so the cursor still shows up on any editable surface.
+    return this.genericCaretCoords();
+  }
+
+  cmCaretCoords(view) {
+    try {
+      const pos = view.state.selection.main.head;
+      const doc = view.dom.ownerDocument;
+      const active = doc.activeElement;
+      const activeIsEditable = isTextCaretHost(active);
+      const inTable = !!active?.closest?.("table");
+
+      let c = inTable ? null : (view.coordsAtPos(pos, -1) || view.coordsAtPos(pos, 1));
+
+      if (!c) {
+        c = this.selectionFallbackCoords(view);
+        if (!c) return null;
+      }
+
+      // When the caret's document position is scrolled outside the visible
+      // editor pane (e.g. mouse-wheel scrolling without moving the text
+      // cursor), CodeMirror can still return a coordinate for it - typically
+      // clamped near the top or bottom edge of the rendered content, which
+      // lands right on the titlebar or just above the status bar. Treat an
+      // out-of-view caret the same as "not focused" rather than drawing a
+      // ghost cursor there; this also stops the smear spring from reacting
+      // to that spurious jump (which is what caused the wiggle on fast
+      // scrolling).
+      const paneRect = this.getPaneRect(view);
+      if (paneRect) {
+        const margin = 1; // avoid flicker right at the pane edge
+        const cBottom = c.bottom ?? c.top;
+        if (cBottom < paneRect.top - margin || c.top > paneRect.bottom + margin) {
+          return null;
+        }
+      }
+
+      const rawChar = view.state.doc.sliceString(pos, pos + 1);
+      const char = rawChar && rawChar !== "\n" ? rawChar : "";
+
+      const win = doc.defaultView || window;
+      const contentStyle = win.getComputedStyle(view.contentDOM);
+
+      // Find the actual DOM element rendering the character at the caret
+      // (not just "the first .cm-line in the document"), so headings,
+      // inline code, and any other differently-sized text report their own
+      // real font metrics instead of the editor's base font-size/family.
+      const sampleX = Math.min(c.left + 2, doc.documentElement.clientWidth - 1);
+      const sampleY = (c.top + c.bottom) / 2;
+      const elAtCaret = doc.elementFromPoint ? doc.elementFromPoint(sampleX, sampleY) : null;
+      const lineEl = (elAtCaret && elAtCaret.closest && elAtCaret.closest(".cm-line")) ||
+        view.contentDOM.querySelector(".cm-line");
+      const charStyle = elAtCaret && lineEl && lineEl.contains(elAtCaret)
+        ? win.getComputedStyle(elAtCaret)
+        : (lineEl ? win.getComputedStyle(lineEl) : contentStyle);
+// ... existing code ...
+      const textColor = charStyle.color || contentStyle.color || "#ffffff";
+
+      // Extract exact font metrics
+      const fontSize = parseFloat(charStyle.fontSize) || parseFloat(contentStyle.fontSize) || 14;
+      const fontFamily = charStyle.fontFamily || contentStyle.fontFamily || "monospace";
+      const fontWeight = charStyle.fontWeight || contentStyle.fontWeight || "normal";
+      const fontStyleCss = charStyle.fontStyle || contentStyle.fontStyle || "normal";
+      
+      // Grab letter-spacing (getComputedStyle resolves this to 'px' even if set in 'em')
+      const letterSpacingStr = charStyle.letterSpacing || contentStyle.letterSpacing;
+      let letterSpacing = 0;
+      if (letterSpacingStr && letterSpacingStr.endsWith('px')) {
+        letterSpacing = parseFloat(letterSpacingStr) || 0;
+      }
+
+      // Width: canvas measurement primary (accurate for proportional fonts,
+      // respects letter-spacing), coordsAtPos delta as fallback only when
+      // there's no character to measure (end of text, blank line).
+      // Note: coordsAtPos(pos+1) at end-of-line returns the start of the
+      // NEXT line, making the delta garbage - so it must be the fallback,
+      // not the primary source. The canvas measurement handles end-of-line
+      // correctly because it measures the actual glyph, not a position delta.
+      let charWidth = view.defaultCharacterWidth || 8;
+      if (char) {
+        const measuredW = this.measureCharWidth(char, fontFamily, fontSize, fontWeight, fontStyleCss);
+        if (measuredW) {
+          charWidth = measuredW + letterSpacing;
+        } else {
+          try {
+            const nextCoords = view.coordsAtPos(pos + 1, -1) || view.coordsAtPos(pos + 1, 1);
+            if (nextCoords) {
+              const measured = nextCoords.left - c.left;
+              if (measured > 0.5 && measured < charWidth * 6) charWidth = measured;
+            }
+          } catch {
+            /* fall back to defaultCharacterWidth */
+          }
+        }
+      }
+
+      let finalWidth = charWidth;
+      if (this.settings.cursorStyle === "Line") {
+        finalWidth = this.settings.caretWidthPx;
+      }
+
+      // Height: match the browser's native selection highlight box by
+      // reading CSS line-height. contentStyle (the CM editor) is the
+      // reliable source; charStyle from elementFromPoint can land on a
+      // decoration or embed with an unrelated line-height, so prefer
+      // contentStyle when charStyle gives something wildly different.
+      let h = Math.max(4, c.bottom - c.top);
+      const rawLineHeight = charStyle.lineHeight || contentStyle.lineHeight;
+      if (rawLineHeight && rawLineHeight.endsWith('px')) {
+        h = parseFloat(rawLineHeight);
+      } else if (rawLineHeight && !isNaN(parseFloat(rawLineHeight)) && rawLineHeight !== "normal") {
+        h = fontSize * parseFloat(rawLineHeight);
+      }
+
+      // Center the box vertically around the CodeMirror line coordinate
+      const centerY = (c.top + c.bottom) / 2;
+      const top = centerY - (h / 2);
+      const bottom = centerY + (h / 2);
+
+      return {
+        x: c.left,
+        top: top,
+        bottom: bottom,
+        h: h,
+        w: finalWidth,
+        actualCharWidth: charWidth,
+        char,
+        textColor,
+        fontSize,
+        fontFamily,
+        focused: view.hasFocus || (inTable && activeIsEditable),
+        pos,
+      };
+    } catch {
+      return null; 
+    }
+  }
+
+  // CodeMirror 6 supports multiple cursors: state.selection.ranges is an
+  // array and state.selection.mainIndex points at the "primary" one that the
+  // rest of the plugin (smoothing, smearing, letter-pop, trails) already
+  // draws. This function returns raw pixel coords for every *other* range's
+  // caret head so we can render each as a simple dashed vertical line -
+  // enough to see where the additional carets are without duplicating the
+  // full effect pipeline for them. Returns [] when there's only one range
+  // or the view isn't focused.
+  secondaryCaretCoords(view) {
+    const out = [];
+    if (!view || !view.hasFocus) return out;
+    try {
+      const sel = view.state.selection;
+      const ranges = sel.ranges;
+      if (!ranges || ranges.length <= 1) return out;
+      const mainIndex = sel.mainIndex;
+
+      // Same out-of-view clamp as cmCaretCoords: CodeMirror can hand back a
+      // coordinate for a caret that's scrolled off, and drawing it would
+      // stamp a stray dashed line at the pane edge.
+      const paneRect = this.getPaneRect(view);
+      const margin = 1;
+
+      for (let i = 0; i < ranges.length; i++) {
+        if (i === mainIndex) continue;
+        const head = ranges[i].head;
+        const c = view.coordsAtPos(head, -1) || view.coordsAtPos(head, 1);
+        if (!c) continue;
+        if (paneRect) {
+          const cBottom = c.bottom ?? c.top;
+          if (cBottom < paneRect.top - margin || c.top > paneRect.bottom + margin) continue;
+        }
+        out.push({ x: c.left, top: c.top, bottom: c.bottom });
+      }
+    } catch {
+      /* fall through - a bad frame shouldn't kill the tick loop */
+    }
+    return out;
+  }
+
+  selectionFallbackCoords(view) {
+    const doc = view ? view.dom.ownerDocument : this.canvas?.ownerDocument ?? document;
+    const active = doc.activeElement;
+    if (!active) return null;
+    // Only text-caret input types count as editable here. Toggles, radios,
+    // range sliders, colour pickers, etc. are all <input> but have no caret -
+    // treating them as editable made the plugin draw a cursor on top of them
+    // (visible when clicking the toggle boxes in the plugin's own settings).
+    if (!isTextCaretHost(active)) return null;
+    const isFormField = active.tagName === "TEXTAREA" || active.tagName === "INPUT";
+
+    // <input>/<textarea> don't participate in window.getSelection() at all -
+    // the caret lives at el.selectionStart, not in the DOM Selection API, so
+    // this used to fall straight through to getBoundingClientRect() below
+    // and report the same left-edge coordinate no matter where the caret
+    // actually was (which is why it "stuck to the left side" in the Command
+    // Palette and other search boxes). Measure the real position instead.
+    if (isFormField) {
+      const fieldRect = this.formFieldCaretCoords(active);
+      if (fieldRect) return fieldRect;
+    }
+
+    const win = doc.defaultView || window;
+    const sel = win.getSelection();
+    if (sel && sel.rangeCount > 0 && active.isContentEditable) {
+      const isDegenerate = (r) => !r || (r.width === 0 && r.height === 0 && r.top === 0 && r.left === 0);
+
+      // Prefer measuring an actual adjacent character over a collapsed
+      // point. A *collapsed* range's client rect is inconsistent across
+      // browsers and often reports only the glyph's own tight font metrics
+      // rather than the full rendered line-box - which is exactly what made
+      // the cursor's height mismatch the browser's own (line-box-based)
+      // selection highlight, and, downstream, made the character drawn
+      // inside the box sit higher than the real text. A *non-collapsed*
+      // one-character range renders the same way real text/selections do,
+      // so its rect uses the real line-height metrics.
+      const spanRect = this.adjacentCharRect(doc, sel.focusNode, sel.focusOffset);
+      if (spanRect) return spanRect;
+
+      // sel.getRangeAt(0) is always normalized to document order (start
+      // before end), which isn't necessarily where the live caret is - drag
+      // a selection right-to-left and the blinking caret sits at the range's
+      // start, not its end. sel.focusNode/focusOffset is the actual, live,
+      // direction-aware caret position.
+      let range;
+      try {
+        range = doc.createRange();
+        range.setStart(sel.focusNode, sel.focusOffset);
+        range.collapse(true);
+      } catch {
+        range = sel.getRangeAt(0).cloneRange();
+        range.collapse(true);
+      }
+      let rect = range.getClientRects()[0] || (range.getBoundingClientRect?.() ?? null);
+
+      if (isDegenerate(rect)) {
+        // Blank lines often have no text node for the range to measure -
+        // there's simply nothing there to produce a client rect. Rather than
+        // mutating the document to force one (risky in a third-party editor
+        // we don't own, e.g. it could confuse its own input handling), climb
+        // from the range's container to its nearest element - i.e. that
+        // line's own wrapper - and use its rect instead. This keeps the
+        // caret at the correct line and left edge without touching the DOM.
+        let node = range.startContainer;
+        let lineEl = node.nodeType === 1 ? node : node.parentElement;
+        // Skip past the direct wrapper if it's the entire editable surface
+        // itself (e.g. a fully empty editor) - that's handled by the
+        // size-clamped fallback further down instead.
+        if (lineEl && lineEl !== active) {
+          const lineRect = lineEl.getBoundingClientRect();
+          if (!isDegenerate(lineRect)) rect = lineRect;
+        }
+      }
+
+      if (!isDegenerate(rect)) {
+        return { left: rect.left, top: rect.top, bottom: rect.bottom || rect.top + rect.height };
+      }
+    }
+
+    // No usable in-place caret rect. Only fall back to the focused element's
+    // own bounding box when it's small enough to plausibly BE a single-line
+    // caret host (e.g. a compact rename/edit box) - never for a large
+    // multi-line surface like a full code editor, where that produces a
+    // cursor that's as tall as the entire view.
+    const rect = active.getBoundingClientRect();
+    if (!rect) return null;
+    const style = win.getComputedStyle(active);
+    const approxLineHeight = parseFloat(style.lineHeight) || parseFloat(style.fontSize) * 1.4 || 20;
+    if (rect.height > approxLineHeight * 3) return null;
+    return { left: rect.left, top: rect.top, bottom: rect.bottom };
+  }
+
+  // Measures a real, rendered one-character span next to the caret (rather
+  // than a collapsed point) so the resulting rect uses the browser's actual
+  // line-box metrics - the same metrics it uses to paint text and selection
+  // highlights - instead of a font's tight glyph metrics.
+  adjacentCharRect(doc, node, offset) {
+    if (!node || node.nodeType !== 3) return null;
+    const text = node.data || "";
+    const isDegenerate = (r) => !r || (r.width === 0 && r.height === 0 && r.top === 0 && r.left === 0);
+    try {
+      if (offset < text.length) {
+        const r = doc.createRange();
+        r.setStart(node, offset);
+        r.setEnd(node, offset + 1);
+        const rect = r.getClientRects()[0] || r.getBoundingClientRect();
+        if (!isDegenerate(rect)) return { left: rect.left, top: rect.top, bottom: rect.bottom };
+      }
+      if (offset > 0) {
+        const r = doc.createRange();
+        r.setStart(node, offset - 1);
+        r.setEnd(node, offset);
+        const rect = r.getClientRects()[0] || r.getBoundingClientRect();
+        // Caret sits after this character, so anchor to its right edge.
+        if (!isDegenerate(rect)) return { left: rect.right, top: rect.top, bottom: rect.bottom };
+      }
+    } catch {
+      /* fall through to the collapsed-range approach */
+    }
+    return null;
+  }
+
+  // Measures where the caret actually sits inside an <input>/<textarea> by
+  // mirroring the field's text (up to selectionStart) into an offscreen
+  // element with identical font/box metrics, then reading the position of a
+  // marker placed at the caret. This is the standard technique for this
+  // problem since native form fields expose no coordinate API for the caret.
+  formFieldCaretCoords(el) {
+    try {
+      const doc = el.ownerDocument;
+      const win = doc.defaultView || window;
+      const style = win.getComputedStyle(el);
+      const rect = el.getBoundingClientRect();
+      const isTextarea = el.tagName === "TEXTAREA";
+      const value = el.value != null ? String(el.value) : "";
+      let selStart = value.length;
+      try {
+        const s = el.selectionStart, e = el.selectionEnd;
+        if (typeof s === "number" && typeof e === "number") {
+          // The live caret sits at whichever end of the selection is the
+          // "focus" - the end that moves while dragging. For a
+          // backward-dragged selection that's selectionStart; otherwise
+          // (forward, or no selection at all) it's selectionEnd.
+          selStart = el.selectionDirection === "backward" ? s : e;
+        }
+      } catch {
+        /* some input types (color, number, etc.) throw - just use the end */
+      }
+
+      let mirror = this._formMirror;
+      if (!mirror || mirror.ownerDocument !== doc) {
+        mirror?.remove();
+        mirror = doc.createElement("div");
+        mirror.setAttribute("aria-hidden", "true");
+        mirror.style.position = "absolute";
+        mirror.style.visibility = "hidden";
+        mirror.style.top = "0";
+        mirror.style.left = "0";
+        mirror.style.zIndex = "-1";
+        mirror.style.pointerEvents = "none";
+        doc.body.appendChild(mirror);
+        this._formMirror = mirror;
+      }
+
+      const props = [
+        "boxSizing", "width", "height",
+        "paddingTop", "paddingRight", "paddingBottom", "paddingLeft",
+        "borderTopWidth", "borderRightWidth", "borderBottomWidth", "borderLeftWidth",
+        "fontStyle", "fontVariant", "fontWeight", "fontStretch", "fontSize", "lineHeight",
+        "fontFamily", "letterSpacing", "textIndent", "textTransform", "wordSpacing", "tabSize",
+      ];
+      for (const p of props) mirror.style[p] = style[p];
+      mirror.style.whiteSpace = isTextarea ? "pre-wrap" : "pre";
+      mirror.style.wordWrap = isTextarea ? "break-word" : "normal";
+      mirror.style.overflow = "hidden";
+      if (!isTextarea) mirror.style.height = "auto";
+
+      mirror.textContent = "";
+      mirror.appendChild(doc.createTextNode(value.substring(0, selStart)));
+      const marker = doc.createElement("span");
+      marker.textContent = "\u200b"; // needs a real glyph to have a box
+      mirror.appendChild(marker);
+
+      const markerRect = marker.getBoundingClientRect();
+      const mirrorRect = mirror.getBoundingClientRect();
+      const offsetX = markerRect.left - mirrorRect.left;
+      const offsetY = markerRect.top - mirrorRect.top;
+
+      const scrollLeft = el.scrollLeft || 0;
+      const scrollTop = el.scrollTop || 0;
+      const fontSize = parseFloat(style.fontSize) || 14;
+      const lineHeight = parseFloat(style.lineHeight) || fontSize * 1.2 || 16;
+
+      const left = rect.left + offsetX - scrollLeft;
+
+      let top, height;
+      if (isTextarea) {
+        top = rect.top + offsetY - scrollTop;
+        height = lineHeight;
+      } else {
+        // Single-line <input> elements vertically center their text within
+        // their own box using internal UA rendering, not plain CSS line-box
+        // layout - a mirror <div> doesn't reproduce that centering exactly,
+        // which is what made the cursor sit off-center vertically. Anchor to
+        // the input's own box center instead of the mirror's Y offset.
+        height = Math.min(lineHeight, rect.height) || fontSize * 1.2;
+        top = rect.top + (rect.height - height) / 2;
+      }
+
+      // Clamp to the field's own box so a caret scrolled out of view (long
+      // single-line input, caret past the visible edge) doesn't draw outside it.
+      const clampedLeft = Math.min(Math.max(left, rect.left), rect.right);
+      const clampedTop = Math.min(Math.max(top, rect.top), rect.bottom - 1);
+
+      return { left: clampedLeft, top: clampedTop, bottom: clampedTop + height };
+    } catch {
+      return null;
+    }
+  }
+
+  // Caret info for editable elements outside the note editor entirely -
+  // file-tree rename input, Command Palette / Quick Switcher, Settings text
+  // fields, other plugins' modals, etc. There's no CodeMirror here, so we
+  // don't have real glyph metrics; approximate them from the focused
+  // element's own computed style instead.
+  genericCaretCoords() {
+    try {
+      // Follow the canvas's document rather than hardcoding the main
+      // window's - the canvas migrates to whichever window hosts the
+      // active view, so this keeps interface carets working in pop-outs.
+      const doc = this.canvas?.ownerDocument ?? document;
+      const active = doc.activeElement;
+      // See isTextCaretHost: this excludes checkboxes, radios, sliders, etc.
+      // so the plugin doesn't draw a cursor on top of Obsidian's own toggle
+      // controls when they gain focus (e.g. clicking a setting toggle box).
+      if (!isTextCaretHost(active)) return null;
+
+      const c = this.selectionFallbackCoords(null);
+      if (!c) return null;
+
+      const win = doc.defaultView || window;
+
+      // Sample the actual element under the caret rather than just the
+      // editable container's own style, so syntax-highlighted text (e.g. in
+      // other CodeMirror-based plugins like a CSS editor) reports its own
+      // real color instead of one flat container color.
+      const sampleX = Math.min(c.left + 2, doc.documentElement.clientWidth - 1);
+      const sampleY = (c.top + c.bottom) / 2;
+      const elAtCaret = doc.elementFromPoint ? doc.elementFromPoint(sampleX, sampleY) : null;
+      const styleSource = elAtCaret && active.contains?.(elAtCaret) ? elAtCaret : active;
+      const style = win.getComputedStyle(styleSource);
+
+      const fontSize = parseFloat(style.fontSize) || 14;
+      const fontFamily = style.fontFamily || "inherit";
+      const char = this.genericCaretChar(active);
+
+      // Generic inputs aren't fixed-width like the note editor, so there's
+      // no single "character width" to assume - measure the actual glyph
+      // under the caret with a canvas (accurate for proportional fonts,
+      // unlike a flat fontSize-based guess). Falls back to an estimate only
+      // when there's no character to measure (end of text, blank line).
+      const measured = char
+        ? this.measureCharWidth(char, fontFamily, fontSize, style.fontWeight, style.fontStyle)
+        : null;
+      const charWidth = measured || Math.max(4, fontSize * 0.55);
+      const height = Math.max(4, (c.bottom - c.top) || fontSize * 1.2);
+
+      let finalWidth = charWidth;
+      if (this.settings.cursorStyle === "Line") {
+        finalWidth = this.settings.caretWidthPx;
+      }
+
+      return {
+        x: c.left,
+        top: c.top,
+        bottom: c.top + height,
+        h: height,
+        w: finalWidth,
+        actualCharWidth: charWidth,
+        char,
+        textColor: style.color || "#ffffff",
+        fontSize,
+        fontFamily,
+        focused: true,
+        pos: null,
+      };
+    } catch {
+      return null;
+    }
+  }
+
+  // Measures the real rendered width of a single character in a given font,
+  // used to size the Box/Underline cursor accurately for proportional
+  // (non-monospace) fonts - a flat fontSize-based guess consistently under-
+  // or over-shoots for anything but a true monospace font. Weight and style
+  // matter: a bold glyph is meaningfully wider than its regular counterpart,
+  // and measuring without them left the box visibly too narrow on bold or
+  // italic text.
+  measureCharWidth(char, fontFamily, fontSize, fontWeight, fontStyle) {
+    try {
+      if (!this._measureCtx) {
+        const canvas = (this.canvas?.ownerDocument ?? document).createElement("canvas");
+        this._measureCtx = canvas.getContext("2d");
+      }
+      const weight = fontWeight && fontWeight !== "normal" ? fontWeight + " " : "";
+      const style = fontStyle && fontStyle !== "normal" ? fontStyle + " " : "";
+      this._measureCtx.font = `${style}${weight}${fontSize}px ${fontFamily}`;
+      const w = this._measureCtx.measureText(char).width;
+      return w > 0 ? w : null;
+    } catch {
+      return null;
+    }
+  }
+
+  // The character sitting immediately after the caret, for elements outside
+  // the note editor - mirrors what cmCaretCoords does for CodeMirror. Used
+  // to draw the "letter inside the cursor" effect in non-editor fields too.
+  genericCaretChar(active) {
+    try {
+      if (active.tagName === "INPUT" || active.tagName === "TEXTAREA") {
+        const value = active.value != null ? String(active.value) : "";
+        let selStart = value.length;
+        try {
+          const s = active.selectionStart, e = active.selectionEnd;
+          if (typeof s === "number" && typeof e === "number") {
+            selStart = active.selectionDirection === "backward" ? s : e;
+          }
+        } catch {
+          /* input types without selectionStart support */
+        }
+        const ch = value.charAt(selStart);
+        return ch && ch !== "\n" ? ch : "";
+      }
+
+      if (active.isContentEditable) {
+        const doc = active.ownerDocument;
+        const win = doc.defaultView || window;
+        const sel = win.getSelection();
+        if (sel && sel.focusNode && sel.focusNode.nodeType === 3) {
+          const text = sel.focusNode.data || "";
+          const ch = text.charAt(sel.focusOffset);
+          return ch && ch !== "\n" ? ch : "";
+        }
+      }
+    } catch {
+      /* fall through */
+    }
+    return "";
+  }
+
+  resolveHoldChar(newCaret) {
+    try {
+      const view = this.app.workspace.activeEditor?.editor?.cm;
+      if (
+        view &&
+        typeof newCaret.pos === "number" &&
+        typeof this.lastActive?.pos === "number" &&
+        newCaret.pos > this.lastActive.pos
+      ) {
+        const justTyped = view.state.doc.sliceString(newCaret.pos - 1, newCaret.pos);
+        if (justTyped && justTyped !== "\n") {
+          if (this.settings.popLetters) {
+            this.spawnLetterParticle(justTyped, this.lastActive);
+          }
+          return justTyped;
+        }
+      }
+    } catch {
+      /* fall through */
+    }
+    return this.lastActive ? this.lastActive.char : "";
+  }
+
+  updateActivePoint() {
+    const caret = this.caretCoords();
+    if (!caret || !caret.focused) {
+      this.lastActive = null;
+      this.pending = null;
+      return;
+    }
+
+    if (!this.lastActive) {
+      this.lastActive = caret;
+      this.pending = null;
+      return;
+    }
+
+    const moved =
+      Math.abs(this.lastActive.x - caret.x) > 0.5 || Math.abs(this.lastActive.top - caret.top) > 0.5;
+
+    if (!moved) {
+      if (!this.pending) this.lastActive = caret;
+      return;
+    }
+
+    if (caret.pos !== null && caret.pos === this.lastActive.pos) {
+      const dx = caret.x - this.lastActive.x;
+      const dy = caret.top - this.lastActive.top;
+      
+      this.lastActive = caret;
+      
+      // If the coordinate changed but the document position didn't, it was a scroll/layout shift.
+      // We instantly shift the animation and spring physics to prevent the smear wiggle.
+      if (this.animActive && (Math.abs(dx) > 0.01 || Math.abs(dy) > 0.01)) {
+        this.animActive.x += dx;
+        this.animActive.top += dy;
+        this.animActive.w = caret.w;
+        this.animActive.h = caret.h;
+        
+        if (this.smearQuad) {
+          for (const key in this.smearQuad) {
+            this.smearQuad[key].x += dx;
+            this.smearQuad[key].y += dy;
+          }
+          if (this.smearCenterPrev) {
+            this.smearCenterPrev.x += dx;
+            this.smearCenterPrev.y += dy;
+          }
+        }
+      }
+      return;
+    }
+
+    const delay = Math.max(0, Math.round(this.settings.moveDelayMs));
+    if (delay <= 0) {
+      const holdChar = this.resolveHoldChar(caret);
+      this.commitMove(caret);
+      if (holdChar && this.lastActive) this.lastActive.holdChar = holdChar;
+      return;
+    }
+
+    const targetChanged = !this.pending || this.pending.caret.x !== caret.x || this.pending.caret.top !== caret.top;
+    if (targetChanged) {
+      this.pending = { caret, since: performance.now(), holdChar: this.resolveHoldChar(caret) };
+    } else if (performance.now() - this.pending.since >= delay) {
+      this.commitMove(this.pending.caret);
+    }
+  }
+
+  updateSmoothCursor() {
+    if (!this.lastActive) {
+      this.animActive = null;
+      return;
+    }
+
+    if (!this.settings.smoothEnabled) {
+      this.animActive = { ...this.lastActive };
+      return;
+    }
+
+    if (!this.animActive) {
+      this.animActive = { ...this.lastActive };
+    }
+
+    const now = performance.now();
+    let targetSpeed = this.settings.catchUpSpeed;
+
+    if (this.settings.smoothAdaptive) {
+      const timeSinceMove = now - this.lastMoveTime;
+      if (timeSinceMove < 150) {
+        const maxMod = this.settings.maxCatchUpSpeed / Math.max(0.01, this.settings.catchUpSpeed);
+        this.typingSpeedMod = Math.min(this.typingSpeedMod + 0.15, maxMod);
+      } else {
+        this.typingSpeedMod = Math.max(this.typingSpeedMod - 0.05, 1);
+      }
+      targetSpeed = Math.min(this.settings.maxCatchUpSpeed, targetSpeed * this.typingSpeedMod);
+    }
+
+    const lerpFactor = Math.min(1, targetSpeed * (1 - this.settings.smoothness));
+
+    this.animActive.x += (this.lastActive.x - this.animActive.x) * lerpFactor;
+    this.animActive.top += (this.lastActive.top - this.animActive.top) * lerpFactor;
+    this.animActive.w += (this.lastActive.w - this.animActive.w) * lerpFactor;
+    this.animActive.h += (this.lastActive.h - this.animActive.h) * lerpFactor;
+    
+    this.animActive.textColor = this.lastActive.textColor;
+    this.animActive.char = this.lastActive.char;
+    this.animActive.holdChar = this.lastActive.holdChar;
+    this.animActive.actualCharWidth = this.lastActive.actualCharWidth;
+    this.animActive.fontFamily = this.lastActive.fontFamily;
+    this.animActive.fontSize = this.lastActive.fontSize;
+  }
+
+  commitMove(caret) {
+    this.pushTrail(this.lastActive);
+    if (this.lastActive) {
+      this.spawnFlamePixels(this.lastActive);
+    }
+    this.lastActive = caret;
+    this.pending = null;
+    this.lastMoveTime = performance.now(); 
+  }
+
+  getActiveRect() {
+    const active = this.animActive;
+    if (!active) return null;
+    if (this.settings.cursorStyle === "Underline") {
+      const uThickness = Math.max(2, Math.round(active.h * 0.15));
+      return { x: active.x, y: active.top + active.h - uThickness, w: active.actualCharWidth, h: uThickness };
+    }
+    return { x: active.x, y: active.top, w: this.renderWidth(active), h: active.h };
+  }
+
+  updateSmearQuad() {
+    const now = performance.now();
+    if (!this.smearQuadLastT) this.smearQuadLastT = now;
+    let dt = (now - this.smearQuadLastT) / 1000;
+    this.smearQuadLastT = now;
+    dt = Math.min(dt, 0.05);
+
+    const settings = this.settings;
+    const rect = settings.smear ? this.getActiveRect() : null;
+
+    if (!rect) {
+      this.smearQuad = null;
+      this.smearCenterPrev = null;
+      return;
+    }
+
+    const targets = {
+      tl: { x: rect.x, y: rect.y },
+      tr: { x: rect.x + rect.w, y: rect.y },
+      br: { x: rect.x + rect.w, y: rect.y + rect.h },
+      bl: { x: rect.x, y: rect.y + rect.h },
+    };
+
+    if (!this.smearQuad) {
+      this.smearQuad = {};
+      for (const key in targets) {
+        this.smearQuad[key] = { x: targets[key].x, y: targets[key].y, vx: 0, vy: 0 };
+      }
+      this.smearCenterPrev = { x: rect.x + rect.w / 2, y: rect.y + rect.h / 2 };
+      return;
+    }
+
+    const center = { x: rect.x + rect.w / 2, y: rect.y + rect.h / 2 };
+    let dirX = 0, dirY = 0;
+    if (this.smearCenterPrev) {
+      dirX = center.x - this.smearCenterPrev.x;
+      dirY = center.y - this.smearCenterPrev.y;
+    }
+    const dirLen = Math.hypot(dirX, dirY);
+    if (dirLen > 0.01) {
+      dirX /= dirLen;
+      dirY /= dirLen;
+    }
+    this.smearCenterPrev = center;
+
+    const freqLead = 2 + Math.max(0, Math.min(1, settings.smearStiffness)) * 38;
+    const freqTrail = 2 + Math.max(0, Math.min(1, settings.smearTrailingStiffness)) * 38;
+    const dampingRatio = 0.15 + Math.max(0, Math.min(1, settings.smearDamping)) * 1.15;
+
+    for (const key in targets) {
+      const c = this.smearQuad[key];
+      const t = targets[key];
+
+      const offX = t.x - center.x;
+      const offY = t.y - center.y;
+      const offLen = Math.hypot(offX, offY) || 1;
+      const align = dirLen > 0.01 ? (offX / offLen) * dirX + (offY / offLen) * dirY : 0;
+      const freq = align >= 0 ? freqLead : freqTrail;
+
+      const k = freq * freq;
+      const damp = 2 * dampingRatio * freq;
+      const ax = k * (t.x - c.x) - damp * c.vx;
+      const ay = k * (t.y - c.y) - damp * c.vy;
+      c.vx += ax * dt;
+      c.vy += ay * dt;
+      c.x += c.vx * dt;
+      c.y += c.vy * dt;
+
+      if (!isFinite(c.x) || !isFinite(c.y) || !isFinite(c.vx) || !isFinite(c.vy)) {
+        c.x = t.x;
+        c.y = t.y;
+        c.vx = 0;
+        c.vy = 0;
+      }
+    }
+  }
+
+  pushTrail(point) {
+    if (!point) return;
+    this.trail.push({ x: point.x, y: point.top, w: point.w, h: point.h, t: performance.now() });
+    const max = Math.max(0, Math.round(this.settings.trailLength));
+    while (this.trail.length > max) this.trail.shift();
+  }
+
+  spawnLetterParticle(char, anchor) {
+    if (!char.trim()) return;
+    this.particles.push({
+      char: char,
+      x: anchor.x + (anchor.w || anchor.actualCharWidth) / 2,
+      y: anchor.top,
+      vx: (Math.random() - 0.5) * 120,    
+      vy: -150 - Math.random() * 130,     
+      rotation: (Math.random() - 0.5) * 4,
+      alpha: 1,
+      fontSize: anchor.fontSize,
+      fontFamily: anchor.fontFamily,
+      color: this.getActiveColor() || anchor.textColor, 
+      start: performance.now()
+    });
+  }
+
+  spawnFlamePixels(anchor) {
+    if (!this.settings.flameTrail) return;
+    
+    const count = Math.floor(6 + Math.random() * 6);
+    let baseHex = this.getActiveColor() || "#39ff14";
+    let h = baseHex.replace("#", "");
+    if (h.length === 3) h = h.split("").map(c => c + c).join("");
+    let r = (parseInt(h, 16) >> 16) & 255;
+    let g = (parseInt(h, 16) >> 8) & 255;
+    let b = parseInt(h, 16) & 255;
+    
+    for (let i = 0; i < count; i++) {
+      const pX = anchor.x + Math.random() * (anchor.w || anchor.actualCharWidth);
+      const pY = anchor.top + Math.random() * anchor.h;
+      const varR = Math.max(0, Math.min(255, r + Math.floor((Math.random() - 0.5) * 70)));
+      const varG = Math.max(0, Math.min(255, g + Math.floor((Math.random() - 0.5) * 70)));
+      const varB = Math.max(0, Math.min(255, b + Math.floor((Math.random() - 0.5) * 70)));
+      
+      this.flamePixels.push({
+        x: pX,
+        y: pY,
+        vx: (Math.random() - 0.5) * 20, 
+        vy: 0,                          
+        size: 2.5 + Math.random() * 3,  
+        color: `rgb(${varR}, ${varG}, ${varB})`,
+        alpha: 1,
+        start: performance.now()
+      });
+    }
+  }
+
+  blinkAlpha(now) {
+    if (!this.settings.blinkingEnabled) return 1;
+    // Build the effective hold window from two independent sources:
+    //   • smoothStopBlinking (existing): 450 ms hold, only active when smooth
+    //     movement is on (behaviour unchanged for existing users).
+    //   • blinkDelayMs (new): explicit user-controlled delay that works
+    //     regardless of whether smooth movement is enabled.
+    // We take the larger of the two so neither setting silently overrides the other.
+    let holdMs = 0;
+    if (this.settings.smoothEnabled && this.settings.smoothStopBlinking) holdMs = 450;
+    const delayMs = Math.max(0, this.settings.blinkDelayMs ?? 0);
+    if (delayMs > holdMs) holdMs = delayMs;
+    if (holdMs > 0 && now - this.lastMoveTime < holdMs) return 1;
+    return blinkAlphaAt(now, Math.max(0, this.settings.blinkSpeed), this.settings.blinkOnOffBalance ?? 0.5);
+  }
+
+  draw() {
+    const ctx = this.ctx;
+    if (!ctx) return;
+    const win = this.canvas.ownerDocument.defaultView || window;
+    ctx.clearRect(0, 0, win.innerWidth, win.innerHeight);
+
+    this.drawLettersParticles();
+    this.drawFlamePixels();
+
+    switch (this.settings.cursorStyle) {
+      case "Line":
+        this.drawGenericCaret(false);
+        break;
+      case "Underline":
+        this.drawGenericCaret(true);
+        break;
+      case "Box":
+        this.drawRetroBox();
+        break;
+    }
+
+    // Secondary carets sit on top of the main cursor's trail/particles but
+    // don't participate in smear/glow - just plain dashed vertical lines.
+    this.drawSecondaryCarets();
+  }
+
+  renderWidth(active) {
+    return active.w;
+  }
+
+  forEachTrailPoint(cb) {
+    if (!this.settings.crtEffect) return;
+    const now = performance.now();
+    const fade = Math.max(50, this.settings.trailFadeMs);
+    this.trail = this.trail.filter((p) => now - p.t < fade);
+    for (const p of this.trail) {
+      const age = (now - p.t) / fade;
+      const alpha = Math.max(0, 1 - age) * 0.55;
+      if (alpha > 0.02) cb(p, alpha);
+    }
+  }
+
+  fillCursorShape(ctx, rx, ry, rw, rh) {
+    const q = this.settings.smear ? this.smearQuad : null;
+    const corners = q || {
+      tl: { x: rx, y: ry },
+      tr: { x: rx + rw, y: ry },
+      br: { x: rx + rw, y: ry + rh },
+      bl: { x: rx, y: ry + rh },
+    };
+
+    ctx.beginPath();
+    ctx.moveTo(corners.tl.x, corners.tl.y);
+    ctx.lineTo(corners.tr.x, corners.tr.y);
+    ctx.lineTo(corners.br.x, corners.br.y);
+    ctx.lineTo(corners.bl.x, corners.bl.y);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  createEnergyGradient(x, y, w, h, baseColor, alpha) {
+    const ctx = this.ctx;
+    const speed = this.settings.energySpeed ?? 1;
+    const t = (performance.now() / 1000) * speed;
+    const base = hexToRgbTuple(baseColor);
+
+    const grad = ctx.createLinearGradient(x + w / 2, y + h, x + w / 2, y);
+    const stops = 6;
+    for (let i = 0; i <= stops; i++) {
+      const pos = i / stops;
+      const pulse = 0.5 + 0.5 * Math.sin((pos - t * 0.6) * Math.PI * 2);
+
+      let r = base[0], g = base[1], b = base[2];
+      if (pulse > 0.5) {
+        const k = (pulse - 0.5) * 2;
+        r += (255 - r) * k * 0.55;
+        g += (255 - g) * k * 0.55;
+        b += (255 - b) * k * 0.55;
+      } else {
+        const k = (0.5 - pulse) * 2;
+        r -= r * k * 0.45;
+        g -= g * k * 0.45;
+        b -= b * k * 0.45;
+      }
+
+      const shift = 14;
+      r += Math.sin(t * 0.7 + pos * 6) * shift;
+      g += Math.sin(t * 0.7 + pos * 6 + 2.1) * shift;
+      b += Math.sin(t * 0.7 + pos * 6 + 4.2) * shift;
+
+      r = Math.max(0, Math.min(255, Math.round(r)));
+      g = Math.max(0, Math.min(255, Math.round(g)));
+      b = Math.max(0, Math.min(255, Math.round(b)));
+
+      grad.addColorStop(pos, `rgba(${r}, ${g}, ${b}, ${alpha})`);
+    }
+    return grad;
+  }
+
+  drawGenericCaret(isUnderline = false) {
+    const ctx = this.ctx;
+    const settings = this.settings;
+    const active = this.animActive;
+    const now = performance.now();
+    const trailColor = this.getActiveColor();
+    const opacity = Math.max(0, Math.min(1, settings.cursorOpacity ?? 1));
+
+    this.forEachTrailPoint((p, alpha) => {
+      ctx.fillStyle = hexToRgba(trailColor, alpha * opacity);
+      if (isUnderline) {
+        const uThickness = Math.max(2, Math.round(p.h * 0.15));
+        ctx.fillRect(p.x, p.y + p.h - uThickness, p.w, uThickness);
+      } else {
+        ctx.fillRect(p.x, p.y, p.w, p.h);
+      }
+    });
+
+    if (!active) return;
+    const blinkAlpha = this.blinkAlpha(now);
+    const color = this.getActiveColor() || active.textColor || "#ffffff";
+
+    ctx.save();
+    if (settings.crtEffect && settings.glow) {
+      ctx.shadowColor = color;
+      ctx.shadowBlur = 8 * blinkAlpha;
+    }
+
+    let rx, ry, rw, rh;
+    if (isUnderline) {
+      const uThickness = Math.max(2, Math.round(active.h * 0.15));
+      rx = active.x;
+      ry = active.top + active.h - uThickness;
+      rw = active.actualCharWidth;
+      rh = uThickness;
+    } else {
+      rx = active.x;
+      ry = active.top;
+      rw = this.renderWidth(active);
+      rh = active.h;
+    }
+
+    ctx.fillStyle = settings.energyEffect
+      ? this.createEnergyGradient(rx, ry, rw, rh, color, 0.9 * blinkAlpha * opacity)
+      : hexToRgba(color, 0.9 * blinkAlpha * opacity);
+    this.fillCursorShape(ctx, rx, ry, rw, rh);
+    ctx.restore();
+  }
+
+  // Simple solid 2px vertical line per non-primary caret, drawn in the
+  // active cursor colour. Deliberately minimal: no smear (independent
+  // spring per caret would be visually noisy and expensive with many
+  // cursors), no letter-inside-box, no trail. Blinks in sync with the
+  // main cursor so all carets fade together.
+  drawSecondaryCarets() {
+    const carets = this.secondaryCarets;
+    if (!carets || carets.length === 0) return;
+    const ctx = this.ctx;
+    const color = this.getActiveColor();
+    const opacity = Math.max(0, Math.min(1, this.settings.cursorOpacity ?? 1));
+    const alpha = this.blinkAlpha(performance.now()) * opacity;
+    if (alpha <= 0.01) return;
+
+    ctx.save();
+    ctx.strokeStyle = hexToRgba(color, 0.9 * alpha);
+    ctx.lineWidth = 2;
+    ctx.lineCap = "butt";
+    for (const c of carets) {
+      // 0.5-pixel offset so a 2px stroke lands on whole pixels rather than
+      // straddling a boundary and antialiasing to a blurry 3px stripe.
+      const x = Math.round(c.x) + 0.5;
+      ctx.beginPath();
+      ctx.moveTo(x, c.top);
+      ctx.lineTo(x, c.bottom);
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  drawLettersParticles() {
+    const ctx = this.ctx;
+    const now = performance.now();
+    
+    this.particles = this.particles.filter(p => {
+      const elapsed = (now - p.start) / 1000; 
+      if (elapsed > 0.45) return false;       
+      
+      const t = elapsed / 0.45;
+      p.alpha = 1 - t; 
+      
+      const curX = p.x + p.vx * elapsed;
+      const curY = p.y + p.vy * elapsed + 0.5 * 320 * elapsed * elapsed; 
+      const curRot = p.rotation * elapsed * 5;
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.fillStyle = p.color;
+      ctx.font = `bold ${p.fontSize * 0.9}px ${p.fontFamily}`;
+      ctx.translate(curX, curY);
+      ctx.rotate(curRot);
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(p.char, 0, 0);
+      ctx.restore();
+      
+      return true;
+    });
+  }
+
+  drawFlamePixels() {
+    const ctx = this.ctx;
+    const now = performance.now();
+
+    this.flamePixels = this.flamePixels.filter(p => {
+      const elapsed = (now - p.start) / 1000;
+      if (elapsed > 0.4) return false;
+
+      const t = elapsed / 0.4;
+      p.alpha = 1 - Math.pow(t, 2);
+
+      const curX = p.x + p.vx * elapsed;
+      const curY = p.y + p.vy * elapsed;
+
+      ctx.save();
+      ctx.globalAlpha = Math.max(0, p.alpha);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(curX, curY, p.size, p.size);
+      ctx.restore();
+
+      return true;
+    });
+  }
+
+  drawRetroBox() {
+    const ctx = this.ctx;
+    const settings = this.settings;
+    const now = performance.now();
+    const color = this.getActiveColor();
+    const opacity = Math.max(0, Math.min(1, settings.cursorOpacity ?? 1));
+
+    this.forEachTrailPoint((p, alpha) => {
+      ctx.fillStyle = hexToRgba(color, alpha * opacity);
+      ctx.fillRect(p.x, p.y, p.w, p.h);
+    });
+
+    const active = this.animActive;
+    if (active) {
+      const blinkAlpha = this.blinkAlpha(now);
+      const renderW = this.renderWidth(active);
+
+      ctx.save();
+      if (settings.crtEffect && settings.glow) {
+        ctx.shadowColor = color;
+        ctx.shadowBlur = 10 * blinkAlpha;
+        ctx.fillStyle = hexToRgba(color, 0.01);
+        this.fillCursorShape(ctx, active.x, active.top, renderW, active.h);
+        ctx.shadowBlur = 0;
+      }
+      ctx.fillStyle = settings.energyEffect
+        ? this.createEnergyGradient(active.x, active.top, renderW, active.h, color, 0.9 * blinkAlpha * opacity)
+        : hexToRgba(color, 0.9 * blinkAlpha * opacity);
+      this.fillCursorShape(ctx, active.x, active.top, renderW, active.h);
+      ctx.restore();
+
+      const displayChar = this.pending ? this.pending.holdChar : (active.holdChar || active.char);
+      if (settings.showChar && displayChar) {
+        ctx.save();
+        ctx.globalAlpha = Math.min(1, 0.3 + blinkAlpha * 0.7);
+        ctx.fillStyle = invertColor(active.textColor);
+        ctx.font = `${active.fontSize}px ${active.fontFamily}`;
+
+        // Canvas's "middle" baseline centers a glyph within its own font
+        // em-box (roughly ascent/descent of the font itself), but active.h
+        // is the rendered *line height*, which is usually taller than that
+        // em-box (CSS line-height adds extra leading above/below the
+        // glyph). Centering purely on font metrics ignores that leading and
+        // makes the drawn character sit noticeably higher than the real
+        // text, which is vertically centered within the full line box.
+        // Measuring real ascent/descent and centering the glyph's em-box
+        // inside active.h (the same way the browser centers line content)
+        // lines it up with where the actual character renders.
+        const metrics = ctx.measureText(displayChar);
+        const ascent = metrics.fontBoundingBoxAscent ?? metrics.actualBoundingBoxAscent ?? active.fontSize * 0.8;
+        const descent = metrics.fontBoundingBoxDescent ?? metrics.actualBoundingBoxDescent ?? active.fontSize * 0.2;
+        const glyphBoxHeight = ascent + descent;
+        const leading = active.h - glyphBoxHeight;
+        const baselineY = active.top + ascent + leading / 2;
+
+        ctx.textAlign = "center";
+        ctx.textBaseline = "alphabetic";
+        ctx.fillText(displayChar, active.x + renderW / 2, baselineY);
+        ctx.restore();
+      }
+    }
+  }
+
+  enableTorchOverlay() {
+    this.torchEngineActive = true;
+    this.x = this.tx = window.innerWidth / 2;
+    this.y = this.ty = window.innerHeight / 2;
+
+    const tick = () => {
+      if (!this.torchEngineActive) return;
+      try {
+        // Same presentation-mode guard as the canvas engine: hide the torch
+        // overlay during a Slides presentation so it doesn't bleed through
+        // the presentation overlay.
+        if (this.isPresentationModeActive()) {
+          if (this.overlay) this.overlay.classList.add("torch-cursor-hidden");
+          this.torchRaf = requestAnimationFrame(tick);
+          return;
+        }
+        if (this.overlay) this.overlay.classList.remove("torch-cursor-hidden");
+
+        const view = this.app.workspace.activeEditor?.editor?.cm;
+        this.ensureTorchOverlayForView(view);
+        if (view) this.registerWindowEvents(view.dom.ownerDocument);
+
+        if (!this.overlay) {
+          this.torchRaf = requestAnimationFrame(tick);
+          return;
+        }
+
+        this.updateOverlayTarget();
+        const lerp = this.settings.overlaySpeed;
+        this.x += (this.tx - this.x) * lerp;
+        this.y += (this.ty - this.y) * lerp;
+
+        const r = this.getPaneRect(view);
+        const usePane = r && this.settings.overlaySpareSidebars;
+        // Even when we're not sparing the sidebars, the overlay must never
+        // cover the titlebar - getFullViewportRect clamps around it (see
+        // its comment for the drag-hit-testing rationale). The overlay is
+        // guaranteed non-null here, so its own document is the right one.
+        const rect = usePane ? r : this.getFullViewportRect(this.overlay.ownerDocument);
+
+        const top = Math.round(rect.top);
+        const left = Math.round(rect.left);
+        const width = Math.round(rect.width);
+        const height = Math.round(rect.height);
+        const key = top + "," + left + "," + width + "," + height;
+        if (key !== this._lastOverlayRect) {
+          this._lastOverlayRect = key;
+          this.overlay.style.top = top + "px";
+          this.overlay.style.left = left + "px";
+          this.overlay.style.width = width + "px";
+          this.overlay.style.height = height + "px";
+        }
+
+        this.overlay.style.setProperty("--torch-x", (this.x - left).toFixed(1) + "px");
+        this.overlay.style.setProperty("--torch-y", (this.y - top).toFixed(1) + "px");
+
+        const hideForModal = this.settings.overlaySpareSidebars && this.modalOpen;
+        this.overlay.classList.toggle("torch-cursor-hidden", !!hideForModal);
+      } catch (e) {
+        if (!this._torchErrorLogged) {
+          this._torchErrorLogged = true;
+          console.error("[cursor-smith] torch tick error (loop kept alive):", e);
+        }
+      }
+      this.torchRaf = requestAnimationFrame(tick);
+    };
+    this.torchRaf = requestAnimationFrame(tick);
+  }
+
+  // True when the element is actually painted (not display:none, hidden,
+  // or fully transparent). Used by _chromeInsets to decide whether the
+  // STATUS BAR should clamp the overlay: an invisible-but-in-flow status
+  // bar (zen-mode themes hide it via opacity so it can reveal on hover)
+  // shouldn't leave a dead unshaded strip. Deliberately NOT used for the
+  // titlebar - see _chromeInsets for why the titlebar clamps regardless
+  // of visibility.
+  _isVisiblyRendered(el) {
+    if (!el) return false;
+    const win = el.ownerDocument.defaultView || window;
+    const cs = win.getComputedStyle(el);
+    if (cs.display === "none" || cs.visibility === "hidden") return false;
+    if (parseFloat(cs.opacity) <= 0.01) return false;
+    return true;
+  }
+
+  // Cached top/bottom insets around Obsidian's window chrome, refreshed at
+  // most every 500ms (or on window resize via _bumpChromeInsets). Both tick
+  // loops need these every frame; uncached, that's 2 querySelectors + 2
+  // getBoundingClientRects + 2 getComputedStyles per frame per loop, which
+  // is measurable jank on weak GPUs (ChromeOS Crostini) - and Chromium has
+  // a known slow path where layout reads get more expensive whenever any
+  // app-region: drag element exists in the document, which is always true
+  // in frameless Obsidian.
+  //
+  // Titlebar: clamps whenever it occupies layout space, VISIBLE OR NOT.
+  // Drag hit-testing doesn't care about visibility - an opacity-0 titlebar
+  // (zen-mode themes) still owns the window's drag region, and covering it
+  // breaks dragging just the same. Drag correctness beats the cosmetic
+  // cost of a few undarkened pixels.
+  //
+  // Status bar: clamps only when visibly rendered. It has no drag role, so
+  // for an invisible-but-in-flow status bar the clamp would just leave a
+  // dead unshaded strip for no benefit (the concern _isVisiblyRendered was
+  // originally written for).
+  _chromeInsets(doc) {
+    const now = Date.now();
+    const c = this._chromeCache;
+    if (c && c.doc === doc && now - c.t < 500) return c;
+
+    let top = 0;
+    const titleBar = doc.querySelector(".titlebar");
+    // is-hidden-frameless: titlebar element exists but contains no visible
+    // content (window controls hidden). The tab bar spacers are the drag
+    // surface but they're visually transparent - we can paint over them
+    // since our overlay has no app-region declaration and doesn't affect
+    // Electron's drag hit-testing. Start from t:0 in this mode.
+    // is-frameless (without is-hidden-frameless): custom titlebar IS visible,
+    // clamp below it so we don't cover the window controls.
+    const isHiddenFrameless = doc.body.classList.contains("is-hidden-frameless");
+    if (titleBar && !isHiddenFrameless) {
+      const tb = titleBar.getBoundingClientRect();
+      if (tb.height > 0 && tb.top <= tb.height) top = Math.max(top, tb.bottom);
+    }
+    // When there's no titlebar at all (native frame style or non-Electron),
+    // tab bars at t:0 are still the drag surface but again our overlay
+    // doesn't affect app-region so no clamp needed there either.
+    // Only clamp against tab bars when a VISIBLE titlebar pushes them down
+    // and we need to cover the gap between titlebar bottom and tab bar bottom.
+
+    // No bottom clamp for the status bar. It sits above our overlay via its
+    // own stacking context (the overlay is z-index:9990 and the status bar
+    // renders on top naturally). Clamping to sb.top was incorrectly cutting
+    // the torch overlay short before the status bar, leaving the bottom of
+    // the note unilluminated. The original file had no bottom clamp here.
+
+    this._chromeCache = { doc, t: now, top, bottomInset: 0 };
+    return this._chromeCache;
+  }
+
+  // Full-window rect minus the window chrome. Never returns a rect that
+  // overlaps the titlebar: a full-viewport fixed-position layer sitting
+  // over the titlebar - even one with pointer-events: none - breaks
+  // Electron's native window-drag hit-testing on frameless/custom-titlebar
+  // windows (Electron composes drag regions in DOM order; z-index and
+  // pointer-events don't participate). Seen in the wild on Linux X11 (KDE)
+  // and ChromeOS Crostini: window resizes fine, refuses to move.
+  // Note: when Obsidian runs with the NATIVE frame there's no .titlebar in
+  // the DOM at all - and none is needed, because the OS titlebar lives
+  // outside the web contents where nothing we render can cover it. The
+  // zero inset we compute in that case is correct, not a missed clamp.
+  getFullViewportRect(doc) {
+    const win = doc.defaultView || window;
+    const { top } = this._chromeInsets(doc);
+    const bottom = win.innerHeight; // no bottom clamp - status bar stacks above us
+    if (bottom <= top) {
+      return { top: 0, bottom: 0, left: 0, right: 0, width: 0, height: 0 };
+    }
+    return {
+      top,
+      bottom,
+      left: 0,
+      right: win.innerWidth,
+      width: win.innerWidth,
+      height: bottom - top,
+    };
+  }
+
+  getPaneRect(view) {
+    if (!view) return null;
+    const rootEl = view.dom.closest(".cm-editor") || view.dom.closest(".workspace-leaf");
+    if (!rootEl) return null;
+    const rect = rootEl.getBoundingClientRect();
+
+    // Clipping to the pane's own rect assumes the titlebar/status bar take
+    // up real space in flow, pushing the pane to stop short of them. Some
+    // themes float those bars over the pane instead (fixed/absolute), so
+    // the pane's rect extends underneath - and our z-index 10000 canvas
+    // would paint over them, with the same drag-breaking consequence as
+    // the full-viewport case for the titlebar. Clamp against the cached
+    // chrome insets (cheap - no extra layout reads per frame).
+    const doc = rootEl.ownerDocument;
+    const win = doc.defaultView || window;
+    const { top: chromeTop } = this._chromeInsets(doc);
+    const top = Math.max(rect.top, chromeTop);
+    const bottom = rect.bottom; // no bottom clamp - status bar stacks above us
+
+    if (bottom <= top) return rect;
+
+    return {
+      top,
+      bottom,
+      left: rect.left,
+      right: rect.right,
+      width: rect.width,
+      height: bottom - top,
+    };
+  }
+
+  updateOverlayTarget() {
+    const mode = this.settings.overlayFollowMode;
+    const caret = this.caretCoords();
+    if (caret) {
+      if (!this.lastCaret || caret.x !== this.lastCaret.x || caret.top !== this.lastCaret.top) {
+        this.lastCaretMove = Date.now();
+      }
+      this.lastCaret = caret;
+    }
+
+    const useMouse =
+      mode === "mouse" ||
+      (mode === "auto" && (Date.now() - this.lastMouseMove < 800 || !this.lastCaret));
+
+    if (useMouse) {
+      this.tx = this.mouseX;
+      this.ty = this.mouseY;
+    } else if (this.lastCaret) {
+      this.tx = this.lastCaret.x;
+      this.ty = (this.lastCaret.top + this.lastCaret.bottom) / 2;
+    }
+  }
+}
+
+class CursorSmithSettingTab extends PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+
+    const set = (key) => async (v) => {
+      this.plugin.settings[key] = v;
+      await this.plugin.saveSettings();
+    };
+
+    const setAndRedraw = (key) => async (v) => {
+      this.plugin.settings[key] = v;
+      await this.plugin.saveSettings();
+      this.display();
+    };
+
+    containerEl.createEl("h2", { text: "⚡ Cursor-Smith Settings" });
+    containerEl.createEl("h3", { text: "Core Configuration" });
+
+    new Setting(containerEl)
+      .setName("Enable Plugin")
+      .addToggle((toggle) =>
+        toggle
+          .setValue(this.plugin.settings.enabled)
+          .onChange(async (value) => {
+            this.plugin.settings.enabled = value;
+            value ? this.plugin.enable() : this.plugin.disable();
+            await this.plugin.saveSettings();
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Cursor Style")
+      .addDropdown((dropdown) =>
+        dropdown
+          .addOption("Box", "Box")
+          .addOption("Line", "Line")
+          .addOption("Underline", "Underline")
+          .setValue(this.plugin.settings.cursorStyle)
+          .onChange(async (value) => {
+            this.plugin.settings.cursorStyle = value;
+            await this.plugin.saveSettings();
+            this.plugin.enable();
+            this.display(); 
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Hide Real Cursor")
+      .setDesc("Hides the native primary cursor so only the custom one shows. Additional cursors (multi-cursor editing) remain visible in Obsidian's default style.")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.hideNativeCaret).onChange(set("hideNativeCaret")));
+
+    containerEl.createEl("h3", { text: "Appearance" });
+
+    if (this.plugin.settings.cursorStyle === "Line") {
+      new Setting(containerEl)
+        .setName("Cursor Thickness")
+        .setDesc("How thick the Line cursor is, in pixels.")
+        .addSlider((slider) =>
+          slider
+            .setLimits(1, 12, 1)
+            .setValue(this.plugin.settings.caretWidthPx)
+            .setDynamicTooltip()
+            .onChange(set("caretWidthPx"))
+        );
+    }
+
+    new Setting(containerEl)
+      .setName("Cursor Color (Dark Theme)")
+      .addColorPicker((cp) => cp.setValue(this.plugin.settings.colorDark).onChange(set("colorDark")));
+
+    new Setting(containerEl)
+      .setName("Cursor Color (Light Theme)")
+      .addColorPicker((cp) => cp.setValue(this.plugin.settings.colorLight).onChange(set("colorLight")));
+
+    new Setting(containerEl)
+      .setName("Cursor Opacity")
+      .setDesc("How see-through the cursor is.")
+      .addSlider((s) => s.setLimits(0.1, 1, 0.05).setValue(this.plugin.settings.cursorOpacity).setDynamicTooltip().onChange(set("cursorOpacity")));
+
+    if (this.plugin.settings.cursorStyle === "Box") {
+      new Setting(containerEl)
+        .setName("Show Letter Inside Cursor")
+        .setDesc("Shows the letter under the cursor inside the block, with the colors flipped.")
+        .addToggle((toggle) => toggle.setValue(this.plugin.settings.showChar).onChange(set("showChar")));
+    }
+
+    containerEl.createEl("h3", { text: "Blinking" });
+
+    new Setting(containerEl)
+      .setName("Blinking")
+      .setDesc("Makes the cursor blink. Turn off to keep it always fully lit.")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.blinkingEnabled).onChange(setAndRedraw("blinkingEnabled")));
+
+    if (this.plugin.settings.blinkingEnabled) {
+      new Setting(containerEl)
+        .setName("Blink Speed")
+        .setDesc("How fast the cursor blinks.")
+        .addSlider((s) => s.setLimits(0.1, 3, 0.1).setValue(this.plugin.settings.blinkSpeed).setDynamicTooltip().onChange(set("blinkSpeed")));
+
+      new Setting(containerEl)
+        .setName("Blink Balance")
+        .setDesc("How the blink cycle is split between lit and dark.")
+        .addSlider((s) => s.setLimits(0.1, 0.9, 0.05).setValue(this.plugin.settings.blinkOnOffBalance).setDynamicTooltip().onChange(set("blinkOnOffBalance")));
+
+      new Setting(containerEl)
+        .setName("Don't Blink While Typing")
+        .setDesc("Keeps the cursor fully lit while you type or move it.")
+        .addToggle((toggle) => toggle.setValue(this.plugin.settings.smoothStopBlinking).onChange(set("smoothStopBlinking")));
+
+      new Setting(containerEl)
+        .setName("Blink Delay")
+        .setDesc("How long (in ms) the cursor stays fully lit after any move or keystroke before blinking resumes. Works independently of Smooth Movement.")
+        .addSlider((s) =>
+          s
+            .setLimits(0, 2000, 50)
+            .setValue(this.plugin.settings.blinkDelayMs ?? 0)
+            .setDynamicTooltip()
+            .onChange(set("blinkDelayMs"))
+        );
+    }
+
+    containerEl.createEl("h3", { text: "Smooth Movement" });
+
+    new Setting(containerEl)
+      .setName("Smooth Movement")
+      .setDesc("Makes the cursor glide to its new spot instead of jumping there instantly.")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.smoothEnabled).onChange(setAndRedraw("smoothEnabled")));
+
+    if (this.plugin.settings.smoothEnabled) {
+      new Setting(containerEl)
+        .setName("Glide Amount")
+        .addSlider((s) => s.setLimits(0.05, 0.30, 0.05).setValue(this.plugin.settings.smoothness).setDynamicTooltip().onChange(set("smoothness")));
+
+      new Setting(containerEl)
+        .setName("Catch-Up Speed")
+        .addSlider((s) => s.setLimits(0.30, 0.80, 0.05).setValue(this.plugin.settings.catchUpSpeed).setDynamicTooltip().onChange(set("catchUpSpeed")));
+
+      new Setting(containerEl)
+        .setName("Max Catch-Up Speed")
+        .addSlider((s) => s.setLimits(0.50, 1.0, 0.05).setValue(this.plugin.settings.maxCatchUpSpeed).setDynamicTooltip().onChange(set("maxCatchUpSpeed")));
+
+      new Setting(containerEl)
+        .setName("Speed Up When Typing Fast")
+        .addToggle((toggle) => toggle.setValue(this.plugin.settings.smoothAdaptive).onChange(set("smoothAdaptive")));
+
+      new Setting(containerEl)
+        .setName("Movement Delay")
+        .addSlider((s) => s.setLimits(0, 500, 10).setValue(this.plugin.settings.moveDelayMs).setDynamicTooltip().onChange(set("moveDelayMs")));
+    }
+
+    containerEl.createEl("h3", { text: "Effects" });
+
+    new Setting(containerEl)
+      .setName("Popping Letters")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.popLetters).onChange(set("popLetters")));
+
+    new Setting(containerEl)
+      .setName("Pixel Trail")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.flameTrail).onChange(set("flameTrail")));
+
+    new Setting(containerEl)
+      .setName("Motion Smear")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.smear).onChange(setAndRedraw("smear")));
+
+    if (this.plugin.settings.smear) {
+      new Setting(containerEl)
+        .setName("Stiffness")
+        .addSlider((s) => s.setLimits(0.1, 1, 0.05).setValue(this.plugin.settings.smearStiffness).setDynamicTooltip().onChange(set("smearStiffness")));
+
+      new Setting(containerEl)
+        .setName("Trailing Stiffness")
+        .addSlider((s) => s.setLimits(0.05, 1, 0.05).setValue(this.plugin.settings.smearTrailingStiffness).setDynamicTooltip().onChange(set("smearTrailingStiffness")));
+
+      new Setting(containerEl)
+        .setName("Damping")
+        .addSlider((s) => s.setLimits(0.05, 1, 0.05).setValue(this.plugin.settings.smearDamping).setDynamicTooltip().onChange(set("smearDamping")));
+    }
+
+    new Setting(containerEl)
+      .setName("Energy Beam")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.energyEffect).onChange(setAndRedraw("energyEffect")));
+
+    if (this.plugin.settings.energyEffect) {
+      new Setting(containerEl)
+        .setName("Beam Speed")
+        .addSlider((s) => s.setLimits(0.2, 3, 0.1).setValue(this.plugin.settings.energySpeed).setDynamicTooltip().onChange(set("energySpeed")));
+    }
+
+    new Setting(containerEl)
+      .setName("CRT Effect")
+      .addToggle((toggle) => toggle.setValue(this.plugin.settings.crtEffect).onChange(setAndRedraw("crtEffect")));
+
+    if (this.plugin.settings.crtEffect) {
+      new Setting(containerEl)
+        .setName("Trail Length")
+        .addSlider((s) => s.setLimits(0, 30, 1).setValue(this.plugin.settings.trailLength).setDynamicTooltip().onChange(set("trailLength")));
+
+      new Setting(containerEl)
+        .setName("Trail Fade Time")
+        .addSlider((s) => s.setLimits(50, 1500, 25).setValue(this.plugin.settings.trailFadeMs).setDynamicTooltip().onChange(set("trailFadeMs")));
+
+      new Setting(containerEl)
+        .setName("Glow")
+        .addToggle((toggle) => toggle.setValue(this.plugin.settings.glow).onChange(set("glow")));
+    }
+
+    new Setting(containerEl)
+      .setName("Torch Spotlight")
+      .addToggle((toggle) =>
+        toggle.setValue(this.plugin.settings.torchEffect).onChange(async (value) => {
+          this.plugin.settings.torchEffect = value;
+          await this.plugin.saveSettings();
+          if (this.plugin.settings.enabled) {
+            value ? this.plugin.enableTorchOverlay() : this.plugin.disableTorchOverlay();
+          }
+          this.display();
+        })
+      );
+
+    if (this.plugin.settings.torchEffect) {
+      containerEl.createEl("h4", { text: "Spotlight" });
+
+      new Setting(containerEl)
+        .setName("Follow")
+        .addDropdown((d) =>
+          d
+            .addOptions({ caret: "Text Cursor Only", mouse: "Mouse Pointer Only", auto: "Auto Intelligent Swap" })
+            .setValue(this.plugin.settings.overlayFollowMode)
+            .onChange(set("overlayFollowMode"))
+        );
+
+      new Setting(containerEl)
+        .setName("Light Size")
+        .addSlider((s) => s.setLimits(100, 800, 10).setValue(this.plugin.settings.overlayRadius).setDynamicTooltip().onChange(set("overlayRadius")));
+
+      new Setting(containerEl)
+        .setName("Light Color")
+        .addColorPicker((cp) => cp.setValue(this.plugin.settings.overlayColor).onChange(set("overlayColor")));
+
+      new Setting(containerEl)
+        .setName("Follow Speed")
+        .addSlider((s) => s.setLimits(0.05, 1, 0.05).setValue(this.plugin.settings.overlaySpeed).setDynamicTooltip().onChange(set("overlaySpeed")));
+
+      containerEl.createEl("h4", { text: "Environment" });
+
+      new Setting(containerEl)
+        .setName("Darkness")
+        .addSlider((s) => s.setLimits(0.2, 1, 0.01).setValue(this.plugin.settings.overlayDarkness).setDynamicTooltip().onChange(set("overlayDarkness")));
+
+      new Setting(containerEl)
+        .setName("Glow Strength")
+        .addSlider((s) => s.setLimits(0, 1, 0.05).setValue(this.plugin.settings.overlayIntensity).setDynamicTooltip().onChange(set("overlayIntensity")));
+
+      new Setting(containerEl)
+        .setName("Flicker")
+        .addToggle((toggle) => toggle.setValue(this.plugin.settings.overlayFlicker).onChange(set("overlayFlicker")));
+
+      new Setting(containerEl)
+        .setName("Keep Sidebars Lit")
+        .addToggle((toggle) => toggle.setValue(this.plugin.settings.overlaySpareSidebars).onChange(set("overlaySpareSidebars")));
+    }
+  }
+}
+/* nosourcemap */
+/* nosourcemap */
+
+/* nosourcemap */
+/* nosourcemap */
