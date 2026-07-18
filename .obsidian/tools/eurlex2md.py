@@ -3,14 +3,14 @@ from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
 
-SOURCES = {  
-    "de": "https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202601778",
-    "en": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601778",
+DOC_ID = "L_202601778"
+
+SOURCES = {
+    "de": f"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:{DOC_ID}",
+    "en": f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:{DOC_ID}",
 }
 
-DOC_ID = "L_202601778"
 OUTPUT_FILE = Path(f"{DOC_ID}.md")
-
 
 def fetch_as_markdown(url: str) -> str:
     response = requests.get(url)
@@ -27,7 +27,6 @@ source_en: "{SOURCES['en']}"
 date_fetched: {date.today().isoformat()}
 languages: [DE, EN]
 tags: [EU-Recht, Verordnung, bilingual]
-status: raw
 ---
 
 """
