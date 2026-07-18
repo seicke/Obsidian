@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "d5458db29512500d",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "dfdd2422e06bee32",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -106,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 25.26041666666667,
+        "dimension": 31.359649122807014,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -209,7 +209,7 @@
       {
         "id": "2b36ae8bafc79e23",
         "type": "tabs",
-        "dimension": 27.34375,
+        "dimension": 35.08771929824561,
         "children": [
           {
             "id": "85c8dd9f7f8bdbfc",
@@ -224,34 +224,27 @@
         ]
       },
       {
-        "id": "4910875ae564f333",
+        "id": "cb9fb971918c368a",
         "type": "tabs",
-        "dimension": 47.39583333333333,
+        "dimension": 33.55263157894737,
         "children": [
           {
-            "id": "53d278dd30d24cdb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "682d72bb661f475a",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "03 Tasks/Tasks.md",
+                "mode": "source",
+                "source": false
+              },
               "pinned": true,
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Tasks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -277,13 +270,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "682d72bb661f475a",
+  "active": "dfdd2422e06bee32",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "Inbox.md",
     "03 Tasks/Tasks.md",
+    "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
+    "03 Tasks/Tasks.md",
     "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
-    "Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "08 People/Thiessen, Nico.md",
     "08 People/Riwe, Roman.md",
