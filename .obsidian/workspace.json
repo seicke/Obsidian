@@ -11,14 +11,12 @@
             "id": "ef9ca44523b93e98",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
-                "mode": "source",
-                "source": false
+                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf"
               },
-              "icon": "lucide-file",
-              "title": "DKE AK 651.0.12"
+              "icon": "lucide-file-text",
+              "title": "651.0.12_2026-0010__Deckblatt"
             }
           }
         ]
@@ -97,8 +95,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 422.5,
-    "collapsed": true
+    "width": 707.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -115,13 +112,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of DKE AK 651.0.12"
+              "title": "Outline of 651.0.12_2026-0010__Deckblatt"
             }
           },
           {
@@ -169,7 +166,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +176,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for DKE AK 651.0.12"
+              "title": "Backlinks for 651.0.12_2026-0010__Deckblatt"
             }
           },
           {
@@ -188,12 +185,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from DKE AK 651.0.12"
+              "title": "Outgoing links from 651.0.12_2026-0010__Deckblatt"
             }
           },
           {
@@ -276,9 +273,16 @@
   },
   "active": "ef9ca44523b93e98",
   "lastOpenFiles": [
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0001_48_618_DC2026-04__48-618-DC__Do.pdf",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0002_FprEN_182392026-05__JT024007__D.pdf",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0003_Einladung___Sitzung_DKE_AK_651_.pdf",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0004_Aufgabenbereich_des_AK_651_0_12.pdf",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0005_Classification_of_electrical_co.pdf",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0008_Ergebnisbericht__Sitzung_DKE_AK.pdf",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0009_Einladung___Sitzung_DKE_AK_651_.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf",
-    "02 Notes/Obsidian/Journaling with Obsidian.md",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+    "02 Notes/Obsidian/Journaling with Obsidian.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
@@ -289,14 +293,8 @@
     "00 Inbox/3e36d63f-0f32-4577-8a54-238ce8537aec.tmp",
     "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "05 Projects/2025 IDTA Asset Data eXchange Hub - IDTA AdX Hub.md",
-    "05 Projects/2026-05-22 Brief KI Linzenz an DIN Media.pdf",
-    "05 Projects/Untitled/desktop.ini",
-    "05 Projects/Archiv",
     "03 Tasks/_MOC_Tasks.md",
-    "02 Notes/Obsidian",
     "03 Tasks/_MOC_StudentTasks.md",
-    "02 Notes/Untitled/desktop.ini",
-    "02 Notes/Blockbrain",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
