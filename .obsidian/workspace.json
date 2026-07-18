@@ -25,6 +25,18 @@
             "id": "52ce580f59ad958c",
             "type": "leaf",
             "state": {
+              "type": "pdf",
+              "state": {
+                "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0006_Export_CDD_AAA147/651.0.12_2026-0006_Export_CDD_AAA147.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "651.0.12_2026-0006_Export_CDD_AAA147"
+            }
+          },
+          {
+            "id": "073b22dff2b4e5e7",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
@@ -36,7 +48,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -288,12 +300,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "52ce580f59ad958c",
+  "active": "073b22dff2b4e5e7",
   "lastOpenFiles": [
-    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/~$651.0.12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_.tmp",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0006_Export_CDD_AAA147/651.0.12_2026-0006_Export_CDD_AAA147.pdf",
-    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "00 Inbox/L_202601778.md",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/~$651.0.12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_.tmp",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0001_48_618_DC2026-04__48-618-DC__Do.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0002_FprEN_182392026-05__JT024007__D.pdf",
@@ -302,7 +314,6 @@
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0005_Classification_of_electrical_co.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0008_Ergebnisbericht__Sitzung_DKE_AK.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0009_Einladung___Sitzung_DKE_AK_651_.pdf",
-    "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
