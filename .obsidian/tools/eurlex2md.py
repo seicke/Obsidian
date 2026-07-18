@@ -34,23 +34,25 @@ def fetch_html(url: str) -> str:
 
     return bytes(http.ResponseBody).decode("utf-8")
 
-
 def extract_title(html: str, fallback: str) -> str:
-    """Extract document title from HTML body headings or <title> tag."""
+    """Extract document title from HTML body headings or <title> tag.
+
+    Skips headings that match the .fmx.xml filename pattern.
+    """
     soup = BeautifulSoup(html, "html.parser")
 
     if soup.body:
-        for tag in ["h1", "h2"]:
-            heading = soup.body.find(tag)
-            if heading:
-                return heading.get_text(separator=" ", strip=True)
+        for tag in ["h1", "h2", "p"]:
+            for heading in soup.body.find_all(tag):
+                text = heading.get_text(separator=" ", strip=True)
+                if text and not re.search(r"\.fmx\.xml$", text):
+                    return text
 
     title_tag = soup.find("title")
     if title_tag:
         return title_tag.get_text(strip=True)
 
     return fallback
-
 
 from bs4 import BeautifulSoup, ProcessingInstruction
 
