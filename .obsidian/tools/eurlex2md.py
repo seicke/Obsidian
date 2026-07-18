@@ -2,11 +2,13 @@ import requests
 from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
+import os
 
 PROXY_URL = "http://proxyespel.harting.intra:80"
-PROXIES = {
-    "http": PROXY_URL,
-    "https": PROXY_URL,
+
+PROXIES = {  
+    "http": PROXY_URL,  
+    "https": PROXY_URL,  
 }
 
 DOC_ID = "L_202601778"
@@ -22,7 +24,7 @@ TARGET_DIR = (SCRIPT_DIR / "../../00 Inbox").resolve()
 OUTPUT_FILE = TARGET_DIR / f"{DOC_ID}.md"
 
 def fetch_as_markdown(url: str) -> str:
-    response = requests.get(url, proxies=PROXIES, auth="")
+    response = requests.get(url)
     response.raise_for_status()
     return md(response.text, heading_style="ATX")
 
@@ -40,8 +42,14 @@ tags: [EU-Recht, Verordnung, bilingual]
 
 """
 
+print(os.environ.get("HTTPS_PROXY"))
+print(os.environ.get("HTTP_PROXY"))
+
+print("1")
 content_de = fetch_as_markdown(SOURCES["de"])
+print("2")
 content_en = fetch_as_markdown(SOURCES["en"])
+print("3")
 
 note = (
     frontmatter
