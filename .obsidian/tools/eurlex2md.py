@@ -72,13 +72,14 @@ def preprocess_html(html: str) -> str:
 
     return str(soup)
 
-
 def html_to_markdown(html: str) -> str:
     """Convert HTML to clean Markdown.
 
     Pre-processes HTML to remove layout tables and horizontal rules.
     Collapses excessive blank lines and merges dangling list markers with their content.
     Normalises multiple spaces after list markers to a single space.
+    Removes blank lines between consecutive list items.
+    Converts 'Artikel ...' and 'Article ...' lines to #### headings [[1]](6a5b85f8434dbfbccdd8d476).
     Strips trailing whitespace from each line.
     """
     cleaned_html = preprocess_html(html)
@@ -93,13 +94,16 @@ def html_to_markdown(html: str) -> str:
     # Collapse multiple spaces after list markers to a single space
     result = re.sub(r"(?m)^([a-z]\)|\([0-9]+\)|[0-9]+\.)\s{2,}", r"\1 ", result)
 
+    # Remove blank lines between consecutive list items
+    result = re.sub(r"\n\n(?=(?:[a-z]\)|\([0-9]+\)|[0-9]+\.) )", "\n", result)
+
+    # Convert 'Artikel ...' and 'Article ...' lines to #### 
+    result = re.sub(r"(?m)^(Artikel|Article) ([0-9]+)$", r"#### \1 \2", result)
+
     # Strip trailing whitespace per line
     result = "\n".join(line.rstrip() for line in result.split("\n"))
 
     return result.strip()
-
-
-
 
 html_de = fetch_html(SOURCES["de"])
 html_en = fetch_html(SOURCES["en"])
