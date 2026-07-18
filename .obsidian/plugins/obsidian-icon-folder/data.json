@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBookTemplate",
       "LiUser2",
       "FasUser",
       "LiInbox",
-      "LiCheck",
-      "FasPerson"
+      "LiCheck"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -44,5 +44,6 @@
   "08 People": "LiUser2",
   "02 Notes": "LiNotebook",
   "04 Assets": "LiFiles",
-  "07 Links": "LiLink"
+  "07 Links": "LiLink",
+  "09 Templates": "LiBookTemplate"
 }
