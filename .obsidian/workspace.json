@@ -11,12 +11,14 @@
             "id": "c0313119a7c0b343",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "00 Inbox/JRC145830_01.pdf"
+                "file": "00 Inbox/L_202601778.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "JRC145830_01"
+              "icon": "lucide-file",
+              "title": "L_202601778"
             }
           }
         ]
@@ -112,12 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00 Inbox/L_202601778.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of L_202601778"
             }
           },
           {
@@ -201,8 +204,7 @@
               "title": "Notes Review Queue"
             }
           }
-        ],
-        "currentTab": 6
+        ]
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -268,10 +270,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c0313119a7c0b343",
+  "active": "d3a3f042b66a2a8c",
   "lastOpenFiles": [
-    "00 Inbox/L_202601778.md",
     "00 Inbox/JRC145830_01.pdf",
+    "00 Inbox/L_202601778.md",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
     "00 Inbox/651-0-12_2026-0011_Struktur_Steckverbinder_Vorschl.pdf",
