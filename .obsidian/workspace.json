@@ -6,7 +6,7 @@
       {
         "id": "64d74a948f7f01fc",
         "type": "tabs",
-        "dimension": 82.75039745627981,
+        "dimension": 44.5945945945946,
         "children": [
           {
             "id": "2d60129bb90f98d7",
@@ -16,7 +16,7 @@
               "state": {
                 "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Regulation (EU) 2024-1781 ESPR"
@@ -27,7 +27,7 @@
       {
         "id": "56feb3cc85f9f52d",
         "type": "tabs",
-        "dimension": 17.24960254372019,
+        "dimension": 55.4054054054054,
         "children": [
           {
             "id": "719e58f90788eef5",
