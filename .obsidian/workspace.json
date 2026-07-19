@@ -22,20 +22,6 @@
             }
           },
           {
-            "id": "d60e81af91c4922c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Regulation (EU) 2024-1781 ESPR"
-            }
-          },
-          {
             "id": "a9a13f42cc9f7ec0",
             "type": "leaf",
             "state": {
@@ -49,8 +35,7 @@
               "title": "Regulation (EU) 2026-1778 DPP Registry"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -144,13 +129,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Regulation (EU) 2026-1778 DPP Registry"
+              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
             }
           },
           {
@@ -301,7 +286,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 487.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -323,10 +309,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a9a13f42cc9f7ec0",
+  "active": "6f234d817b34eae4",
   "lastOpenFiles": [
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "02 Notes/2026-07-19.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Assets",
     "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
