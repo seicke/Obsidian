@@ -5,11 +5,11 @@ from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
 
-DOC_ID = "L_202401781"
+DOC_ID = "32023R1542"
 
 SOURCES = {
-    "de": f"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:{DOC_ID}",
-    "en": f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:{DOC_ID}",
+    "de": f"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32023R1542",
+    "en": f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R1542",
 }
 
 SCRIPT_DIR = Path(__file__).parent
@@ -159,14 +159,12 @@ content_de = html_to_markdown(html_de)
 content_en = html_to_markdown(html_en)
 
 frontmatter = f"""---
-title: "{doc_title}"
 aliases:
 source_de: "{SOURCES['de']}"
 source_en: "{SOURCES['en']}"
 date_fetched: {date.today().isoformat()}
-languages:
-        - DE
-        - EN
+title_de:
+title_en:
 tags:
 created: {date.today().strftime("%Y-%m-%d %H:%M:%S")}
 updated: {date.today().strftime("%Y-%m-%d %H:%M:%S")}
