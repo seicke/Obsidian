@@ -6,7 +6,7 @@
       {
         "id": "64d74a948f7f01fc",
         "type": "tabs",
-        "dimension": 52.22575516693164,
+        "dimension": 82.75039745627981,
         "children": [
           {
             "id": "2d60129bb90f98d7",
@@ -16,7 +16,7 @@
               "state": {
                 "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "mode": "source",
-                "source": true
+                "source": false
               },
               "icon": "lucide-file",
               "title": "Regulation (EU) 2024-1781 ESPR"
@@ -27,7 +27,7 @@
       {
         "id": "56feb3cc85f9f52d",
         "type": "tabs",
-        "dimension": 47.774244833068366,
+        "dimension": 17.24960254372019,
         "children": [
           {
             "id": "719e58f90788eef5",
@@ -49,10 +49,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf"
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Regulation (EU) 2024-1781 ESPR DE"
+              "title": "Regulation (EU) 2024-1781 ESPR EN"
             }
           }
         ],
@@ -333,12 +333,12 @@
   },
   "active": "2d60129bb90f98d7",
   "lastOpenFiles": [
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "00 Inbox/Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf.crdownload",
     "00 Inbox/44a77fe8-c7b1-4a35-ab53-43ec491e139c.tmp",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf.crdownload",
