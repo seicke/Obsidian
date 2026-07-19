@@ -6,6 +6,7 @@
       {
         "id": "64d74a948f7f01fc",
         "type": "tabs",
+        "dimension": 92.05087440381558,
         "children": [
           {
             "id": "2d60129bb90f98d7",
@@ -15,7 +16,7 @@
               "state": {
                 "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Regulation (EU) 2024-1781 ESPR"
@@ -26,6 +27,7 @@
       {
         "id": "56feb3cc85f9f52d",
         "type": "tabs",
+        "dimension": 7.94912559618442,
         "children": [
           {
             "id": "719e58f90788eef5",
@@ -148,13 +150,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Regulation (EU) 2024-1781 ESPR DE"
+              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
             }
           },
           {
@@ -261,7 +263,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -328,10 +331,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a3de07897e0ee665",
+  "active": "2d60129bb90f98d7",
   "lastOpenFiles": [
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "00 Inbox/Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
