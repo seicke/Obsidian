@@ -1,5 +1,5 @@
 # --- Configuration ---
-$DOC_ID      = "L_202601778"
+$DOC_ID      = "L_202401781"
 $PROXY       = "http://proxyespel.harting.intra:80"
 $DATE_FETCHED = (Get-Date -Format "yyyy-MM-dd")
 

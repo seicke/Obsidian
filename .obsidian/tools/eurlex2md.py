@@ -5,7 +5,7 @@ from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
 
-DOC_ID = "L_202601778"
+DOC_ID = "L_202401781"
 
 SOURCES = {
     "de": f"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:{DOC_ID}",
