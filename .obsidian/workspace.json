@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-17 Friday"
+              "title": "2026-06-19 Friday"
             }
           }
         ]
@@ -114,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-17 Friday"
+              "title": "Outline of 2026-06-19 Friday"
             }
           },
           {
@@ -296,6 +296,9 @@
   },
   "active": "2f7fe49cb2edd6cf",
   "lastOpenFiles": [
+    "00 Inbox/Note Types.md",
+    "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "08 People/Georg, Christian.md",
     "08 People/Krug, Christian.md",
     "08 People/Vollenbruch, Paul.md",
@@ -317,7 +320,6 @@
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Assets",
     "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport.md",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
@@ -332,8 +334,6 @@
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
-    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
-    "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
