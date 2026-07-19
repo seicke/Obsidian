@@ -6,7 +6,7 @@
       {
         "id": "64d74a948f7f01fc",
         "type": "tabs",
-        "dimension": 44.5945945945946,
+        "dimension": 53.09734513274337,
         "children": [
           {
             "id": "2d60129bb90f98d7",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+                "file": "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Regulation (EU) 2024-1781 ESPR"
+              "title": "_MOC_Student Tasks"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "56feb3cc85f9f52d",
         "type": "tabs",
-        "dimension": 55.4054054054054,
+        "dimension": 46.902654867256636,
         "children": [
           {
             "id": "719e58f90788eef5",
@@ -42,21 +42,8 @@
               "icon": "lucide-file",
               "title": "Regulation (EU) 2026-1778 DPP Registry"
             }
-          },
-          {
-            "id": "a3de07897e0ee665",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Regulation (EU) 2024-1781 ESPR EN"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,8 +119,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 707.5,
-    "collapsed": true
+    "width": 707.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -150,13 +136,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+                "file": "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
+              "title": "Outline of _MOC_Student Tasks"
             }
           },
           {
@@ -333,9 +319,14 @@
   },
   "active": "2d60129bb90f98d7",
   "lastOpenFiles": [
+    "03 Tasks/Student Tasks/Work Item.md",
+    "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
+    "03 Tasks/_MOC_Tasks.md",
+    "03 Tasks/Untitled/desktop.ini",
+    "03 Tasks/Student Tasks",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "00 Inbox/Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
@@ -345,9 +336,6 @@
     "00 Inbox/33884158-bed2-41b3-b995-745148fd4b51.tmp",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
     "02 Notes/DAVID.md",
-    "03 Tasks/_MOC_Tasks.md",
-    "00 Inbox/090166e52cc5e3b2.pdf",
-    "02 Notes/Regulation (EU) 2024-1781 ESPR/2024-11-13 ESPR - Regulation Study on new product priorities.pdf",
     "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
@@ -360,7 +348,6 @@
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
     "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "05 Projects/2025 IDTA Asset Data eXchange Hub - IDTA AdX Hub.md",
-    "03 Tasks/_MOC_StudentTasks.md",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "Inbox.md",
