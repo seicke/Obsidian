@@ -20,8 +20,37 @@
               "icon": "lucide-file",
               "title": "Regulation (EU) 2024-1781 ESPR"
             }
+          },
+          {
+            "id": "d60e81af91c4922c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Regulation (EU) 2024-1781 ESPR"
+            }
+          },
+          {
+            "id": "a9a13f42cc9f7ec0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Regulation (EU) 2026-1778 DPP Registry"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -295,14 +324,16 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "6f234d817b34eae4",
+  "active": "d60e81af91c4922c",
   "lastOpenFiles": [
-    "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
+    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Assets",
+    "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport - Digitaler Produktpass (DPP).md",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport.md",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
@@ -310,7 +341,6 @@
     "03 Tasks/Student Tasks/Work Item 8493 - AAS Onboarding - Understanding and Creating-Editing AAS.md",
     "03 Tasks/Student Tasks/Work Item 8495 - Explore SAP Product Footprint Management API and Create Bruno Collection.md",
     "09 Templates/Student Task Note Template.md",
-    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
     "08 People/Schewzow, Andreas.md",
     "03 Tasks/_MOC_Tasks.md",
@@ -321,7 +351,6 @@
     "00 Inbox/Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf.crdownload",
     "00 Inbox/44a77fe8-c7b1-4a35-ab53-43ec491e139c.tmp",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf.crdownload",
     "02 Notes/DAVID.md",
     "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
@@ -334,7 +363,6 @@
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
     "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "05 Projects/2025 IDTA Asset Data eXchange Hub - IDTA AdX Hub.md",
-    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
