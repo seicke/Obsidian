@@ -50,7 +50,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -144,13 +144,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+                "file": "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
+              "title": "Outline of Regulation (EU) 2026-1778 DPP Registry"
             }
           },
           {
@@ -323,11 +323,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d3a3f042b66a2a8c",
+  "active": "a9a13f42cc9f7ec0",
   "lastOpenFiles": [
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "02 Notes/2026-07-19.md",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Assets",
     "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
