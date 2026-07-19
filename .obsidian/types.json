@@ -29,6 +29,7 @@
     "Data volume sent": "number",
     "Data volume received": "number",
     "birthday": "date",
-    "date": "date"
+    "date": "date",
+    "assigned": "date"
   }
 }
