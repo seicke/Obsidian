@@ -3,7 +3,6 @@
   "highlighterMethods": "inline-styles",
   "highlighters": {
     "Red": "#FF5582A6",
-    "Orange": "#FFB86CA6",
     "Green": "#BBFABBA6",
     "Cyan": "#ABF7F7A6",
     "Blue": "#ADCCFFA6",
@@ -12,7 +11,6 @@
   },
   "highlighterOrder": [
     "Red",
-    "Orange",
     "Green",
     "Cyan",
     "Blue",

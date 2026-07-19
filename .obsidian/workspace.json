@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "64d74a948f7f01fc",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "2d60129bb90f98d7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
-                "mode": "source",
-                "source": false
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf"
               },
-              "icon": "lucide-file",
-              "title": "2026-07-19 Sunday"
+              "icon": "lucide-file-text",
+              "title": "Regulation (EU) 2024-1781 ESPR EN"
             }
           }
         ]
@@ -283,25 +281,27 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "2d60129bb90f98d7",
   "lastOpenFiles": [
-    "03 Tasks/_MOC_Tasks.md",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf.crdownload",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
+    "00 Inbox/44a77fe8-c7b1-4a35-ab53-43ec491e139c.tmp",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf.crdownload",
+    "00 Inbox/33884158-bed2-41b3-b995-745148fd4b51.tmp",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
+    "02 Notes/DAVID.md",
+    "03 Tasks/_MOC_Tasks.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/090166e52cc5e3b2.pdf",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "00 Inbox/JRC145830_01.pdf",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/2024-11-13 ESPR - Regulation Study on new product priorities.pdf",
     "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/Untitled/desktop.ini",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR",
-    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry DE.pdf",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
-    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry EN.pdf",
-    "00 Inbox/Regulation EU 2026-1778/Regulation EU 2026-1778.pdf.crdownload",
-    "00 Inbox/99cd7a05-d234-4dc9-a90f-3486424511fc.tmp",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
@@ -321,8 +321,6 @@
     "08 People/Feulner, Dennis.md",
     "08 People/Vollenbruch, Paul.md",
     "08 People/Schewzow, Andreas.md",
-    "08 People/Krug, Christian.md",
-    "08 People/Opitz, Karl Luke.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
