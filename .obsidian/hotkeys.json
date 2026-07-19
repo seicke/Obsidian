@@ -114,5 +114,13 @@
       ],
       "key": "F2"
     }
+  ],
+  "highlightr-plugin:Yellow": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Y"
+    }
   ]
 }
