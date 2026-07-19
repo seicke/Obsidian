@@ -106,5 +106,13 @@
       "key": "B"
     }
   ],
-  "obsidian-icons-plugin:open-icons-plugin-modal": []
+  "obsidian-icons-plugin:open-icons-plugin-modal": [],
+  "obsidian-git:open-git-view": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "F2"
+    }
+  ]
 }

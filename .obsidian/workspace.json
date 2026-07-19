@@ -11,12 +11,34 @@
             "id": "2d60129bb90f98d7",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf"
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Regulation (EU) 2024-1781 ESPR EN"
+              "icon": "lucide-file",
+              "title": "Regulation (EU) 2024-1781 ESPR"
+            }
+          }
+        ]
+      },
+      {
+        "id": "56feb3cc85f9f52d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "719e58f90788eef5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Regulation (EU) 2026-1778 DPP Registry"
             }
           }
         ]
@@ -213,9 +235,19 @@
               "icon": "SpacedRepIcon",
               "title": "Notes Review Queue"
             }
+          },
+          {
+            "id": "a41392476ca1ac60",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -283,24 +315,23 @@
   },
   "active": "2d60129bb90f98d7",
   "lastOpenFiles": [
+    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+    "00 Inbox/Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf.crdownload",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
     "00 Inbox/44a77fe8-c7b1-4a35-ab53-43ec491e139c.tmp",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf.crdownload",
     "00 Inbox/33884158-bed2-41b3-b995-745148fd4b51.tmp",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "02 Notes/DAVID.md",
     "03 Tasks/_MOC_Tasks.md",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/090166e52cc5e3b2.pdf",
-    "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
-    "00 Inbox/JRC145830_01.pdf",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/2024-11-13 ESPR - Regulation Study on new product priorities.pdf",
     "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
-    "00 Inbox/Untitled/desktop.ini",
     "05 Projects/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
