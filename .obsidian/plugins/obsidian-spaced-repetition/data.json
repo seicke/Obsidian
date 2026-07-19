@@ -1,7 +1,8 @@
 {
   "settings": {
     "flashcardTags": [
-      "#flashcards"
+      "#flashcards",
+      "#2026_English_Course/Vocabulary"
     ],
     "flashcardTagsToIgnore": [],
     "convertFoldersToDecks": false,
@@ -48,7 +49,7 @@
     "initiallyExpandAllSubdecksInTree": true,
     "showContextInCards": true,
     "showIntervalInReviewButtons": true,
-    "flashcardHeightPercentage": 60,
+    "flashcardHeightPercentage": 59.985632183908045,
     "flashcardWidthPercentage": 60,
     "flashcardHeightPercentageMobile": 100,
     "flashcardWidthPercentageMobile": 100,

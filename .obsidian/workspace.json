@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
+                "file": "05 Projects/2026 English Course/2026 English Course - Vocabulary.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-07-19 Sunday"
+              "title": "2026 English Course - Vocabulary"
             }
           }
         ]
@@ -69,7 +69,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -114,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
+                "file": "05 Projects/2026 English Course/2026 English Course - Vocabulary.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-19 Sunday"
+              "title": "Outline of 2026 English Course - Vocabulary"
             }
           },
           {
@@ -272,7 +272,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 487.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -297,6 +298,8 @@
   "active": "a0bdd4e66da9e1d7",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
+    "05 Projects/2026 English Course/2026 English Course - Vocabulary.md",
+    "05 Projects/2026 English Course/2026 English Course.md",
     "01 Journal/2026/2026-01 January/2026-01-07 Wednesday.md",
     "00 Inbox/Asset Administration Shell (AAS).md",
     "02 Notes/SAP SFM.md",
@@ -330,8 +333,6 @@
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation",
     "02 Notes/2026-07-19.md",
     "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
