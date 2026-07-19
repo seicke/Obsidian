@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4ead5235824adebb",
+        "id": "db16f99668d702fd",
         "type": "tabs",
         "children": [
           {
-            "id": "2a181a21e071bb0a",
+            "id": "a0bdd4e66da9e1d7",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -33,7 +33,7 @@
       {
         "id": "59e62d438170d56c",
         "type": "tabs",
-        "dimension": 78.42846553002224,
+        "dimension": 76.37037037037037,
         "children": [
           {
             "id": "84018928a2888d9f",
@@ -79,22 +79,18 @@
         "currentTab": 2
       },
       {
-        "id": "83495321bfc99a8c",
+        "id": "f6ceb98296cf20c9",
         "type": "tabs",
-        "dimension": 21.57153446997776,
+        "dimension": 23.62962962962963,
         "children": [
           {
-            "id": "494320b05cf5d107",
+            "id": "2a181a21e071bb0a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-01 January/2026-01-07 Wednesday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-01-07 Wednesday"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -118,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-01 January/2026-01-07 Wednesday.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-01-07 Wednesday"
+              "title": "Outline of 2026-07-19 Sunday"
             }
           },
           {
@@ -298,9 +294,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "494320b05cf5d107",
+  "active": "a0bdd4e66da9e1d7",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
+    "01 Journal/2026/2026-01 January/2026-01-07 Wednesday.md",
     "00 Inbox/Asset Administration Shell (AAS).md",
     "02 Notes/SAP SFM.md",
     "03 Tasks/Student Tasks/Work Item 8495 - Explore SAP Product Footprint Management API and Create Bruno Collection.md",
@@ -335,7 +332,6 @@
     "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport.md",
-    "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
