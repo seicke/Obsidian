@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "eb476f6cb5d3e7a7",
+        "id": "a57750e063ee88ee",
         "type": "tabs",
         "children": [
           {
-            "id": "8e79e16c59c3549e",
+            "id": "2f7fe49cb2edd6cf",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -265,8 +265,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5,
-    "collapsed": true
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -288,8 +287,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "8e79e16c59c3549e",
+  "active": "2f7fe49cb2edd6cf",
   "lastOpenFiles": [
+    "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
     "03 Tasks/_MOC_Tasks.md",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Regulation (EU) 2023-1542 Battery Regulation.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
@@ -315,7 +315,6 @@
     "03 Tasks/Student Tasks/Work Item 8493 - AAS Onboarding - Understanding and Creating-Editing AAS.md",
     "03 Tasks/Student Tasks/Work Item 8495 - Explore SAP Product Footprint Management API and Create Bruno Collection.md",
     "09 Templates/Student Task Note Template.md",
-    "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
     "08 People/Schewzow, Andreas.md",
     "02 Notes/DAVID.md",
     "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
