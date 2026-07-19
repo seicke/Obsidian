@@ -107,7 +107,7 @@
     }
   ],
   "obsidian-icons-plugin:open-icons-plugin-modal": [],
-  "obsidian-git:open-git-view": [
+  "editor:toggle-source": [
     {
       "modifiers": [
         "Mod"

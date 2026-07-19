@@ -117,7 +117,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 707.5
+    "width": 707.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -134,12 +135,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
             }
           },
           {
@@ -246,8 +248,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 8
+        ]
       },
       {
         "id": "2b36ae8bafc79e23",
