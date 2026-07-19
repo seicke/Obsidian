@@ -11,10 +11,14 @@
             "id": "2f7fe49cb2edd6cf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-07-17 Friday"
             }
           }
         ]
@@ -71,7 +75,8 @@
               "title": "Files"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "83495321bfc99a8c",
@@ -109,12 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2026-07-17 Friday"
             }
           },
           {
@@ -147,7 +153,7 @@
               "state": {
                 "sortOrder": "alphabetical",
                 "useHierarchy": true,
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": ""
               },
               "icon": "lucide-tags",
@@ -221,7 +227,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -289,12 +296,15 @@
   },
   "active": "2f7fe49cb2edd6cf",
   "lastOpenFiles": [
+    "08 People/Georg, Christian.md",
+    "08 People/Krug, Christian.md",
+    "08 People/Vollenbruch, Paul.md",
+    "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
     "03 Tasks/_MOC_Tasks.md",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Regulation (EU) 2023-1542 Battery Regulation.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
-    "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation EN.pdf.crdownload",
     "00 Inbox/d0091135-39d2-493a-b46d-6ec3f0af9556.tmp",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation DE.pdf.crdownload",
@@ -324,9 +334,6 @@
     "02 Notes/Obsidian/Journaling with Obsidian.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md",
-    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
-    "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
-    "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
