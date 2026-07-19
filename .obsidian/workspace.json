@@ -4,57 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ab0279261e5da514",
+        "id": "21ac06972f37db4e",
         "type": "tabs",
-        "dimension": 39.10398230088495,
         "children": [
           {
-            "id": "719e58f90788eef5",
+            "id": "6f234d817b34eae4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-17 Friday"
-            }
-          },
-          {
-            "id": "79636421f3561096",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-07-17 Friday"
-            }
-          }
-        ]
-      },
-      {
-        "id": "a5b48c4d90c311cf",
-        "type": "tabs",
-        "dimension": 60.89601769911505,
-        "children": [
-          {
-            "id": "42d16095070eea79",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport - Digitaler Produktpass (DPP).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Digital Product Passport - Digitaler Produktpass (DPP)"
+              "title": "Regulation (EU) 2024-1781 ESPR"
             }
           }
         ]
@@ -133,7 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 707.5
+    "width": 491.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -150,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-17 Friday"
+              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
             }
           },
           {
@@ -331,11 +295,15 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "719e58f90788eef5",
+  "active": "6f234d817b34eae4",
   "lastOpenFiles": [
+    "02 Notes/European Green Deal - Europäischer Grüner Deal.md",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets",
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport - Digitaler Produktpass (DPP).md",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Digital Product Passport.md",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "03 Tasks/Student Tasks/Work Item 8494 - Comparative Analysis of AAS SMTs Handover Documentation v2  vs.  Digital Quality Documents Part 1 - Core Elements v1.md",
@@ -348,15 +316,12 @@
     "03 Tasks/_MOC_Tasks.md",
     "03 Tasks/Untitled/desktop.ini",
     "03 Tasks/Student Tasks",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/Regulation (EU) 2024-1781 ESPR EN.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/Regulation (EU) 2024-1781 ESPR DE.pdf",
     "00 Inbox/Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR EN.pdf.crdownload",
     "00 Inbox/44a77fe8-c7b1-4a35-ab53-43ec491e139c.tmp",
     "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE.pdf.crdownload",
-    "00 Inbox/33884158-bed2-41b3-b995-745148fd4b51.tmp",
-    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR DE with marks.pdf",
     "02 Notes/DAVID.md",
     "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
@@ -370,7 +335,6 @@
     "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
     "05 Projects/2025 IDTA Asset Data eXchange Hub - IDTA AdX Hub.md",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
-    "Inbox.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
     "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
