@@ -257,8 +257,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -302,8 +301,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5,
-    "collapsed": true
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -325,7 +323,7 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d60e81af91c4922c",
+  "active": "d3a3f042b66a2a8c",
   "lastOpenFiles": [
     "00 Inbox/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "02 Notes/2026-07-19.md",
