@@ -133,6 +133,7 @@ def html_to_markdown(html: str) -> str:
 
     # Convert standalone 'Artikel N' / 'Article N' lines to #### headings
     result = re.sub(r"(?m)^(Artikel|Article)\s([0-9a-z]+)$", r"#### \1 \2", result)
+    result = re.sub(r"(?m)^(Anhang |Annex)\s([0-9a-z]+)$", r"#### \1 \2", result)
 
     # Merge article heading with the following title line
     result = re.sub(r"(?m)^(#### (?:Artikel|Article)\s[0-9a-z]+)\n\n(.+)$", r"\1 \2", result)
