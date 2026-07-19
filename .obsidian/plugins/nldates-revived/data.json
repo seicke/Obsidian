@@ -1,0 +1,31 @@
+{
+  "autosuggestToggleLink": false,
+  "autocompleteTriggerPhrase": "@",
+  "isAutosuggestEnabled": true,
+  "format": "YYYY-MM-DD",
+  "timeFormat": "HH:mm",
+  "separator": " ",
+  "weekStart": "locale-default",
+  "languages": [
+    "en",
+    "de"
+  ],
+  "english": true,
+  "japanese": false,
+  "french": false,
+  "german": true,
+  "portuguese": false,
+  "dutch": false,
+  "spanish": false,
+  "italian": false,
+  "russian": false,
+  "ukrainian": false,
+  "chinese": false,
+  "modalToggleTime": false,
+  "modalToggleLink": false,
+  "modalMomentFormat": "YYYY-MM-DD HH:mm",
+  "enableSmartSuggestions": true,
+  "enableHistorySuggestions": true,
+  "enableContextSuggestions": true,
+  "omitDateForShortRelative": true
+}
