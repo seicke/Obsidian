@@ -91,7 +91,6 @@
     "02 Notes/HARTING Greenline.md": "6745572e8300c3c113c10084540c13fcff601e7ac54bd2b910f41c776805fcf2",
     "02 Notes/openssl.md": "85b74908c6514a672495dba4e98bf581c7874db5ce160cf777e52125e61e02f6",
     "02 Notes/PowerShell.md": "a6eb0ddcb9c5ebc1b3ead69a98ff4a86c06c3d0f7d0a64b95b2bd399bcb1ced9",
-    "02 Notes/SAP SFM.md": "3bd25a4d203ab85f900e941c75027bff409a2ee3ac1bbc375969fed071d6017f",
     "02 Notes/Unbenannt.md": "21c55d5092271c55b8196bd04fed425dae66e1d8866e6e8d8ceefcbd6dd1e875",
     "02 Notes/Volumes - Shares.md": "476ac1735eccd598a096da6e3bd16b5fb6bb1404372e39e10851f0cbe2ce447d",
     "02 Notes/IEC 61406 Identification Link/IEC 61406 Identification Link.md": "d657a95cdd50cdeae9e3c8139d726b7dd731a8ed8fb58ab56c92b8cf75fb98f5",
@@ -131,6 +130,7 @@
     "08 People/Poggemeier, Carsten.md": "ed01332251958b4b53116f02364e99b600133b45d76a244ecc1a2f60ea3eace4",
     "08 People/Braun, John Edwin.md": "b3e10c83bc537693e3daa719d559971498efd66442d409eba0e38c2033bf15ee",
     "09 Templates/Journal Daily Note Template.md": "452fe9ddf201a95a2614f8735262d7192da8fcf4f4370e8222522b1fb5547cb1",
-    "02 Notes/SAP Material Data API.md": "3a3933c6688fc5f05d69554b74db925162e5fa0a83e3d083b92a33fc39ffd1b1"
+    "02 Notes/SAP Material Data API.md": "3a3933c6688fc5f05d69554b74db925162e5fa0a83e3d083b92a33fc39ffd1b1",
+    "00 Inbox/Asset Administration Shell (AAS).md": "c955406dee7373af0427e804ec2bd824e04915ff7670db1dea47b7031f186a16"
   }
 }
