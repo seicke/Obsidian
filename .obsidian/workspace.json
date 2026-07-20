@@ -20,8 +20,19 @@
               "icon": "lucide-file",
               "title": "2026-07-20 Monday"
             }
+          },
+          {
+            "id": "a80041951008c888",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -106,7 +117,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 31.359649122807014,
+        "dimension": 35.91954022988506,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -212,8 +223,8 @@
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "review-queue-list-view"
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
             }
           },
           {
@@ -232,7 +243,7 @@
       {
         "id": "2b36ae8bafc79e23",
         "type": "tabs",
-        "dimension": 35.08771929824561,
+        "dimension": 30.531609195402297,
         "children": [
           {
             "id": "85c8dd9f7f8bdbfc",
@@ -249,7 +260,7 @@
       {
         "id": "cb9fb971918c368a",
         "type": "tabs",
-        "dimension": 33.55263157894737,
+        "dimension": 33.548850574712645,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -271,8 +282,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5,
-    "collapsed": true
+    "width": 487.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -291,10 +301,11 @@
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "a133e29936805f2c",
+  "active": "a80041951008c888",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
