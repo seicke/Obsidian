@@ -225,9 +225,29 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "79d056ec1e563018",
+            "type": "leaf",
+            "state": {
+              "type": "planner-timeline",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Timeline"
+            }
+          },
+          {
+            "id": "e460c24f3eb952dc",
+            "type": "leaf",
+            "state": {
+              "type": "planner-time-tracker",
+              "state": {},
+              "icon": "timer",
+              "title": "Time Tracker"
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 9
       },
       {
         "id": "2b36ae8bafc79e23",
@@ -254,7 +274,8 @@
               "title": "Calendar"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "cb9fb971918c368a",
@@ -281,7 +302,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 675.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -301,11 +322,14 @@
       "obsidian-git:Open Git source control": true,
       "obsidian-spaced-repetition:Review flashcards": false,
       "periodic-notes:Open today": false,
-      "obsidian-full-calendar:Open Full Calendar": false
+      "obsidian-full-calendar:Open Full Calendar": false,
+      "obsidian-day-planner:Open Timeline": false,
+      "obsidian-day-planner:Open Multi-Day View": false
     }
   },
-  "active": "85c8dd9f7f8bdbfc",
+  "active": "a80041951008c888",
   "lastOpenFiles": [
+    "03 Tasks/_MOC_Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "09 Templates/Journal Daily Note Template.md",
@@ -333,7 +357,6 @@
     "08 People/Krug, Christian.md",
     "08 People/Vollenbruch, Paul.md",
     "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
-    "03 Tasks/_MOC_Tasks.md",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation EN.pdf.crdownload",
     "00 Inbox/d0091135-39d2-493a-b46d-6ec3f0af9556.tmp",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation DE.pdf.crdownload",
