@@ -35,8 +35,6 @@
   "enabled_templates_hotkeys": [
     ""
   ],
-  "startup_templates": [
-    "09 Templates/Journal Daily Note Startup.md"
-  ],
+  "startup_templates": [],
   "intellisense_render": 1
 }
