@@ -20,19 +20,8 @@
               "icon": "lucide-file",
               "title": "2026-07-20 Monday"
             }
-          },
-          {
-            "id": "a80041951008c888",
-            "type": "leaf",
-            "state": {
-              "type": "full-calendar-view",
-              "state": {},
-              "icon": "calendar-glyph",
-              "title": "Calendar"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -117,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 35.91954022988506,
+        "dimension": 42.09770114942529,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -243,7 +232,7 @@
       {
         "id": "2b36ae8bafc79e23",
         "type": "tabs",
-        "dimension": 30.531609195402297,
+        "dimension": 25.43103448275862,
         "children": [
           {
             "id": "85c8dd9f7f8bdbfc",
@@ -254,13 +243,23 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "a80041951008c888",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
           }
         ]
       },
       {
         "id": "cb9fb971918c368a",
         "type": "tabs",
-        "dimension": 33.548850574712645,
+        "dimension": 32.4712643678161,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -305,7 +304,7 @@
       "obsidian-full-calendar:Open Full Calendar": false
     }
   },
-  "active": "a80041951008c888",
+  "active": "85c8dd9f7f8bdbfc",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
