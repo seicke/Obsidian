@@ -43,7 +43,7 @@ tR += `- [ ] Weekly Planning ➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_da
 
 ```tasks
 not done
-(due this week) OR (scheduled this week)
+filter by function (function() { const ref = moment("<% week.format('gggg-MM-DD') %>"); const date = task.due.moment ?? task.scheduled.moment; if (!date) return false; const start = ref.clone().startOf('isoWeek'); const end = ref.clone().endOf('isoWeek'); return date.isBetween(start, end, 'day', '[]'); })()
 group by function (task.due.moment ?? task.scheduled.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
 sort by function task.due.moment?.valueOf() ?? task.scheduled.moment?.valueOf() ?? Infinity
 sort by priority
