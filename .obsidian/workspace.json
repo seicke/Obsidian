@@ -13,6 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "09 Templates/Journal Weekly Note Template.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Journal Weekly Note Template"
+            }
+          }
+        ]
+      },
+      {
+        "id": "de229a321dc75318",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb5486871d754bc2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "03 Tasks/_MOC_Tasks.md",
                 "mode": "source",
                 "source": false
@@ -20,8 +40,23 @@
               "icon": "lucide-file",
               "title": "_MOC_Tasks"
             }
+          },
+          {
+            "id": "29436e26580c6d7f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Notes/Obsidian/Journaling with Obsidian.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Journaling with Obsidian"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +104,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true
+                "autoReveal": false
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -311,10 +346,12 @@
   },
   "active": "262583d0cc1347ed",
   "lastOpenFiles": [
+    "02 Notes/Obsidian/Journaling with Obsidian.md",
+    "09 Templates/Journal Weekly Note Template.md",
     "03 Tasks/_MOC_Tasks.md",
+    "09 Templates/Journal Daily Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
-    "09 Templates/Journal Daily Note Template.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 5.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 4.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 3.md",
@@ -337,8 +374,6 @@
     "00 Inbox/Note Types.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "08 People/Krug, Christian.md",
-    "08 People/Vollenbruch, Paul.md",
-    "03 Tasks/Student Tasks/_MOC_Student Tasks.md",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation EN.pdf.crdownload",
     "00 Inbox/d0091135-39d2-493a-b46d-6ec3f0af9556.tmp",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation DE.pdf.crdownload",
