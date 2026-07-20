@@ -6,13 +6,11 @@
   "minMinutesBetweenSaves": 1,
   "ignoreGlobalFolder": [
     "/",
-    "Templater",
-    "Templater/Templates"
+    "09 Templates"
   ],
   "ignoreCreatedFolder": [
     "/",
-    "Templater",
-    "Templater/Templates"
+    "09 Templates"
   ],
   "enableExperimentalHash": false,
   "fileHashMap": {
@@ -128,7 +126,7 @@
     "08 People/Epp, Julia.md": "072e5959a33d8282cad7bd49921ecfae87f7e37daaf2ba3aed621a49efccf562",
     "08 People/Poggemeier, Carsten.md": "ed01332251958b4b53116f02364e99b600133b45d76a244ecc1a2f60ea3eace4",
     "08 People/Braun, John Edwin.md": "b3e10c83bc537693e3daa719d559971498efd66442d409eba0e38c2033bf15ee",
-    "09 Templates/Journal Daily Note Template.md": "f1ec78129c0a384ced009a5c2d21c63e9a95ad207666f1cd59770395746b415f",
+    "09 Templates/Journal Daily Note Template.md": "b3c9a62e96d69abec81fec2620f9c5a3cdf46a22d63bce1df699035b985750fb",
     "02 Notes/SAP Material Data API.md": "3a3933c6688fc5f05d69554b74db925162e5fa0a83e3d083b92a33fc39ffd1b1",
     "00 Inbox/Asset Administration Shell (AAS).md": "c955406dee7373af0427e804ec2bd824e04915ff7670db1dea47b7031f186a16",
     "05 Projects/2026 English Course/2026 English Course.md": "90159dcb2c337ed5eab1feb9a56a1c5be5cf9e08ca05d7473e0d4b02e1ef1eaf",
@@ -139,6 +137,6 @@
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 1.md": "401ef490b5ecb81cda034489f41d0d5b6a88e54c82432069048e700e97196f44",
     "09 Templates/Journal Weekly Note Template.md": "036f7291d3a67414b383649f507edcb585dd05f2c03215a2d1def9584407091f",
     "09 Templates/Journal Yearly Note Template.md": "9a51db3b42b7d68d66b123da12237b8b78f534be4478cc93de41202da6fdd0b7",
-    "01 Journal/2026/2026 W30.md": "aaf09e8400877146ab937fc8c01ac6641919862dffc161103bce4660c2335cc9"
+    "01 Journal/2026/2026 W30.md": "48cdcd2818e91f639386abfdb863b30f2c27cc190e343a4f888b8173cbc8f66a"
   }
 }

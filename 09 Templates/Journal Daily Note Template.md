@@ -1,7 +1,3 @@
----
-created: 2026-01-04 09:25:07
-updated: 2026-07-20 06:50:32
----
 <%*
 moment.locale("en");
 let filename = tp.file.title;
