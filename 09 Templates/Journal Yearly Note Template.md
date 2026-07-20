@@ -1,3 +1,7 @@
+---
+created: 2026-07-13 06:56:28
+updated: 2026-07-20 06:50:59
+---
 <%*
 moment.locale("en");
 let filename = tp.file.title;
@@ -18,6 +22,8 @@ if (tp.file.title !== filename) await tp.file.rename(filename);
 %>---
 aliases:
   - 
+created:
+updated:
 ---
 # <% filename %>
 <%* // ❮❮ YYYY-- | YYYY++  ❯❯

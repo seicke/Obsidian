@@ -1,6 +1,6 @@
 ---
 created: 2026-07-20 06:37:20
-updated: 2026-07-20 06:45:11
+updated: 2026-07-20 06:50:50
 ---
 <%*
 moment.locale("en");
@@ -23,7 +23,13 @@ filename = week.format('gggg [W]WW');
 if (tp.file.title !== filename) await tp.file.rename(filename);
 %>---
 aliases:
+  - <% week.format('gggg [W]WW') %>
+  - <% week.format('[W]WW gggg') %>
+created:
+updated
 ---
 # <% filename %>
 <%* // ❮❮ gggg [W]WW | gggg | MMMM gggg | gggg [W]WW  ❯❯
-%>❮❮ [[<% week_before.format('[01 Journal]/gggg/gggg [W]WW') %>]] | [[<% week.format('[01 Journal]/gggg/gggg|gggg') %>]] | [[<% day.format('[01 Journal]/gggg/gggg-MM MMMM/gggg-MM MMMM|MMMM gggg') %>]] | [[<% week_after.format('[01 Journal]/gggg/gggg [W]WW') %>]] ❯❯
+%>❮❮ [[<% week_before.format('[01 Journal]/gggg/gggg [W]WW|gggg [W]WW') %>]] | [[<% week.format('[01 Journal]/gggg/gggg|gggg') %>]] | [[<% week.format('[01 Journal]/gggg/gggg-MM MMMM/gggg-MM MMMM|MMMM gggg') %>]] | [[<% week_after.format('[01 Journal]/gggg/gggg [W]WW|gggg [W]WW') %>]] ❯❯
+
+- <% tp.file.cursor() %>

@@ -1,6 +1,6 @@
 ---
 created: 2026-01-04 09:25:07
-updated: 2026-07-19 14:12:54
+updated: 2026-07-20 06:50:32
 ---
 <%*
 moment.locale("en");
@@ -29,6 +29,8 @@ aliases:
   - <% day.format('dddd DD. MMMM YYYY') %>
   - <% day.clone().locale("de").format('dddd DD.MM.YYYY') %>
   - <% day.clone().locale("de").format('dddd DD. MMMM YYYY') %>
+created:
+updated
 ---
 # <% filename %>
 <%* // ❮❮ YYYY-MM-DD dddd | YYYY | MMMM YYYY | YYYY-MM-DD dddd  ❯❯

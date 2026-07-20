@@ -13,20 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-07-20 Monday"
-            }
-          },
-          {
-            "id": "0163a7668cc81980",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "01 Journal/2026/2026 W30.md",
                 "mode": "source",
                 "source": false
@@ -35,8 +21,7 @@
               "title": "2026 W30"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "de229a321dc75318",
@@ -78,7 +63,7 @@
               "state": {
                 "file": "09 Templates/Journal Daily Note Template.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
               "title": "Journal Daily Note Template"
@@ -374,12 +359,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "ef66f284ebee4c02",
+  "active": "262583d0cc1347ed",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026 W30.md",
     "09 Templates/Journal Weekly Note Template.md",
+    "09 Templates/Journal Yearly Note Template.md",
     "09 Templates/Journal Daily Note Template.md",
-    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
     "03 Tasks/_MOC_Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
@@ -403,7 +389,6 @@
     "08 People/Poggemeier, Carsten.md",
     "08 People/Georg, Christian.md",
     "00 Inbox/Note Types.md",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation EN.pdf.crdownload",
     "00 Inbox/d0091135-39d2-493a-b46d-6ec3f0af9556.tmp",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation DE.pdf.crdownload",
