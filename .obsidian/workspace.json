@@ -106,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 25.646551724137932,
+        "dimension": 44.037356321839084,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -114,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026 W30.md",
+                "file": "03 Tasks/_MOC_Tasks.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026 W30"
+              "title": "Outline of _MOC_Tasks"
             }
           },
           {
@@ -129,7 +129,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "01 Journal/2026/2026 W30.md"
+                "file": "03 Tasks/_MOC_Tasks.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -180,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01 Journal/2026/2026 W30.md",
+                "file": "03 Tasks/_MOC_Tasks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026 W30"
+              "title": "Backlinks for _MOC_Tasks"
             }
           },
           {
@@ -199,12 +199,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026 W30.md",
+                "file": "03 Tasks/_MOC_Tasks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026 W30"
+              "title": "Outgoing links from _MOC_Tasks"
             }
           },
           {
@@ -230,17 +230,17 @@
         ]
       },
       {
-        "id": "d16f25907ea54574",
+        "id": "19eb8b4152cb74bb",
         "type": "tabs",
-        "dimension": 37.35632183908046,
+        "dimension": 22.557471264367816,
         "children": [
           {
-            "id": "55434ebd38177ef1",
+            "id": "85c8dd9f7f8bdbfc",
             "type": "leaf",
             "state": {
-              "type": "full-calendar-view",
+              "type": "calendar",
               "state": {},
-              "icon": "calendar-glyph",
+              "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
           }
@@ -249,7 +249,7 @@
       {
         "id": "cb9fb971918c368a",
         "type": "tabs",
-        "dimension": 36.997126436781606,
+        "dimension": 33.4051724137931,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -265,16 +265,6 @@
               "pinned": true,
               "icon": "lucide-file",
               "title": "_MOC_Tasks"
-            }
-          },
-          {
-            "id": "85c8dd9f7f8bdbfc",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
             }
           }
         ]
@@ -306,14 +296,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d3a3f042b66a2a8c",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "01 Journal/2026/2026 W30.md",
     "00 Inbox/viaPRODUCT__Product_Tree_DE_Pflegestruktur.csv",
     "00 Inbox/viaPRODUCT__Product_Tree_EN_Pflegestruktur.csv",
     "00 Inbox/viaPRODUCT__Product_Tree_EN_Shop.csv",
     "00 Inbox/viaPRODUCT__Product_Tree_DE_Shop.csv",
     "03 Tasks/_MOC_Tasks.md",
-    "01 Journal/2026/2026 W30.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "09 Templates/Journal Weekly Note Template.md",
     "09 Templates/Journal Daily Note Template.md",
@@ -343,7 +333,6 @@
     "00 Inbox/d0091135-39d2-493a-b46d-6ec3f0af9556.tmp",
     "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation DE.pdf.crdownload",
     "00 Inbox/abeb9f52-6986-46e6-8327-05dd00a656df.tmp",
-    "00 Inbox/Regulation (EU) 2023-1542 Battery Regulation/Assets/Regulation (EU) 2023-1542 Battery Regulation DE.pdf",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
