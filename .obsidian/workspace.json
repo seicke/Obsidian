@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "f0f923e61e4c640d",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "262583d0cc1347ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+                "file": "03 Tasks/_MOC_Tasks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-20 Monday"
+              "title": "_MOC_Tasks"
             }
           }
         ]
@@ -106,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 42.09770114942529,
+        "dimension": 73.99425287356321,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -250,37 +250,9 @@
         "currentTab": 9
       },
       {
-        "id": "2b36ae8bafc79e23",
-        "type": "tabs",
-        "dimension": 25.43103448275862,
-        "children": [
-          {
-            "id": "85c8dd9f7f8bdbfc",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
-            }
-          },
-          {
-            "id": "a80041951008c888",
-            "type": "leaf",
-            "state": {
-              "type": "full-calendar-view",
-              "state": {},
-              "icon": "calendar-glyph",
-              "title": "Calendar"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "cb9fb971918c368a",
         "type": "tabs",
-        "dimension": 32.4712643678161,
+        "dimension": 26.00574712643678,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -296,6 +268,16 @@
               "pinned": true,
               "icon": "lucide-file",
               "title": "_MOC_Tasks"
+            }
+          },
+          {
+            "id": "85c8dd9f7f8bdbfc",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           }
         ]
@@ -321,13 +303,13 @@
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
       "obsidian-spaced-repetition:Review flashcards": false,
-      "periodic-notes:Open today": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "obsidian-day-planner:Open Timeline": false,
-      "obsidian-day-planner:Open Multi-Day View": false
+      "obsidian-day-planner:Open Multi-Day View": false,
+      "periodic-notes:Open today": false
     }
   },
-  "active": "a80041951008c888",
+  "active": "262583d0cc1347ed",
   "lastOpenFiles": [
     "03 Tasks/_MOC_Tasks.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
