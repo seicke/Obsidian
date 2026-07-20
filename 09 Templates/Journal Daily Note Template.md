@@ -1,6 +1,6 @@
 ---
 created: 2026-01-04 09:25:07
-updated: 2026-07-19 13:08:23
+updated: 2026-07-19 14:12:54
 ---
 <%*
 moment.locale("en");
@@ -40,6 +40,7 @@ if (day.isSame(today, 'day') || day.isAfter(today)) {
 		&& [2025,2026].includes(day.year())) {
 		tR += `- [ ] [[Railway-X]] Stunden buchen: [Aufwandabschätzung_Railway-X.xlsx](https://harting.sharepoint.com/:x:/r/sites/Railway-X/Freigegebene%20Dokumente/General/Aufw%C3%A4nde/Aufwandsch%C3%A4tzung_Railway-X.xlsx?d=wec9022baf9184e1cbbecc0054bd1b2c2&csf=1&web=1&e=1pSzDy) ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 		tR += `- [ ] #Blockbrain Daily Assistant testen ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
+		tR += `- [ ] [[2026 English Course]] Vocabulary lernen ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 	}
 	if ([5].includes(day.isoWeekday())) {
 		tR += `- [ ] Weekly Review ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
