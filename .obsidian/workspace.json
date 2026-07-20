@@ -11,10 +11,14 @@
             "id": "c584427a2b46ed4e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "DKE AK 651.0.12"
             }
           }
         ]
@@ -93,7 +97,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 460.5
+    "width": 460.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -110,12 +115,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of DKE AK 651.0.12"
             }
           },
           {
@@ -123,7 +129,9 @@
             "type": "leaf",
             "state": {
               "type": "footnotes",
-              "state": {},
+              "state": {
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md"
+              },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
             }
@@ -173,6 +181,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -182,7 +191,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for DKE AK 651.0.12"
             }
           },
           {
@@ -191,11 +200,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from DKE AK 651.0.12"
             }
           },
           {
@@ -262,7 +272,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 675.5
+    "width": 675.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -289,6 +300,8 @@
   },
   "active": "c584427a2b46ed4e",
   "lastOpenFiles": [
+    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/Untitled/desktop.ini",
+    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/2026-07-17 HARTING Produktstruktur",
     "00 Inbox/uniCSVed.zip",
     "00 Inbox/uniCSVed.zip.crdownload",
     "00 Inbox/627a87ce-c9a7-4ee3-bc5a-e27feb031811.tmp",
@@ -298,12 +311,10 @@
     "00 Inbox/Nicht bestätigt 39483.crdownload",
     "00 Inbox/e7151b70-7a57-439a-af3b-3dbf3f96b789.tmp",
     "00 Inbox/Nicht bestätigt 522352.crdownload",
-    "00 Inbox/e0828a35-6714-4c66-8cb9-7d2c86742b93.tmp",
     "01 Journal/2026/2026-01 January/2026-01-30 Friday.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "01 Journal/2026/2026 W30.md",
     "03 Tasks/_MOC_Tasks.md",
-    "00 Inbox/viaPRODUCT__Product_Tree_DE_Shop (1).csv",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "09 Templates/Journal Weekly Note Template.md",
     "09 Templates/Journal Daily Note Template.md",
