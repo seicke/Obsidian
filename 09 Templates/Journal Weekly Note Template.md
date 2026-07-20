@@ -41,15 +41,16 @@ updated:
 tR += `- [ ] Weekly Planning ➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
-```tasks
-not done
-filter by function (function() { const ref = moment("<% week.format('gggg-MM-DD') %>"); const date = task.due.moment ?? task.scheduled.moment; if (!date) return false; const start = ref.clone().startOf('isoWeek'); const end = ref.clone().endOf('isoWeek'); return date.isBetween(start, end, 'day', '[]'); })()
-group by function (task.due.moment ?? task.scheduled.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
-sort by function task.due.moment?.valueOf() ?? task.scheduled.moment?.valueOf() ?? Infinity
-sort by priority
-hide created date
-path does not include StudentTasks.md
-```
+> [!todo]- Tasks
+> ```tasks
+> not done
+> filter by function !(task.due.moment ?? task.scheduled.moment) ? false : !(task.due.moment ?? task.scheduled.moment).isValid() ? false : !!(task.due.moment ?? task.scheduled.moment).isBetween( moment("<% week.format('gggg-MM-DD') %>").startOf('isoWeek'), moment("<% week.format('gggg-MM-DD') %>").endOf('isoWeek'), 'day', '[]' )
+> group by function (task.due.moment ?? task.scheduled.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
+> sort by function task.due.moment?.valueOf() ?? task.scheduled.moment?.valueOf() ?? Infinity
+> sort by priority
+> hide created date
+> path does not include StudentTasks.md
+> ```
 
 ## Review
 <%*

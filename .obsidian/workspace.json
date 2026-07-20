@@ -106,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 73.99425287356321,
+        "dimension": 24.42528735632184,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -225,29 +225,26 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
-          },
-          {
-            "id": "79d056ec1e563018",
-            "type": "leaf",
-            "state": {
-              "type": "planner-timeline",
-              "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Timeline"
-            }
-          },
-          {
-            "id": "e460c24f3eb952dc",
-            "type": "leaf",
-            "state": {
-              "type": "planner-time-tracker",
-              "state": {},
-              "icon": "timer",
-              "title": "Time Tracker"
-            }
           }
         ],
-        "currentTab": 9
+        "currentTab": 8
+      },
+      {
+        "id": "d16f25907ea54574",
+        "type": "tabs",
+        "dimension": 49.56896551724138,
+        "children": [
+          {
+            "id": "55434ebd38177ef1",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
+          }
+        ]
       },
       {
         "id": "cb9fb971918c368a",
@@ -309,13 +306,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "4619f296a7f092a1",
+  "active": "55434ebd38177ef1",
   "lastOpenFiles": [
-    "09 Templates/Journal Weekly Note Template.md",
-    "01 Journal/2026/2026 W30.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
-    "09 Templates/Journal Daily Note Template.md",
     "03 Tasks/_MOC_Tasks.md",
+    "01 Journal/2026/2026 W30.md",
+    "09 Templates/Journal Weekly Note Template.md",
+    "09 Templates/Journal Daily Note Template.md",
     "09 Templates/Task Note Template.md",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
     "09 Templates/Student Task Note Template.md",
