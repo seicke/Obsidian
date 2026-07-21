@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+                "file": "08 People/Geryhalter, Johannes.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "2026-07-21 Tuesday"
+              "title": "Geryhalter, Johannes"
             }
           }
         ]
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 460.5,
-    "collapsed": true
+    "width": 460.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -114,13 +113,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+                "file": "08 People/Geryhalter, Johannes.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-21 Tuesday"
+              "title": "Outline of Geryhalter, Johannes"
             }
           },
           {
@@ -307,27 +306,29 @@
   },
   "active": "2cebbcadcdf069bd",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+    "08 People/Geryhalter, Johannes.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-17 PCN Onboarding___EPLAN.pdf",
+    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
+    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/Property-Block.xlsx",
+    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026,_Webkonferenz.pdf",
+    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/2026-07-16_Struktur_Steckverbinder_bearbeitet_nach_der_Sitzung.pptx",
+    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK",
+    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK.zip",
+    "00 Inbox/Nicht bestätigt 643746.crdownload",
+    "00 Inbox/d3df0e06-3438-47ca-b610-3d63e530ae67.tmp",
     "05 Projects/2025-2026 Railway-X/Tractus-X EDC.md",
     "03 Tasks/_MOC_Tasks.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "09 Templates/Journal Daily Note Template.md",
     "00 Inbox/bruno_3.5.3_x64_win.zip",
-    "00 Inbox/Nicht bestätigt 4883.crdownload",
-    "00 Inbox/6e4e5435-f04e-4f68-9435-50643719ac74.tmp",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "01 Journal/2026/2026-07 July/2026-07-08 Wednesday.md",
     "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
-    "00 Inbox/The EU Digital Product Passport for Batteries.pdf",
     "01 Journal/2026/2026 W30.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
-    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/Untitled/desktop.ini",
-    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/2026-07-17 HARTING Produktstruktur",
-    "00 Inbox/uniCSVed.zip",
-    "00 Inbox/uniCSVed.zip.crdownload",
-    "00 Inbox/627a87ce-c9a7-4ee3-bc5a-e27feb031811.tmp",
-    "00 Inbox/CSVed.zip",
     "01 Journal/2026/2026-01 January/2026-01-30 Friday.md",
     "09 Templates/Journal Weekly Note Template.md",
     "09 Templates/Task Note Template.md",
@@ -341,8 +342,6 @@
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 4.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 3.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 2.md",
-    "05 Projects/2026 English Course/2026 English Course - Vocabulary 1.md",
-    "05 Projects/2026 English Course/2026 English Course.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
