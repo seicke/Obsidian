@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8cb161331010f255",
+        "id": "cf5f4a76c788b0bb",
         "type": "tabs",
         "children": [
           {
-            "id": "5ff8c7d0b4404241",
+            "id": "2cebbcadcdf069bd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-07-21 Tuesday"
+              "title": "New tab"
             }
           }
         ]
@@ -114,13 +110,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-21 Tuesday"
+              "title": "Outline"
             }
           },
           {
@@ -305,11 +300,12 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "5ff8c7d0b4404241",
+  "active": "2cebbcadcdf069bd",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "05 Projects/2025-2026 Railway-X/Tractus-X EDC.md",
     "03 Tasks/_MOC_Tasks.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
-    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "09 Templates/Journal Daily Note Template.md",
     "00 Inbox/bruno_3.5.3_x64_win.zip",
@@ -342,7 +338,6 @@
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 2.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 1.md",
     "05 Projects/2026 English Course/2026 English Course.md",
-    "01 Journal/2026/2026-01 January/2026-01-07 Wednesday.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
