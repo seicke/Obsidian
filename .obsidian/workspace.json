@@ -54,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Software",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -75,7 +75,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "f6ceb98296cf20c9",
@@ -105,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 44.03735632183909,
+        "dimension": 37.5,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -232,7 +233,7 @@
       {
         "id": "19eb8b4152cb74bb",
         "type": "tabs",
-        "dimension": 22.557471264367813,
+        "dimension": 29.069767441860467,
         "children": [
           {
             "id": "85c8dd9f7f8bdbfc",
@@ -259,7 +260,7 @@
       {
         "id": "cb9fb971918c368a",
         "type": "tabs",
-        "dimension": 33.4051724137931,
+        "dimension": 33.43023255813954,
         "children": [
           {
             "id": "e7a7b303c61786dc",
@@ -281,7 +282,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 675.5
+    "width": 395.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -306,12 +307,18 @@
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "00 Inbox/bruno_3.5.3_x64_win.zip",
+    "00 Inbox/Nicht bestätigt 4883.crdownload",
+    "00 Inbox/6e4e5435-f04e-4f68-9435-50643719ac74.tmp",
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
+    "01 Journal/2026/2026-07 July/2026-07-08 Wednesday.md",
+    "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "09 Templates/Journal Daily Note Template.md",
     "03 Tasks/_MOC_Tasks.md",
     "00 Inbox/The EU Digital Product Passport for Batteries.pdf",
     "01 Journal/2026/2026 W30.md",
-    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
-    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/Untitled/desktop.ini",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/2026-07-17 HARTING Produktstruktur",
@@ -320,11 +327,8 @@
     "00 Inbox/627a87ce-c9a7-4ee3-bc5a-e27feb031811.tmp",
     "00 Inbox/CSVed.zip",
     "00 Inbox/Nicht bestätigt 901721.crdownload",
-    "00 Inbox/e912cb0c-605a-40b3-884b-1fcf2ea42198.tmp",
-    "00 Inbox/Nicht bestätigt 39483.crdownload",
     "01 Journal/2026/2026-01 January/2026-01-30 Friday.md",
     "09 Templates/Journal Weekly Note Template.md",
-    "09 Templates/Journal Daily Note Template.md",
     "09 Templates/Task Note Template.md",
     "02 Notes/Obsidian/Journaling with Obsidian.md",
     "09 Templates/Student Task Note Template.md",
@@ -339,9 +343,6 @@
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 1.md",
     "05 Projects/2026 English Course/2026 English Course.md",
     "01 Journal/2026/2026-01 January/2026-01-07 Wednesday.md",
-    "00 Inbox/Asset Administration Shell (AAS).md",
-    "02 Notes/SAP SFM.md",
-    "03 Tasks/Student Tasks/Work Item 8495 - Explore SAP Product Footprint Management API and Create Bruno Collection.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
