@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen"
             }
-          },
-          {
-            "id": "0b9acf0c77db3bbc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-07-21 Tuesday"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -111,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 460.5
+    "width": 460.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -128,13 +114,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+                "file": "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-21 Tuesday"
+              "title": "Outline of Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen"
             }
           },
           {
@@ -296,7 +282,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.5
+    "width": 395.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -319,10 +306,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "0b9acf0c77db3bbc",
+  "active": "7434e910ff412947",
   "lastOpenFiles": [
-    "02 Notes/Marc Schleth.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "02 Notes/Marc Schleth.md",
     "08 People/Schleth, Marc.md",
     "08 People/Opitz, Karl Luke.md",
     "08 People/Poggemeier, Carsten.md",
