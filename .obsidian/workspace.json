@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen"
             }
+          },
+          {
+            "id": "0b9acf0c77db3bbc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-07-21 Tuesday"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -75,8 +90,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "f6ceb98296cf20c9",
@@ -114,13 +128,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen"
+              "title": "Outline of 2026-07-21 Tuesday"
             }
           },
           {
@@ -305,13 +319,26 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "7434e910ff412947",
+  "active": "0b9acf0c77db3bbc",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
+    "02 Notes/Marc Schleth.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
-    "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+    "08 People/Schleth, Marc.md",
+    "08 People/Opitz, Karl Luke.md",
+    "08 People/Poggemeier, Carsten.md",
+    "08 People/Riwe, Roman.md",
+    "08 People/Schewzow, Andreas.md",
+    "08 People/Thiessen, Nico.md",
+    "08 People/Vollenbruch, Paul.md",
+    "08 People/Krug, Christian.md",
     "08 People/Geryhalter, Johannes.md",
+    "08 People/Georg, Christian.md",
+    "08 People/Braun, John Edwin.md",
+    "08 People/Epp, Julia.md",
+    "08 People/Feulner, Dennis.md",
+    "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
+    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 PCN Onboarding___EPLAN.pdf",
     "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
     "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/Property-Block.xlsx",
@@ -330,19 +357,6 @@
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "01 Journal/2026/2026-07 July/2026-07-08 Wednesday.md",
     "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
-    "01 Journal/2026/2026 W30.md",
-    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
-    "01 Journal/2026/2026-01 January/2026-01-30 Friday.md",
-    "09 Templates/Journal Weekly Note Template.md",
-    "09 Templates/Task Note Template.md",
-    "02 Notes/Obsidian/Journaling with Obsidian.md",
-    "09 Templates/Student Task Note Template.md",
-    "09 Templates/People Note Template.md",
-    "09 Templates/Note Template.md",
-    "09 Templates/Journal Yearly Note Template.md",
-    "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
-    "05 Projects/2026 English Course/2026 English Course - Vocabulary 5.md",
-    "05 Projects/2026 English Course/2026 English Course - Vocabulary 4.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
