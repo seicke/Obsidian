@@ -32,6 +32,16 @@ updated:
 <%* // ❮❮ YYYY-MM-DD dddd | YYYY | MMMM YYYY | YYYY-MM-DD dddd  ❯❯
 %>❮❮ [[<% day_before.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY|YYYY') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM MMMM|MMMM YYYY') %>]] | [[<% day_after.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] ❯❯
 
+> [!todo] Today
+>```tasks
+>not done
+>(due before <% day_before.format('YYYY-MM-DD') %>) OR (due on <% day_before.format('YYYY-MM-DD') %>) OR (scheduled on <% day_before.format('YYYY-MM-DD') %>)
+>sort by due, priority
+>hide due date
+>hide created date
+>path does not include StudentTasks.md
+>```
+
 <%*
 if (day.isSame(today, 'day') || day.isAfter(today)) {
 	if ([1,2,3,4,5].includes(day.isoWeekday())
