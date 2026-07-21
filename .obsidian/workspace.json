@@ -10,6 +10,7 @@
           {
             "id": "cf5f4a76c788b0bb",
             "type": "tabs",
+            "dimension": 32.26744186046512,
             "children": [
               {
                 "id": "2cebbcadcdf069bd",
@@ -30,6 +31,7 @@
           {
             "id": "7f7f2ac1c74de337",
             "type": "tabs",
+            "dimension": 67.73255813953489,
             "children": [
               {
                 "id": "7434e910ff412947",
@@ -81,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Software",
+                "query": "endpoint",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -102,7 +104,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "f6ceb98296cf20c9",
@@ -333,8 +336,9 @@
   },
   "active": "7434e910ff412947",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
     "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
+    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "08 People/Geryhalter, Johannes.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 PCN Onboarding___EPLAN.pdf",
@@ -368,7 +372,6 @@
     "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 5.md",
     "05 Projects/2026 English Course/2026 English Course - Vocabulary 4.md",
-    "05 Projects/2026 English Course/2026 English Course - Vocabulary 3.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
