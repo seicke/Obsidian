@@ -37,7 +37,6 @@ updated:
 >not done
 >(due before <% day_before.format('YYYY-MM-DD') %>) OR (due on <% day_before.format('YYYY-MM-DD') %>) OR (scheduled on <% day_before.format('YYYY-MM-DD') %>)
 >sort by due, priority
->hide due date
 >hide created date
 >path does not include StudentTasks.md
 >```

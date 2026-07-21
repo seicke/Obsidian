@@ -4,41 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7f7f2ac1c74de337",
+        "id": "77f85c2e350a0104",
         "type": "tabs",
         "children": [
           {
-            "id": "7434e910ff412947",
+            "id": "c927c3c74eeb213f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen"
-            }
-          }
-        ]
-      },
-      {
-        "id": "e436a4fd1fda9eba",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "8f11790322755d1e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-06-28 Sunday"
+              "title": "New tab"
             }
           }
         ]
@@ -74,7 +50,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "endpoint",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +71,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "f6ceb98296cf20c9",
@@ -116,8 +93,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 460.5,
-    "collapsed": true
+    "width": 460.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -134,13 +110,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen"
+              "title": "Outline"
             }
           },
           {
@@ -326,17 +301,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "7434e910ff412947",
+  "active": "c927c3c74eeb213f",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
+    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "09 Templates/Journal Daily Note Template.md",
     "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
+    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf.crdownload",
     "00 Inbox/029ada78-8ba8-4b94-bfef-1daa6d84b061.tmp",
     "00 Inbox/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf",
     "00 Inbox/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf.crdownload",
     "00 Inbox/fb9575ed-513c-46b3-b4be-d4d764b26ac5.tmp",
-    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "02 Notes/Marc Schleth.md",
     "08 People/Schleth, Marc.md",
     "08 People/Opitz, Karl Luke.md",
@@ -359,8 +336,6 @@
     "05 Projects/2025-2026 Railway-X/Tractus-X EDC.md",
     "03 Tasks/_MOC_Tasks.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
-    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
-    "09 Templates/Journal Daily Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "01 Journal/2026/2026-07 July/2026-07-08 Wednesday.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
