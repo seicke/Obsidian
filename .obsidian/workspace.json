@@ -11,10 +11,14 @@
             "id": "326721328c0ed353",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-07-22 Wednesday"
             }
           }
         ]
@@ -300,11 +304,12 @@
   },
   "active": "326721328c0ed353",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-08 Angebot Analyse Threat Modeling Verwaltungsschale Basyx___Cologne Intelligence.pdf",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
     "03 Tasks/_MOC_Tasks.md",
-    "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
     "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "09 Templates/Journal Daily Note Template.md",
@@ -334,8 +339,6 @@
     "08 People/Geryhalter, Johannes.md",
     "08 People/Georg, Christian.md",
     "08 People/Braun, John Edwin.md",
-    "01 Journal/2026/2026-07 July/Assets/2026-07-17 PCN Onboarding___EPLAN.pdf",
-    "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
