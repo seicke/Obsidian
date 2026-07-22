@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "2026-07-22 Wednesday"
             }
+          },
+          {
+            "id": "1eec974c38328a9e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "basyx-aas-gui - deleteRequest() with Header Object"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,8 +111,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 457.5,
-    "collapsed": true
+    "width": 457.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -222,8 +236,8 @@
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "review-queue-list-view"
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
             }
           }
         ],
@@ -279,8 +293,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 395.5,
-    "collapsed": true
+    "width": 567.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -303,11 +316,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "826f2f6929fe760f",
+  "active": "1eec974c38328a9e",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
     "03 Tasks/_MOC_Tasks.md",
+    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
+    "09 Templates/Journal Daily Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "01 Journal/2026/2026-09 September/2026-09-01 Tuesday.md",
     "01 Journal/2026/2026-09 September",
@@ -316,7 +331,6 @@
     "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
     "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
-    "09 Templates/Journal Daily Note Template.md",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf.crdownload",
     "00 Inbox/029ada78-8ba8-4b94-bfef-1daa6d84b061.tmp",
@@ -340,7 +354,6 @@
     "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 PCN Onboarding___EPLAN.pdf",
     "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
-    "05 Projects/2025-2026 Railway-X/Tractus-X EDC.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
