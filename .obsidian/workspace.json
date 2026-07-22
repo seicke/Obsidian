@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "16ea418f04d3b804",
+        "id": "303ae17245af208b",
         "type": "tabs",
         "children": [
           {
-            "id": "3089d369a5daa716",
+            "id": "326721328c0ed353",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -300,8 +298,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "3089d369a5daa716",
+  "active": "326721328c0ed353",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
     "03 Tasks/_MOC_Tasks.md",
@@ -335,7 +334,6 @@
     "08 People/Geryhalter, Johannes.md",
     "08 People/Georg, Christian.md",
     "08 People/Braun, John Edwin.md",
-    "08 People/Epp, Julia.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 PCN Onboarding___EPLAN.pdf",
     "00 Inbox/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
