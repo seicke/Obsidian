@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "303ae17245af208b",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "326721328c0ed353",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Notes/Fragen zum Tag der Arbeit.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Fragen zum Tag der Arbeit"
+              "title": "2026-07-22 Wednesday"
             }
           }
         ]
@@ -36,12 +36,25 @@
         "dimension": 78.42846553002224,
         "children": [
           {
+            "id": "85d34257d90251d4",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
             "id": "84018928a2888d9f",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "https://ssi.sandbox.railway-x.de/api/v1/directory",
+                "query": "threa",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,22 +74,9 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
-          },
-          {
-            "id": "85d34257d90251d4",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": true
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       },
       {
         "id": "83495321bfc99a8c",
@@ -97,7 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 341.5
+    "width": 457.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -106,7 +106,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 25.26041666666667,
+        "dimension": 37.5,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -120,6 +120,18 @@
               },
               "icon": "lucide-list",
               "title": "Outline"
+            }
+          },
+          {
+            "id": "cc04d15e9192173b",
+            "type": "leaf",
+            "state": {
+              "type": "footnotes",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md"
+              },
+              "icon": "lucide-file-signature",
+              "title": "Footnotes"
             }
           },
           {
@@ -167,6 +179,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +189,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 2026-07-20 Monday"
             }
           },
           {
@@ -185,16 +198,26 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-07-17 Friday"
+              "title": "Outgoing links from 2026-07-20 Monday"
             }
           },
           {
-            "id": "a133e29936805f2c",
+            "id": "a41392476ca1ac60",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
+            "id": "826f2f6929fe760f",
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
@@ -204,12 +227,12 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 8
       },
       {
-        "id": "2b36ae8bafc79e23",
+        "id": "19eb8b4152cb74bb",
         "type": "tabs",
-        "dimension": 27.34375,
+        "dimension": 29.069767441860467,
         "children": [
           {
             "id": "85c8dd9f7f8bdbfc",
@@ -220,13 +243,23 @@
               "icon": "calendar-with-checkmark",
               "title": "Calendar"
             }
+          },
+          {
+            "id": "77dabec25a0b9705",
+            "type": "leaf",
+            "state": {
+              "type": "full-calendar-view",
+              "state": {},
+              "icon": "calendar-glyph",
+              "title": "Calendar"
+            }
           }
         ]
       },
       {
         "id": "4910875ae564f333",
         "type": "tabs",
-        "dimension": 47.39583333333333,
+        "dimension": 33.43023255813954,
         "children": [
           {
             "id": "53d278dd30d24cdb",
@@ -241,11 +274,13 @@
           {
             "id": "682d72bb661f475a",
             "type": "leaf",
-            "pinned": true,
             "state": {
-              "type": "empty",
-              "state": {},
-              "pinned": true,
+              "type": "markdown",
+              "state": {
+                "file": "03 Tasks/_MOC_Tasks.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
               "title": "New tab"
             }
@@ -255,7 +290,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 487.5
+    "width": 567.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -274,50 +309,52 @@
       "canvas:Create new canvas": true,
       "obsidian-git:Open Git source control": true,
       "obsidian-spaced-repetition:Review flashcards": false,
+      "obsidian-full-calendar:Open Full Calendar": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "326721328c0ed353",
   "lastOpenFiles": [
-    "conflict-files-obsidian-git.md",
-    "02 Notes/Fragen zum Tag der Arbeit.md",
-    "09 Templates/Student Task Note Template.md",
-    "02 Notes/Journaling with Obsidian.md",
-    "02 Notes/Notizarten.md",
-    "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md",
-    "01 Journal/2026/2026-07 July/2026-07-19 Sunday.md",
-    "Inbox.md",
-    "03 Tasks/Tasks.md",
-    "05 Projects/2026 Lange Charge & Digitales Typenschild/Project Lange Charge & Digitales Typenschild.md",
-    "Tasks.md",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md",
-    "08 People/Thiessen, Nico.md",
-    "08 People/Riwe, Roman.md",
-    "08 People/Feulner, Dennis.md",
-    "08 People/Vollenbruch, Paul.md",
-    "08 People/Schewzow, Andreas.md",
-    "08 People/Krug, Christian.md",
+    "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-08 Angebot Analyse Threat Modeling Verwaltungsschale Basyx___Cologne Intelligence.pdf",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf",
+    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
+    "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
+    "03 Tasks/_MOC_Tasks.md",
+    "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
+    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "09 Templates/Journal Daily Note Template.md",
+    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
+    "01 Journal/2026/2026-09 September/2026-09-01 Tuesday.md",
+    "01 Journal/2026/2026-09 September",
+    "08 People/Hoffmann, Alwin.md",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-21 Industrial BaSyx Preisindikation___Xitaso.pdf",
+    "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
+    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
+    "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf.crdownload",
+    "00 Inbox/029ada78-8ba8-4b94-bfef-1daa6d84b061.tmp",
+    "00 Inbox/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf",
+    "00 Inbox/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf.crdownload",
+    "00 Inbox/fb9575ed-513c-46b3-b4be-d4d764b26ac5.tmp",
+    "02 Notes/Marc Schleth.md",
+    "08 People/Schleth, Marc.md",
     "08 People/Opitz, Karl Luke.md",
-    "00 Inbox/eclipse-themes-updatesite-v1.1.0.zip",
-    "00 Inbox/Nicht bestätigt 804661.crdownload",
-    "00 Inbox/ad195dc9-a744-466b-b673-5492404d8c82.tmp",
-    "00 Inbox/Dark Pro Github.xml",
-    "00 Inbox/Nicht bestätigt 779898.crdownload",
-    "00 Inbox/ecedec4b-7580-41f0-ad96-3b579cedd7ed.tmp",
-    "00 Inbox/Nicht bestätigt 712750.crdownload",
-    "00 Inbox/27476b01-41b0-4cef-b922-f60c5ea48b02.tmp",
-    "00 Inbox/Nicht bestätigt 559413.crdownload",
-    "00 Inbox/d656e79f-27ea-4daa-b5cc-21cca77bf5e7.tmp",
-    "01 Journal/2026/2026-07 July/2026-07-11 Saturday.md",
-    "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md",
-    "05 Projects/2025-2026 Railway-X/Railway-X DataSpace.md",
-    "01 Journal/2026/2026-07 July/2026-07-15 Wednesday.md",
-    "06 Areas/StudentTasks.md",
-    "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01 BaSyx secured.md",
-    "01 Journal/2026/2026-07 July/2026-07-14 Tuesday.md",
-    "01 Journal/2026/2026-07 July/Resources/2026-07-06 Home of the AAS - IDTA Areas.png",
-    "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
-    "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
+    "08 People/Poggemeier, Carsten.md",
+    "08 People/Riwe, Roman.md",
+    "08 People/Schewzow, Andreas.md",
+    "08 People/Thiessen, Nico.md",
+    "08 People/Vollenbruch, Paul.md",
+    "08 People/Krug, Christian.md",
+    "08 People/Geryhalter, Johannes.md",
+    "08 People/Georg, Christian.md",
+    "08 People/Braun, John Edwin.md",
+    "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
+    "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
+    "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
+    "01 Journal/2026/2026-04 April/Assets/2026-04-16 Andreas Starke - Qualifizierungsplan Go___MS Teams Chat.png",
+    "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 AW Anschreiben___LinkedIn.png",
     "02 Notes/IEC 61406 Identification Link/ISO 7000 - 3010/iso_grs_7000_3010.png",

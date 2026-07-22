@@ -10,9 +10,9 @@
   },
   "weekly": {
     "format": "gggg/gggg [W]WW",
-    "template": "Templater/Templates/Journal Weekly Note Template.md",
+    "template": "09 Templates/Journal Weekly Note Template.md",
     "folder": "01 Journal",
-    "enabled": false
+    "enabled": true
   },
   "monthly": {
     "format": "YYYY/YYYY-MM MMMM/YYYY-MM MMMM",

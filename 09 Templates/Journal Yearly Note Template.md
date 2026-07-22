@@ -18,6 +18,8 @@ if (tp.file.title !== filename) await tp.file.rename(filename);
 %>---
 aliases:
   - 
+created:
+updated:
 ---
 # <% filename %>
 <%* // ❮❮ YYYY-- | YYYY++  ❯❯
