@@ -13,20 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-07-23 Thursday"
-            }
-          },
-          {
-            "id": "9876decaa3ea19df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
                 "mode": "source",
                 "source": false
@@ -34,16 +20,9 @@
               "icon": "lucide-file",
               "title": "Regulation (EU) 2026-1778 DPP Registry"
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "599170c4b3868af1",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "6ddb15bf28e6240a",
+            "id": "81ff0976394747a5",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -56,7 +35,8 @@
               "title": "Regulation (EU) 2024-1781 ESPR"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -132,7 +112,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 285.5,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -149,13 +130,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Regulation (EU) 2026-1778 DPP Registry"
+              "title": "Outline of Regulation (EU) 2024-1781 ESPR"
             }
           },
           {
@@ -164,7 +145,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md"
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -224,12 +205,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Regulation (EU) 2026-1778 DPP Registry"
+              "title": "Outgoing links from Regulation (EU) 2024-1781 ESPR"
             }
           }
         ]
@@ -308,12 +289,12 @@
       "generate-hash:Hash": false
     }
   },
-  "active": "d3a3f042b66a2a8c",
+  "active": "81ff0976394747a5",
   "lastOpenFiles": [
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
-    "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Assets/Regulation (EU) 2026-1778 DPP Registry DE.pdf",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+    "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Assets/Regulation (EU) 2026-1778 DPP Registry DE.pdf",
     "03 Tasks/_MOC_Tasks.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
