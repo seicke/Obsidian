@@ -5,11 +5,11 @@ from markdownify import markdownify as md
 from pathlib import Path
 from datetime import date
 
-DOC_ID = "32023R1542"
+DOC_ID = "L_202601736"
 
 SOURCES = {
-    "de": f"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32023R1542",
-    "en": f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32023R1542",
+    "de": f"https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=OJ:L_202601736",
+    "en": f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=OJ:L_202601736",
 }
 
 SCRIPT_DIR = Path(__file__).parent
