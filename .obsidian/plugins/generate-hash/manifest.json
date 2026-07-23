@@ -1,0 +1,10 @@
+{
+	"id": "generate-hash",
+	"name": "Generate Hash",
+	"version": "1.0.2",
+	"minAppVersion": "0.15.0",
+	"description": "Generates a cryptographically strong pseudorandom hash.",
+	"author": "zigahertz",
+	"authorUrl": "https://github.com/zigahertz",
+	"isDesktopOnly": false
+}
