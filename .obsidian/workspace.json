@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "e6922dfbe5275059",
+        "id": "eecbd4fa99e20b7d",
         "type": "tabs",
         "children": [
           {
-            "id": "83254cf16d19ea1f",
+            "id": "3691ec041ed7b727",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "00 Inbox/090166e52cc5e3b2.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "090166e52cc5e3b2"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -279,8 +277,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "83254cf16d19ea1f",
+  "active": "3691ec041ed7b727",
   "lastOpenFiles": [
+    "00 Inbox/atp_magazin_4_2026.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2026-07-07 The EU Digital Product Passport for Batteries - Webinar 2.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2026-04-28 Supplementing Regulation (EU) 2023-1542 - Removability Replaceability.pdf",
     "00 Inbox/JTC24_WG3/CEN-CLC-JTC 24-WG 3_N208_DPP M7 AGREED DRAFT FOR ENQUIRY -1.pdf",
     "02 Notes/Asset Administration Shell (AAS)/IDTA/Assets/2026-05-27 DPP 2Pager___IDTA.pdf",
     "00 Inbox/JTC24_WG3/CEN-CLC-JTC 24-WG 3_N200_Module 3 - Business Confidentiality Access Rights - draft ready for Enquiry .pdf",
@@ -296,9 +297,6 @@
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0002_FprEN_182392026-05__JT024007__D.pdf",
-    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0003_Einladung___Sitzung_DKE_AK_651_.pdf",
-    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
-    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/Property-Block.xlsx",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
