@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "eecbd4fa99e20b7d",
+        "id": "e933bc0702fba938",
         "type": "tabs",
         "children": [
           {
-            "id": "3691ec041ed7b727",
+            "id": "5bd7d2e221cda285",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "00 Inbox/atp_magazin_4_2026.pdf"
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "atp_magazin_4_2026"
+              "icon": "lucide-file",
+              "title": "2026-07-23 Thursday"
             }
           }
         ]
@@ -279,10 +281,11 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "3691ec041ed7b727",
+  "active": "5bd7d2e221cda285",
   "lastOpenFiles": [
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2026 Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
+    "00 Inbox/Note Types.md",
     "00 Inbox/atp_magazin_4_2026.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2026 Methodology for defining data requirements for the Digital Product Passport under the ESPR framework.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2026-07-07 The EU Digital Product Passport for Batteries - Webinar 2.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2026-04-28 Supplementing Regulation (EU) 2023-1542 - Removability Replaceability.pdf",
     "00 Inbox/JTC24_WG3/CEN-CLC-JTC 24-WG 3_N208_DPP M7 AGREED DRAFT FOR ENQUIRY -1.pdf",
@@ -292,7 +295,6 @@
     "02 Notes/Asset Administration Shell (AAS)/IDTA/Assets",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Assets/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf",
-    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026.pdf",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
     "02 Notes/651-0-12_2026-0008_Ergebnisbericht__Sitzung_DKE_AK.md",
