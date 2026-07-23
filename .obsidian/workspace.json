@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "f21ff96b15431077",
+        "id": "9e5955897354a73a",
         "type": "tabs",
         "children": [
           {
-            "id": "d644846d72000690",
+            "id": "35905f8e9a23591a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Notes/Volumes - Shares.md",
+                "file": "02 Notes/Ecodesign for Sustainable Product Regulation - Ökodesign-Anforderungen für nachhaltige Produkte (ESPR).md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Ecodesign for Sustainable Product Regulation - Ökodesign-Anforderungen für nachhaltige Produkte (ESPR)"
+            }
+          },
+          {
+            "id": "c0c97004c03ccb58",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Volumes - Shares"
+              "title": "DPP Standards, harmonised"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -113,13 +128,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 Notes/Volumes - Shares.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Volumes - Shares"
+              "title": "Outline of DPP Standards, harmonised"
             }
           },
           {
@@ -128,7 +143,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "02 Notes/Volumes - Shares.md"
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -188,12 +203,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 Notes/Volumes - Shares.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Volumes - Shares"
+              "title": "Outgoing links from DPP Standards, harmonised"
             }
           }
         ],
@@ -273,13 +288,31 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d644846d72000690",
+  "active": "c0c97004c03ccb58",
   "lastOpenFiles": [
-    "02 Notes/Wago BaSyx Endpoints.md",
+    "02 Notes/Ecodesign for Sustainable Product Regulation - Ökodesign-Anforderungen für nachhaltige Produkte (ESPR).md",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
+    "02 Notes/Docker.md",
+    "02 Notes/Dataspace.md",
+    "02 Notes/COMDO.md",
+    "02 Notes/Asset Administration Shell (AAS)/DAVID.md",
+    "02 Notes/Asset Administration Shell (AAS)/IDTA",
+    "02 Notes/09337062601 Han E6_I_SMC_M_SCT_Ag_GreenLine.md",
+    "02 Notes/HARTING Greenline.md",
+    "02 Notes/Blockbrain/Assistant Agend - System Prompt.md",
+    "02 Notes/DPP4.0/IEC 61406 Identification Link/IEC 61406 Identification Link.md",
+    "02 Notes/EU Legislation/European Green Deal - Europäischer Grüner Deal.md",
+    "02 Notes/DPP4.0/IEC 61406 Identification Link/Assets",
+    "02 Notes/Untitled/desktop.ini",
+    "02 Notes/DPP4.0",
+    "02 Notes/Farbpaletten.md",
+    "02 Notes/HARTING Farbpalette.md",
+    "02 Notes/Gehaltsentwicklung HARTING.md",
     "02 Notes/Volumes - Shares.md",
+    "02 Notes/Wago BaSyx Endpoints.md",
     "02 Notes/smartPCN.md",
     "02 Notes/Unbenannt.md",
-    "02 Notes/HARTING Greenline.md",
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/BaSyx.md",
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/basyx-aas-environment-java.md",
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/desktop.ini",
@@ -288,29 +321,11 @@
     "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2024-04-30 Regulation (EU) 2023-1542 Battery Regulation Delegated Act Carbon Footprint Methodology Draft Annex_EN.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2024 Performance and Durability Requirements in the Batteries Regulation___EU Commission.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2026-06 User Stories v1.0___BatteryPass.pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2025-10-30 Ecodesign preparatory study for product specific measures.pdf",
-    "00 Inbox/BatteryPass-Ready_User-Stories_v1.0.cleaned.pdf.crdownload",
-    "00 Inbox/8b8ab5a1-5451-4ed5-a80a-beda0d5e07c3.tmp",
-    "02 Notes/EU Legislation/Regulation (EU) 2023-1542 Battery Regulation/Assets/2026-03 Battery Passport - Data Attribute Long List v1.3___BatteryPass.xlsx",
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "09 Templates/Journal Daily Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
-    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
-    "03 Tasks/_MOC_Tasks.md",
-    "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
-    "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
-    "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
-    "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
-    "01 Journal/2026/2026-09 September/2026-09-01 Tuesday.md",
-    "08 People/Hoffmann, Alwin.md",
-    "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
-    "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
-    "02 Notes/Marc Schleth.md",
-    "08 People/Schleth, Marc.md",
-    "08 People/Opitz, Karl Luke.md",
-    "08 People/Poggemeier, Carsten.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
@@ -318,7 +333,7 @@
     "01 Journal/2026/2026-03 March/Assets/2026-03-11_15-16-53 Andreas Wedel -  Anschreiben___LinkedIn.png",
     "01 Journal/2026/2026-04 April/Resources/2026-04-16 Andreas Starke - Qualifizierungsplan Go.png",
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 AW Anschreiben___LinkedIn.png",
-    "02 Notes/IEC 61406 Identification Link/ISO 7000 - 3010/iso_grs_7000_3010.png",
+    "02 Notes/DPP4.0/IEC 61406 Identification Link/Assets/ISO 7000 - 3010/iso_grs_7000_3010.png",
     "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - Das Geniale an DeepSeeks 57-facher Effizienzsteigerung - Multi-head Latent Attention MLA/Welch Labs - Attention Head.png",
     "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - AI can't cross this line and we don't know why/Welch Labs - Entropy of Natural Language.png"
   ]
