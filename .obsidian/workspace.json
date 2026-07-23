@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "46663fbd46d49055",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "7aae60b044ddf2ec",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-07-23 Thursday"
             }
           }
         ]
@@ -101,7 +105,7 @@
       {
         "id": "b85ae7c65702c4ac",
         "type": "tabs",
-        "dimension": 37.5,
+        "dimension": 29.68236582694414,
         "children": [
           {
             "id": "d3a3f042b66a2a8c",
@@ -109,12 +113,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 2026-07-23 Thursday"
             }
           },
           {
@@ -123,20 +128,10 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md"
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
-            }
-          },
-          {
-            "id": "f9545d594bacd2ee",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
             }
           },
           {
@@ -193,45 +188,21 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-07-20 Monday"
-            }
-          },
-          {
-            "id": "a41392476ca1ac60",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
-            "id": "826f2f6929fe760f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "2026-07-23 Thursday"
+              "title": "Outgoing links from 2026-07-23 Thursday"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 2
       },
       {
         "id": "19eb8b4152cb74bb",
         "type": "tabs",
-        "dimension": 29.069767441860467,
+        "dimension": 30.120481927710845,
         "children": [
           {
             "id": "85c8dd9f7f8bdbfc",
@@ -256,40 +227,29 @@
         ]
       },
       {
-        "id": "4910875ae564f333",
+        "id": "4920a6b767f04769",
         "type": "tabs",
-        "dimension": 33.43023255813954,
+        "dimension": 40.197152245345016,
         "children": [
           {
-            "id": "53d278dd30d24cdb",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "682d72bb661f475a",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "file": "03 Tasks/_MOC_Tasks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-23 Thursday"
+              "title": "_MOC_Tasks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 567.5
+    "width": 403.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -300,7 +260,7 @@
       "daily-notes:Open today's daily note": true,
       "command-palette:Open command palette": true,
       "bases:Create new base": true,
-      "table-editor-obsidian:Advanced Tables Toolbar": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "templater-obsidian:Templater": true,
       "obsidian-shellcommands:Shell commands: Custom variables": true,
       "obsidian-excalidraw-plugin:New drawing": true,
@@ -312,18 +272,19 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "85d34257d90251d4",
+  "active": "7aae60b044ddf2ec",
   "lastOpenFiles": [
-    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+    "09 Templates/Journal Daily Note Template.md",
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
+    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+    "03 Tasks/_MOC_Tasks.md",
     "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-08 Angebot Analyse Threat Modeling Verwaltungsschale Basyx___Cologne Intelligence.pdf",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
-    "03 Tasks/_MOC_Tasks.md",
     "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
-    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
-    "09 Templates/Journal Daily Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-09 Thursday.md",
     "01 Journal/2026/2026-09 September/2026-09-01 Tuesday.md",
     "01 Journal/2026/2026-09 September",
@@ -331,7 +292,6 @@
     "01 Journal/2026/2026-07 July/Assets/2026-07-21 Industrial BaSyx Preisindikation___Xitaso.pdf",
     "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
     "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
-    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf.crdownload",
     "00 Inbox/029ada78-8ba8-4b94-bfef-1daa6d84b061.tmp",
@@ -359,8 +319,6 @@
     "01 Journal/2026/2026-03 March/Resources/2026-03-11_15-16-53 AW Anschreiben___LinkedIn.png",
     "02 Notes/IEC 61406 Identification Link/ISO 7000 - 3010/iso_grs_7000_3010.png",
     "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - Das Geniale an DeepSeeks 57-facher Effizienzsteigerung - Multi-head Latent Attention MLA/Welch Labs - Attention Head.png",
-    "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - AI can't cross this line and we don't know why/Welch Labs - Entropy of Natural Language.png",
-    "04 Assets/Videos/YouTube/vcubingx/Why Recurrent Neural Networks are cursed - LM2/vcubingx - Recurrent Neural Network.png",
-    "04 Assets/Videos/YouTube/3Blue1Brown/How might LLMs store facts - Deep Learning Chapter 7/3Blue1Brown - GPT3 Number of tunables parameters.png"
+    "04 Assets/Videos/YouTube/Welch Labs/Welch Labs - AI can't cross this line and we don't know why/Welch Labs - Entropy of Natural Language.png"
   ]
 }
