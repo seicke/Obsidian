@@ -4,19 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "198b14a1eef72dbd",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "d8af35ff3e1fd36c",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "pdf",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence"
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
             }
           }
         ]
@@ -94,8 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 575.5110359191895,
-    "collapsed": true
+    "width": 575.5110359191895
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -195,10 +192,14 @@
             "id": "677178c517ff65d6",
             "type": "leaf",
             "state": {
-              "type": "review-queue-list-view",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "review-queue-list-view"
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-07-23 Thursday"
             }
           }
         ],
@@ -280,8 +281,9 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "d8af35ff3e1fd36c",
+  "active": "677178c517ff65d6",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Assets/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf",
     "02 Notes/EU Legislation/Decision (EU) 2026-1736 DPP Harmonised Standards/Decision (EU) 2026-1736 DPP Harmonised Standards, Notes.md",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
@@ -297,7 +299,6 @@
     "00 Inbox/OJ_L_202601736_DE_TXT.pdf.crdownload",
     "00 Inbox/42ffa27d-2b10-433e-a591-d4335cf50bdb.tmp",
     "02 Notes/EU Legislation/Untitled/desktop.ini",
-    "02 Notes/EU Legislation/Decision (EU) 2026-1736 DPP Harmonised Standards",
     "00 Inbox/Note Types.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
