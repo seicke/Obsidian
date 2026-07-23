@@ -68,7 +68,7 @@
     "01 Journal/2026/2026-06 June/2026-06-23 Tuesday.md": "ea7648d42cad0472a7d58fd86d6a55d3560745f394569a4c755e049dbe727b03",
     "01 Journal/2026/2026-07 July/2026-07-06 Monday.md": "6e467fece85dccf02cef7956176d6ba2af06257d733abd59b1f0b0239e964821",
     "08 People/Krug, Christian.md": "7421654f606638994908101b2ea6669562defdcf2652b67ce5113db42d06810c",
-    "01 Journal/2026/2026-07 July/2026-07-10 Friday.md": "3a1503d343f333a3962fb58b6cd84ccad29136115ce20718989eb2765064b644",
+    "01 Journal/2026/2026-07 July/2026-07-10 Friday.md": "5ad8e2339fbbe0065a9edb0c9b0f4771cc514d72bb1958703ff1e5928ea5eb0f",
     "08 People/Vollenbruch, Paul.md": "02fb6980426e26940b387c894dd8f123d2b5a6c0ca50d38329e2747afdaaca36",
     "01 Journal/2026/2026-07 July/2026-07-27 Monday.md": "5d1d45f0ef440495c20fc8d686c0aa772202e93cbe669efd1dbb2ae16f06921a",
     "Tasks.md": "61b0522708ce416118e6e49ad22f1ce6b889b14d30eac14269725684e387b5db",
@@ -96,7 +96,7 @@
     "09 Templates/Task Note Template.md": "f8bbbf40bb32f719cb14004340305e5ad0369ed72788be3bfccf912c39fc343e",
     "01 Journal/2026/2026-07 July/2026-07-15 Wednesday.md": "47aae52e4f94db705fd6017325bb1360a58f1a14c9ef7316674608e8b7ac81a3",
     "01 Journal/2026/2026-07 July/2026-07-16 Thursday.md": "e05521073d395729f777619a638063c99ea04cd376b89b0b02725589c536520d",
-    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md": "615bfcc64d27768cb44a220c8b0b473435875ee5d87b2a0c5b11a16b93891250",
+    "01 Journal/2026/2026-07 July/2026-07-17 Friday.md": "1153f7cf6aec804bbbbaa36865b29d71f0b1f178cd48516f1736ad8a7a615e2f",
     "08 People/Riwe, Roman.md": "7fa2e349a2a51469e1c7130265f4d870ffeb87e8c7a76e71ac74a556a01939d0",
     "08 People/Opitz, Karl Luke.md": "915f1a095191309497a1a46f8dc77d06ddd8200a32f236e6e0d0c3d1276c99f5",
     "01 Journal/2026/2026-07 July/2026-07-18 Saturday.md": "6b161038d6ec55079813091e7ec0aeb921eb35e6b53e1ef6ca6515b48539228a",
@@ -138,7 +138,7 @@
     "08 People/Hoffmann, Alwin.md": "861b7822e593876aaa4f68dd2a5f2fb725380e63dc423898e714155928abc9a2",
     "01 Journal/2026/2026-09 September/2026-09-01 Tuesday.md": "c3d3110d208440eafeea0f2b43cae8b05bad29d5f6a48be1cd21629bd431cb3f",
     "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md": "9f5a21433dc72e5609e23e0c941ce10e381befadad421cb812b2bc4a4a3d48df",
-    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md": "50adf333f94df6249cd056e88986eaee3072313f20ebc9513572c48d96cd301c",
+    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md": "2a8680eff44d890a0a0f090ae66184b1ef5bafec9f74b9fcd7fc86f1c89bd0bf",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md": "031f5d9d77e94b4ae8849f5b526acf331ecb6f4816b83089d621b44ea640a0df",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md": "f15398667a2f693f00e44881d0c94d0a479f73092dd2b518e8b43116c95bd3f8",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md": "42d6533234a25b52b153a72492dfa834f8c2c5bd1e7c578cdd4d964aa774c8c7",
@@ -153,6 +153,6 @@
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md": "dc119428300ef77a81c3342b33d6f257fdc6c8fb20ae00bec7cb20a828caae4f",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md": "d50be7923640b795ca0320d1f29f69a6065f877a81b863eb61346db23cf7e449",
     "02 Notes/EU Legislation/Decision (EU) 2026-1736 DPP Harmonised Standards/Decision (EU) 2026-1736 DPP Harmonised Standards.md": "066f47a30909670356bdc67caad122a329a1202aa52dc9966ec4e8a515689dbf",
-    "02 Notes/EU Legislation/Decision (EU) 2026-1736 DPP Harmonised Standards/Decision (EU) 2026-1736 DPP Harmonised Standards, Notes.md": "debaf84858fe263f12d426cf36623dab07e6bce48fbb7caca5736f118e6d5020"
+    "02 Notes/EU Legislation/Decision (EU) 2026-1736 DPP Harmonised Standards/Decision (EU) 2026-1736 DPP Harmonised Standards, Notes.md": "1e4a4b23e1c8f68c35ad7d9c47e91f1e0a4ae54a68c627a5965571f968f813f0"
   }
 }
