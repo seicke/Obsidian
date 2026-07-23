@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "35905f8e9a23591a",
+            "id": "6c5097aa3a82f8a8",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,30 +19,6 @@
               },
               "icon": "lucide-file",
               "title": "DPP Standards, harmonised"
-            }
-          },
-          {
-            "id": "8f60521bf269ca88",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 EN 18223 DPP - System Interoperability___CEN-CLC-JTC 24.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "2025-11-26 EN 18223 DPP - System Interoperability___CEN-CLC-JTC 24"
-            }
-          },
-          {
-            "id": "6c5097aa3a82f8a8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/CWA 18186 Guidelines to create a Digital Product Passport.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "CWA 18186 Guidelines to create a Digital Product Passport"
             }
           }
         ]
@@ -297,15 +273,18 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "85d34257d90251d4",
+  "active": "6c5097aa3a82f8a8",
   "lastOpenFiles": [
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 EN 18223 DPP - System Interoperability___CEN-CLC-JTC 24.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/CWA 18186 Guidelines to create a Digital Product Passport.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18223 DPP - System Interoperability___CEN-CLC-JTC 24.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API___CEN-CLC-JTC 24.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-25 prEN 18221 DPP - Data Storage, Archiving, Data Persistence____CEN-CLC-JTC 24.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-25 prEN 18216 DPP - Data Exchange Protocols___CEN-CLC-JTC 24.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-06 prEN 18220_DPP_Data Carriers.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2026-05 FprEN 18239 DPP - Access Rights, Information Security, Confidentiality.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/DPP Emblem.pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/CWA 18186 Guidelines to create a Digital Product Passport.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-25 EN 18216 Exchange___CEN-CLC-JTC 24.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "02 Notes/Docker.md",
     "02 Notes/Dataspace.md",
@@ -319,7 +298,6 @@
     "02 Notes/EU Legislation/European Green Deal - Europäischer Grüner Deal.md",
     "02 Notes/DPP4.0/IEC 61406 Identification Link/Assets",
     "02 Notes/Untitled/desktop.ini",
-    "02 Notes/DPP4.0",
     "02 Notes/Farbpaletten.md",
     "02 Notes/HARTING Farbpalette.md",
     "02 Notes/Gehaltsentwicklung HARTING.md",
@@ -329,8 +307,6 @@
     "02 Notes/Unbenannt.md",
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/BaSyx.md",
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/basyx-aas-environment-java.md",
-    "02 Notes/Asset Administration Shell (AAS)/BaSyx/desktop.ini",
-    "02 Notes/Asset Administration Shell (AAS)/BaSyx",
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "09 Templates/Journal Daily Note Template.md",
