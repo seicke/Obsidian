@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3f3a62536c57bcd9",
+        "id": "cd26d71786a6e865",
         "type": "tabs",
         "children": [
           {
-            "id": "68335fd9e2558a0f",
+            "id": "987bc798d3860249",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -42,7 +42,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -96,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 633.5
+    "width": 285.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -273,8 +273,10 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "68335fd9e2558a0f",
+  "active": "987bc798d3860249",
   "lastOpenFiles": [
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
+    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18223 DPP - System Interoperability.pdf",
     "02 Notes/2025-06 prEN 18223_DPP_System Interoperability.pdf.md",
@@ -308,7 +310,6 @@
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/BaSyx.md",
     "02 Notes/Asset Administration Shell (AAS)/BaSyx/basyx-aas-environment-java.md",
     "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
-    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "09 Templates/Journal Daily Note Template.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
