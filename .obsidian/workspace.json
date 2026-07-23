@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "303ae17245af208b",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "326721328c0ed353",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-07-22 Wednesday"
+              "title": "New tab"
             }
           }
         ]
@@ -222,8 +218,8 @@
             "state": {
               "type": "review-queue-list-view",
               "state": {},
-              "icon": "SpacedRepIcon",
-              "title": "Notes Review Queue"
+              "icon": "lucide-ghost",
+              "title": "review-queue-list-view"
             }
           }
         ],
@@ -267,12 +263,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 Tasks/_MOC_Tasks.md",
+                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "_MOC_Tasks"
+              "title": "2026-07-23 Thursday"
             }
           }
         ]
@@ -302,12 +298,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "326721328c0ed353",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-08 Angebot Analyse Threat Modeling Verwaltungsschale Basyx___Cologne Intelligence.pdf",
     "01 Journal/2026/2026-07 July/Assets/2026-07-17 BaSyx Pre-Analyse___Cologne Intelligence.pdf",
-    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
     "06 Areas/Server dpp40tstDMZ01/dpp40tstDMZ01.md",
     "03 Tasks/_MOC_Tasks.md",
     "03 Tasks/basyx-aas-gui - deleteRequest() with Header Object.md",
