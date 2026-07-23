@@ -68,7 +68,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Warencode",
+                "query": "18222",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -287,7 +287,7 @@
       "generate-hash:Hash": false
     }
   },
-  "active": "683400370052cb16",
+  "active": "84018928a2888d9f",
   "lastOpenFiles": [
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
