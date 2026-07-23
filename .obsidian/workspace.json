@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "46663fbd46d49055",
+        "id": "7bccef4dc150aa00",
         "type": "tabs",
         "children": [
           {
-            "id": "7aae60b044ddf2ec",
+            "id": "c6aa4cb3a4031bc1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -249,7 +249,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 403.5
+    "width": 403.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -272,13 +273,13 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "7aae60b044ddf2ec",
+  "active": "c6aa4cb3a4031bc1",
   "lastOpenFiles": [
     "09 Templates/Journal Daily Note Template.md",
+    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
-    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "03 Tasks/_MOC_Tasks.md",
     "01 Journal/2026/2026-06 June/2026-06-19 Friday.md",
     "01 Journal/2026/2026-07 July/Assets/2026-07-08 Angebot Analyse Threat Modeling Verwaltungsschale Basyx___Cologne Intelligence.pdf",

@@ -50,6 +50,7 @@ if (day.isSame(today, 'day') || day.isAfter(today)) {
 		tR += `- [ ] [[2026 English Course]] Vocabulary lernen ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 	}
 	if ([5].includes(day.isoWeekday())) {
+		tR += `- [ ] [[00 Inbox]] leeren ➕ ${day.format('YYYY-MM-DD')}  📅 ${day.format('YYYY-MM-DD')}\n`;
 		tR += `- [ ] Weekly Review ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 	}
 }
