@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "7bccef4dc150aa00",
+        "id": "fbe2d44a2a878557",
         "type": "tabs",
         "children": [
           {
-            "id": "c6aa4cb3a4031bc1",
+            "id": "2c3fe30475ac19eb",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
-                "mode": "source",
-                "source": false
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2025-10-30 Ecodesign preparatory study for product specific measures.pdf"
               },
-              "icon": "lucide-file",
-              "title": "2026-07-23 Thursday"
+              "icon": "lucide-file-text",
+              "title": "2025-10-30 Ecodesign preparatory study for product specific measures"
             }
           }
         ]
@@ -96,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 457.5
+    "width": 625.5
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -113,13 +111,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2025-10-30 Ecodesign preparatory study for product specific measures.pdf",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-07-23 Thursday"
+              "title": "Outline of 2025-10-30 Ecodesign preparatory study for product specific measures"
             }
           },
           {
@@ -128,7 +126,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md"
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2025-10-30 Ecodesign preparatory study for product specific measures.pdf"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -188,12 +186,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2025-10-30 Ecodesign preparatory study for product specific measures.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-07-23 Thursday"
+              "title": "Outgoing links from 2025-10-30 Ecodesign preparatory study for product specific measures"
             }
           }
         ],
@@ -273,10 +271,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "c6aa4cb3a4031bc1",
+  "active": "85d34257d90251d4",
   "lastOpenFiles": [
-    "09 Templates/Journal Daily Note Template.md",
+    "02 Notes/Untitled/desktop.ini",
+    "02 Notes/EU Legislation",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2025-08-28 Ecodesign for Sustainable Products and Energy Labelling Working Plan 2025-2030.pdf",
+    "00 Inbox/Regulation (EU) 2024-1781 ESPR/Assets/2024-11-13 ESPR - Regulation Study on new product priorities.pdf",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/2024 Ecodesign for Sustainable Products Regulation - Study on new product priorities___EU Commission.pdf",
+    "02 Notes/Regulation (EU) 2024-1781 ESPR/2023-12-01 New Product Priorities for Ecodesign for Sustainable Products - Final Summary Report.pdf",
+    "02 Notes/Blockbrain/AI Skill - Second Brain – Obsidian Vault.md",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+    "09 Templates/Journal Daily Note Template.md",
     "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
     "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
@@ -294,11 +299,6 @@
     "03 Tasks/Railway-X Tractus-X EDC - Assets für Digital Twin Registry und AAS Repository und SM Repository anlegen.md",
     "01 Journal/2026/2026-06 June/2026-06-28 Sunday.md",
     "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
-    "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf.crdownload",
-    "00 Inbox/029ada78-8ba8-4b94-bfef-1daa6d84b061.tmp",
-    "00 Inbox/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf",
-    "00 Inbox/2026-07-17 DPP Registry User Guide for Economic Operators___EU DG Grow Digital Solutions.pdf.crdownload",
-    "00 Inbox/fb9575ed-513c-46b3-b4be-d4d764b26ac5.tmp",
     "02 Notes/Marc Schleth.md",
     "08 People/Schleth, Marc.md",
     "08 People/Opitz, Karl Luke.md",
@@ -309,8 +309,6 @@
     "08 People/Vollenbruch, Paul.md",
     "08 People/Krug, Christian.md",
     "08 People/Geryhalter, Johannes.md",
-    "08 People/Georg, Christian.md",
-    "08 People/Braun, John Edwin.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
