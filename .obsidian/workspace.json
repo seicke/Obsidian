@@ -18,8 +18,51 @@
               "icon": "lucide-file-text",
               "title": "651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026"
             }
+          },
+          {
+            "id": "125f3972e0ef6b1f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-07-20 Monday"
+            }
+          },
+          {
+            "id": "927394a5ee3b4205",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-07-20 Monday"
+            }
+          },
+          {
+            "id": "aa14df50d1012b4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DKE AK 651.0.12"
+            }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -94,7 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 679.5110359191895
+    "width": 575.5110359191895
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -279,8 +322,14 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "95ec9b234f31d8aa",
+  "active": "aa14df50d1012b4d",
   "lastOpenFiles": [
+    "02 Notes/651-0-12_2026-0008_Ergebnisbericht__Sitzung_DKE_AK.md",
+    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/DKE AK 651.0.12.md",
+    "01 Journal/2026/2026-07 July/2026-07-20 Monday.md",
+    "01 Journal/2026/2026-07 July/2026-07-21 Tuesday.md",
+    "01 Journal/2026/2026-07 July/2026-07-22 Wednesday.md",
+    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026.pdf",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0002_FprEN_182392026-05__JT024007__D.pdf",
     "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0003_Einladung___Sitzung_DKE_AK_651_.pdf",
@@ -291,8 +340,6 @@
     "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/2026-07-16_Struktur_Steckverbinder_bearbeitet_nach_der_Sitzung.pptx",
     "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_.xlsx",
     "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0007_Vorlage_Struktur_Steckverbinder/651.0.12_2026-0007__Deckblatt.pdf",
-    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0007_Vorlage_Struktur_Steckverbinder/651.0.12_2026-0007_Vorlage_Struktur_Steckverbinder.pptx",
-    "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
@@ -313,10 +360,6 @@
     "02 Notes/EU Legislation/European Green Deal - Europäischer Grüner Deal.md",
     "02 Notes/Farbpaletten.md",
     "02 Notes/HARTING Farbpalette.md",
-    "02 Notes/Gehaltsentwicklung HARTING.md",
-    "02 Notes/Volumes - Shares.md",
-    "02 Notes/Wago BaSyx Endpoints.md",
-    "02 Notes/smartPCN.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
