@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "2ceb318b668acca6",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "95ec9b234f31d8aa",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
-                "mode": "source",
-                "source": false
+                "file": "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026.pdf"
               },
-              "icon": "lucide-file",
-              "title": "2026-07-23 Thursday"
+              "icon": "lucide-file-text",
+              "title": "651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026"
             }
           }
         ]
@@ -96,7 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 478.51103591918945
+    "width": 679.5110359191895
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -281,28 +279,29 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "95ec9b234f31d8aa",
   "lastOpenFiles": [
+    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026.pdf",
+    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0002_FprEN_182392026-05__JT024007__D.pdf",
+    "06 Areas/DKE AK 651.0.12 DPP - CDD Einträge für Produkte des K651/Assets/651-0-12_2026-0003_Einladung___Sitzung_DKE_AK_651_.pdf",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651_0_12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_nach_der_Sitzung.xlsx",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/Property-Block.xlsx",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/651.0.12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK_651_0_12__20_07_2026,_Webkonferenz.pdf",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010__Deckblatt.pdf",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0012_Ergebnisbericht__Sitzung_DKE_AK/2026-07-16_Struktur_Steckverbinder_bearbeitet_nach_der_Sitzung.pptx",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0010_Klassenbaum_von_ECLASS_fr_Steck/651.0.12_2026-0010_Klassenbaum_von_ECLASS_fr_Steckverbinder_.xlsx",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0007_Vorlage_Struktur_Steckverbinder/651.0.12_2026-0007__Deckblatt.pdf",
+    "06AREA~1/DKEAK6~1.12D/Assets/651-0-12_2026-0007_Vorlage_Struktur_Steckverbinder/651.0.12_2026-0007_Vorlage_Struktur_Steckverbinder.pptx",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
-    "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
     "02 Notes/Untitled.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
-    "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Assets/Regulation (EU) 2026-1778 DPP Registry DE.pdf",
     "03 Tasks/_MOC_Tasks.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18223 DPP - System Interoperability.pdf",
     "02 Notes/2025-06 prEN 18223_DPP_System Interoperability.pdf.md",
-    "00 Inbox/2026-05-27 DPP 2Pager___IDTA.pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2026-02-02 FprEN 18246 DPP -Data Authentication, Reliability, Integrity.pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2026-02-02 FprEN 18246 DPP -Data authentication, .pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2026-02-02 FprEN 18246 DPP - .pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/FprEN 18246_Final DRAFT_clean version_V2.pdf",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/CEN-CLC-JTC 24-WG 3_N292_FprEN 18246_Final DRAFT_clean version_V2.pdf",
     "02 Notes/Docker.md",
     "02 Notes/Dataspace.md",
     "02 Notes/COMDO.md",
