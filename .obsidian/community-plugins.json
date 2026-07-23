@@ -31,5 +31,6 @@
   "nldates-revived",
   "colored-text",
   "obsidian-full-calendar",
-  "generate-hash"
+  "generate-hash",
+  "openapi-renderer"
 ]

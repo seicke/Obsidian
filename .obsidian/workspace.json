@@ -316,13 +316,15 @@
       "obsidian-spaced-repetition:Review flashcards": false,
       "obsidian-full-calendar:Open Full Calendar": false,
       "periodic-notes:Open today": false,
-      "generate-hash:Hash": false
+      "generate-hash:Hash": false,
+      "openapi-renderer:Open OpenAPI Entry View": false
     }
   },
   "active": "81b496c7dc085097",
   "lastOpenFiles": [
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf",
+    "00 Inbox/DPP-Verification-Declaration-enrolapp_4fe9e76f073e4c63848532521f801fa0.pdf",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
@@ -340,7 +342,6 @@
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2026-02-02 FprEN 18246 DPP - .pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/FprEN 18246_Final DRAFT_clean version_V2.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/CEN-CLC-JTC 24-WG 3_N292_FprEN 18246_Final DRAFT_clean version_V2.pdf",
-    "00 Inbox/JTC24_WG3/Readme.docx",
     "02 Notes/Docker.md",
     "02 Notes/Dataspace.md",
     "02 Notes/COMDO.md",
