@@ -13,12 +13,24 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Regulation (EU) 2026-1778 DPP Registry"
+              "title": "DPP Standards, harmonised"
+            }
+          },
+          {
+            "id": "6633c080e49cd577",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2025-11-26 prEN 18222 DPP - API"
             }
           },
           {
@@ -27,12 +39,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-23 Thursday"
+              "title": "Regulation (EU) 2026-1778 DPP Registry, Notes"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "215c06c863a6c5af",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "81b496c7dc085097",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "2025-11-26 prEN 18222 DPP - API"
             }
           }
         ]
@@ -89,8 +120,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "83495321bfc99a8c",
@@ -111,7 +141,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 285.5
+    "width": 478.51103591918945,
+    "collapsed": true
   },
   "right": {
     "id": "477d2d045c5f8993",
@@ -128,13 +159,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Regulation (EU) 2026-1778 DPP Registry"
+              "title": "Outline of 2025-11-26 prEN 18222 DPP - API"
             }
           },
           {
@@ -143,7 +174,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md"
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -203,12 +234,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+                "file": "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Regulation (EU) 2026-1778 DPP Registry"
+              "title": "Outgoing links from 2025-11-26 prEN 18222 DPP - API"
             }
           }
         ]
@@ -263,7 +294,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 516.5
+    "width": 394.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -287,16 +319,19 @@
       "generate-hash:Hash": false
     }
   },
-  "active": "84018928a2888d9f",
+  "active": "81b496c7dc085097",
   "lastOpenFiles": [
+    "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry, Notes.md",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18222 DPP - API.pdf",
     "01 Journal/2026/2026-07 July/2026-07-23 Thursday.md",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Regulation (EU) 2026-1778 DPP Registry.md",
+    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
     "02 Notes/Untitled.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR.md",
     "02 Notes/EU Legislation/Regulation (EU) 2026-1778 DPP Registry/Assets/Regulation (EU) 2026-1778 DPP Registry DE.pdf",
     "03 Tasks/_MOC_Tasks.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Digital Product Passport DPP.md",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/DPP Standards, harmonised.md",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/2025-11-26 prEN 18223 DPP - System Interoperability.pdf",
     "02 Notes/2025-06 prEN 18223_DPP_System Interoperability.pdf.md",
     "00 Inbox/2026-05-27 DPP 2Pager___IDTA.pdf",
@@ -306,8 +341,6 @@
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/FprEN 18246_Final DRAFT_clean version_V2.pdf",
     "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Assets/prEN/CEN-CLC-JTC 24-WG 3_N292_FprEN 18246_Final DRAFT_clean version_V2.pdf",
     "00 Inbox/JTC24_WG3/Readme.docx",
-    "00 Inbox/JTC24_WG3/CEN-CLC-JTC 24-WG 3_N212_CEN CLC JTC 24 WG 3 Security_Planning and future meetings.pptx",
-    "02 Notes/EU Legislation/Regulation (EU) 2024-1781 ESPR/Regulation (EU) 2024-1781 ESPR, Notes.md",
     "02 Notes/Docker.md",
     "02 Notes/Dataspace.md",
     "02 Notes/COMDO.md",
@@ -323,8 +356,6 @@
     "02 Notes/Volumes - Shares.md",
     "02 Notes/Wago BaSyx Endpoints.md",
     "02 Notes/smartPCN.md",
-    "02 Notes/Unbenannt.md",
-    "02 Notes/Asset Administration Shell (AAS)/BaSyx/BaSyx.md",
     "02 Notes/Regulation (EU) 2024-1781 ESPR/JTC 24 Big Picture.png",
     "00 Inbox/L_202601778DE.000101.fmx.xml_files/europeanflag.gif",
     "01 Journal/2026/2026-07 July/Assets/2026-07-06 Home of the AAS - IDTA Areas.png",
