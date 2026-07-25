@@ -15,7 +15,7 @@ if (match) {
 week_before = week.clone().subtract(7, 'day');
 week_after = week.clone().add(7, 'day');
 
-week_start = week = today.clone().startOf('isoWeek');
+week_start = today.clone().startOf('isoWeek');
 week_end = today.clone().endOf('isoWeek');
 
 planning_day = week_start.clone().subtract(3, 'day');
@@ -38,15 +38,15 @@ updated:
 
 ## Planning
 <%*
-tR += `- [ ] Weekly Planning ➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
+tR += `- [ ] Weekly Planning 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
 > [!todo]- Tasks
 > ```tasks
 > not done
-> filter by function !(task.due.moment ?? task.scheduled.moment) ? false : !(task.due.moment ?? task.scheduled.moment).isValid() ? false : !!(task.due.moment ?? task.scheduled.moment).isBetween( moment("<% week.format('gggg-MM-DD') %>").startOf('isoWeek'), moment("<% week.format('gggg-MM-DD') %>").endOf('isoWeek'), 'day', '[]' )
-> group by function (task.due.moment ?? task.scheduled.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
-> sort by function task.due.moment?.valueOf() ?? task.scheduled.moment?.valueOf() ?? Infinity
+> filter by function !(task.scheduled.moment ?? task.due.moment) ? false : !(task.scheduled.moment ?? task.due.moment).isValid() ? false : !!(task.scheduled.moment ?? task.due.moment).isBetween( moment("<% week.format('gggg-MM-DD') %>").startOf('isoWeek'), moment("<% week.format('gggg-MM-DD') %>").endOf('isoWeek'), 'day', '[]' )
+> group by function (task.scheduled.moment ?? task.due.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
+> sort by function task.scheduled.moment?.valueOf() ?? task.due.moment?.valueOf() ?? Infinity
 > sort by priority
 > hide created date
 > path does not include StudentTasks.md
@@ -54,5 +54,5 @@ tR += `- [ ] Weekly Planning ➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_da
 
 ## Review
 <%*
-tR += `- [ ] Weekly Review ➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().add(2, 'day').format('YYYY-MM-DD')}\n`;
+tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Review]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().add(2, 'day').format('YYYY-MM-DD')}\n`;
 %>

@@ -32,5 +32,6 @@
   "colored-text",
   "obsidian-full-calendar",
   "generate-hash",
-  "openapi-renderer"
+  "openapi-renderer",
+  "obsidian-icon-shortcodes"
 ]

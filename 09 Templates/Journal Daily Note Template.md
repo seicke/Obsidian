@@ -29,8 +29,8 @@ created:
 updated:
 ---
 # <% filename %>
-<%* // ❮❮ YYYY-MM-DD dddd | YYYY | MMMM YYYY | YYYY-MM-DD dddd  ❯❯
-%>❮❮ [[<% day_before.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY|YYYY') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM MMMM|MMMM YYYY') %>]] | [[<% day_after.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] ❯❯
+<%* // ❮❮ YYYY-MM-DD dddd | YYYY | MMMM YYYY | gggg W[WW] | YYYY-MM-DD dddd  ❯❯
+%>❮❮ [[<% day_before.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY|YYYY') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM MMMM|MMMM YYYY') %>]] | [[<% day.format('[01 Journal]/gggg/gggg [W]WW|[W]WW gggg') %>]] | [[<% day_after.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] ❯❯
 
 > [!todo] Today
 >```tasks
@@ -45,13 +45,12 @@ updated:
 if (day.isSame(today, 'day') || day.isAfter(today)) {
 	if ([1,2,3,4,5].includes(day.isoWeekday())
 		&& [2025,2026].includes(day.year())) {
-		tR += `- [ ] [[Railway-X]] Stunden buchen: [Aufwandabschätzung_Railway-X.xlsx](https://harting.sharepoint.com/:x:/r/sites/Railway-X/Freigegebene%20Dokumente/General/Aufw%C3%A4nde/Aufwandsch%C3%A4tzung_Railway-X.xlsx?d=wec9022baf9184e1cbbecc0054bd1b2c2&csf=1&web=1&e=1pSzDy) ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
+		tR += `- [ ] [[Railway-X]] Stunden buchen: [Aufwandabschätzung_Railway-X.xlsx](https://harting.sharepoint.com/:x:/r/sites/Railway-X/Freigegebene%20Dokumente/General/Aufw%C3%A4nde/Aufwandsch%C3%A4tzung_Railway-X.xlsx?d=wec9022baf9184e1cbbecc0054bd1b2c2&csf=1&web=1&e=1pSzDy) 🔽 ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 		tR += `- [ ] #Blockbrain Daily Assistant testen ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 		tR += `- [ ] [[2026 English Course]] Vocabulary lernen ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
 	}
 	if ([5].includes(day.isoWeekday())) {
-		tR += `- [ ] [[00 Inbox]] leeren ➕ ${day.format('YYYY-MM-DD')}  📅 ${day.format('YYYY-MM-DD')}\n`;
-		tR += `- [ ] Weekly Review ➕ ${day.format('YYYY-MM-DD')} 📅 ${day.format('YYYY-MM-DD')}\n`;
+		tR += `- [ ] 00 Inbox leeren ⏫ ➕ ${day.format('YYYY-MM-DD')}  📅 ${day.format('YYYY-MM-DD')}\n`;
 	}
 }
 %>- <% tp.file.cursor() %>
