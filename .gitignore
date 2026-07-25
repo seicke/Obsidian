@@ -5,6 +5,9 @@
 !09 Templates
 !09 Templates/**
 
+# Obsidian workspace state (local per machine)
+.obsidian/workspace.json
+
 # Folder view configuration files
 */.DS_Store
 */Desktop.ini
