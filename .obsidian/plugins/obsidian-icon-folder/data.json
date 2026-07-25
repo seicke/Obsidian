@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiBookTemplate",
-      "LiUser2",
-      "FasUser",
-      "LiInbox",
-      "LiCheck"
+      "LiCreateGroup",
+      "LiLayers",
+      "FarObjectGroup",
+      "FarObjectUngroup",
+      "LiGroup"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -36,8 +36,8 @@
   },
   "01 Journal": "LiCalendar",
   "03 Tasks": "LiCheck",
-  "05 Projects": "FasObjectGroup",
-  "06 Areas": "FasObjectUngroup",
+  "05 Projects": "FarObjectUngroup",
+  "06 Areas": "LiLayers",
   "08 Links": "LiLink",
   "07 Bases": "LiDatabase",
   "00 Inbox": "LiInbox",
