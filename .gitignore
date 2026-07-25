@@ -24,3 +24,6 @@
 
 # Obsidian mobile workspace state (local per machine)
 .obsidian/workspace-mobile.json
+
+# Obsidian bookmarks state (local per machine)
+.obsidian/bookmarks.json
