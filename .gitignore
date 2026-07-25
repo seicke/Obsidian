@@ -21,3 +21,6 @@
 .Trashes
 .obsidian/plugins/remember-cursor-position/cursor-positions.json
 .obsidian/plugins/text-extractor/cache
+
+# Obsidian mobile workspace state (local per machine)
+.obsidian/workspace-mobile.json
