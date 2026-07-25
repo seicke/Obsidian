@@ -27,3 +27,6 @@
 
 # Obsidian bookmarks state (local per machine)
 .obsidian/bookmarks.json
+
+# Obsidian remember-cursor-position state (local per machine)
+.obsidian/plugins/remember-cursor-position/cursor-positions.json
