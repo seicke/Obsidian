@@ -26,3 +26,7 @@ updated:
 %>❮❮ [[<% prev_year.format('[1 Journal]/YYYY|YYYY') %>]] | [[<% next_year.format('[1 Journal]/YYYY|YYYY') %>]] ❯❯
 
 - <% tp.file.cursor() %>
+
+## Planning
+
+## Review
