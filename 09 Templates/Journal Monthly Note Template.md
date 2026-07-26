@@ -43,6 +43,13 @@ updated:
 tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Monthly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
+<%*
+if (!(tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
+	tR += `- Was ist mir in diesem Monat wichtig?\n`;
+	tR += `- Wie sieht ein perfekter Monat für mich aus?\n`;
+}
+%>
+
 ## Review
 <%*
 tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Monthly Review]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().format('YYYY-MM-DD')}\n`;

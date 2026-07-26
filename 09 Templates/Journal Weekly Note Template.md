@@ -41,6 +41,13 @@ updated:
 tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
+<%*
+if (!(tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
+	tR += `- Was ist mir in dieser Woche wichtig?\n`;
+	tR += `- Wie sieht ein perfekt Woche für mich aus?\n`;
+}
+%>
+
 > [!todo]- Tasks
 > ```tasks
 > not done
