@@ -36,22 +36,37 @@ updated:
 
 - <% tp.file.cursor() %>
 
+<%*
+if (!(tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
+tR += `## Motto\n`;
+tR += `- Weniger Dinge machen, dafür die Dinge, sehr gut machen (skrupellos sein bei Dingen, die man machen bzw. nicht machen will)\n`;
+}
+%>
+
 ## Planning
 <%*
 tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
 - Was ist mir in dieser Woche wichtig?
-- Wie sieht eine perfekte Woche für mich aus?
 <%*
 if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
 	tR += `\t- Mittagspausen genommen, ggf. Mittagsspaziergang\n`;
 	tR += `\t- Zeit (mind. XX Stunden) zum Fortbilden genommen\n`;
 } else {
-	tR += `\t- M\n`;
+	tR += `\t- täglich lesen\n`;
 }
 %>
-	
+- Wie sieht eine perfekte Woche für mich aus?
+<%*
+if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
+	tR += `\t- Mittagspausen genommen, ggf. Mittagsspaziergang\n`;
+	tR += `\t- Zeit (mind. XX Stunden) zum Fortbilden genommen\n`;
+	tR += `\t- Treppen steigen; nicht den Fahrstuhl nehmen\n`;
+} else {
+	tR += `\t- ~ jeden 2. Tag Sport gemacht\n`;
+}
+%>
 
 > [!todo]- Tasks
 > ```tasks
