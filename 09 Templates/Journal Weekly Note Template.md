@@ -41,12 +41,17 @@ updated:
 tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
+- Was ist mir in dieser Woche wichtig?
+- Wie sieht eine perfekte Woche für mich aus?
 <%*
-if (!(tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
-	tR += `- Was ist mir in dieser Woche wichtig?\n`;
-	tR += `- Wie sieht ein perfekt Woche für mich aus?\n`;
+if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
+	tR += `\t- Mittagspausen genommen, ggf. Mittagsspaziergang\n`;
+	tR += `\t- Zeit (mind. XX Stunden) zum Fortbilden genommen\n`;
+} else {
+	tR += `\t- M\n`;
 }
 %>
+	
 
 > [!todo]- Tasks
 > ```tasks
