@@ -4,6 +4,7 @@ let filename = tp.file.title;
 let day = null
 
 const match = filename.match(/^(?<date>\d{4}-\d{2})/);
+console.log(match)
 if (match) {
 	today = moment();
 	month = moment(match.groups.date, 'YYYY-MM');
@@ -13,10 +14,10 @@ if (match) {
 }
 
 month_before = month.clone().subtract(1, 'month');
-month_after = month.clone().add(7, 'month');
+month_after = month.clone().add(1, 'month');
 
-month_start = today.clone().startOf('month');
-month_end = today.clone().endOf('month');
+month_start = month.clone().startOf('month');
+month_end = month.clone().endOf('month');
 
 planning_day = month_start.clone().subtract(1, 'day').day(0);
 review_day = month_end.clone().day(0);

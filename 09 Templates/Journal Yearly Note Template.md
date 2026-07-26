@@ -5,9 +5,11 @@ let year = null;
 
 const match = filename.match(/^(?<date>\d{4})/);
 if (match) {
+	today = moment();
 	year = moment(match.groups.date, 'YYYY');
 } else {
-	year = moment();
+	today = moment();
+	year = today.clone();
 }
 
 const prev_year = year.clone().subtract(1, 'year');

@@ -15,8 +15,8 @@ if (match) {
 week_before = week.clone().subtract(7, 'day');
 week_after = week.clone().add(7, 'day');
 
-week_start = today.clone().startOf('isoWeek');
-week_end = today.clone().endOf('isoWeek');
+week_start = week.clone().startOf('isoWeek');
+week_end = week.clone().endOf('isoWeek');
 
 planning_day = week_start.clone().subtract(3, 'day');
 review_day = week.clone().isoWeekday(5);
