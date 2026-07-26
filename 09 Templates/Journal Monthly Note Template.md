@@ -12,8 +12,8 @@ if (match) {
 	month = today.clone();
 }
 
-month_before = week.clone().subtract(1, 'month');
-month_after = week.clone().add(7, 'month');
+month_before = month.clone().subtract(1, 'month');
+month_after = month.clone().add(7, 'month');
 
 month_start = today.clone().startOf('month');
 month_end = today.clone().endOf('month');
@@ -39,10 +39,10 @@ updated:
 
 ## Planning
 <%*
-tR += `- [ ] Monthly Planning 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
+tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Monthly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
 
 ## Review
 <%*
-tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Weekly Review]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().add(2, 'day').format('YYYY-MM-DD')}\n`;
+tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Monthly Review]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().add(2, 'day').format('YYYY-MM-DD')}\n`;
 %>

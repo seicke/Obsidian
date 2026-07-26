@@ -16,9 +16,9 @@
   },
   "monthly": {
     "format": "YYYY/YYYY-MM MMMM/YYYY-MM MMMM",
-    "template": "Templater/Templates/Journal Monthly Note Template.md",
+    "template": "09 Templates/Journal Monthly Note Template.md",
     "folder": "01 Journal",
-    "enabled": false
+    "enabled": true
   },
   "quarterly": {
     "format": "YYYY/YYYY [Q]Q",
