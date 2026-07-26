@@ -3,25 +3,25 @@ moment.locale("en");
 let filename = tp.file.title;
 let day = null
 
-const match = filename.match(/^(?<date>\d{4} W\d{2})/);
+const match = filename.match(/^(?<date>\d{4}-\d{2})/);
 if (match) {
 	today = moment();
-	week = moment(match.groups.date, 'gggg [W]WW');
+	month = moment(match.groups.date, 'YYYY-MM');
 } else {
 	today = moment();
-	week = today.clone();
+	month = today.clone();
 }
 
-week_before = week.clone().subtract(7, 'day');
-week_after = week.clone().add(7, 'day');
+month_before = week.clone().subtract(1, 'month');
+month_after = week.clone().add(7, 'month');
 
-week_start = today.clone().startOf('isoWeek');
-week_end = today.clone().endOf('isoWeek');
+month_start = today.clone().startOf('month');
+month_end = today.clone().endOf('month');
 
-planning_day = week_start.clone().subtract(3, 'day');
-review_day = week.clone().isoWeekday(5);
+planning_day = month_start.clone().subtract(1, 'day').day(0);
+review_day = month_end.clone().day(0);
 
-filename = week.format('gggg [W]WW');
+filename = month.format('YYYY-MM MMMM');
 if (tp.file.title !== filename) await tp.file.rename(filename);
 %>---
 aliases:
