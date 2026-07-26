@@ -25,34 +25,24 @@ filename = month.format('YYYY-MM MMMM');
 if (tp.file.title !== filename) await tp.file.rename(filename);
 %>---
 aliases:
-  - <% week.format('gggg [W]WW') %>
-  - <% week.format('[W]WW gggg') %>
+  - <% month.format('YYYY-MM') %>
+  - <% month.format('YYYY MMMM') %>
+  - <% month.format('MMMM YYYY') %>
 created:
 updated:
 ---
 # <% filename %>
-<%* // ❮❮ gggg [W]WW | gggg | MMMM gggg | gggg [W]WW  ❯❯
-%>❮❮ [[<% week_before.format('[01 Journal]/gggg/gggg [W]WW|gggg [W]WW') %>]] | [[<% week.format('[01 Journal]/gggg/gggg|gggg') %>]] | [[<% week.format('[01 Journal]/gggg/gggg-MM MMMM/gggg-MM MMMM|MMMM gggg') %>]] | [[<% week_after.format('[01 Journal]/gggg/gggg [W]WW|gggg [W]WW') %>]] ❯❯
+<%* // ❮❮ YYYY MMMM | YYYY | YYYY MMMM  ❯❯
+%>❮❮ [[<% month_before.format('[01 Journal]/YYYY/YYYY MMMM|YYYY MMMM') %>]] | [[<% month.format('[01 Journal]/YYYY/YYYY|YYYY') %>]] | [[<% month_after.format('[01 Journal]/YYYY/YYYY MMMM|YYYY MMMM') %>]] ❯❯
 
 - <% tp.file.cursor() %>
 
 ## Planning
 <%*
-tR += `- [ ] Weekly Planning 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
+tR += `- [ ] Monthly Planning 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
-
-> [!todo]- Tasks
-> ```tasks
-> not done
-> filter by function !(task.scheduled.moment ?? task.due.moment) ? false : !(task.scheduled.moment ?? task.due.moment).isValid() ? false : !!(task.scheduled.moment ?? task.due.moment).isBetween( moment("<% week.format('gggg-MM-DD') %>").startOf('isoWeek'), moment("<% week.format('gggg-MM-DD') %>").endOf('isoWeek'), 'day', '[]' )
-> group by function (task.scheduled.moment ?? task.due.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
-> sort by function task.scheduled.moment?.valueOf() ?? task.due.moment?.valueOf() ?? Infinity
-> sort by priority
-> hide created date
-> path does not include StudentTasks.md
-> ```
 
 ## Review
 <%*
-tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Review]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().add(2, 'day').format('YYYY-MM-DD')}\n`;
+tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Weekly Review]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${review_day.format('YYYY-MM-DD')} 📅 ${review_day.clone().add(2, 'day').format('YYYY-MM-DD')}\n`;
 %>
