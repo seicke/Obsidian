@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "bc1f8ea6b9f69ea6",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "04a89e8be7720075",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "bc4fe242c6640502",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "01 Journal/2026/2026-07 July/2026-07-26 Sunday.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-07-26 Sunday"
             }
           }
         ]
@@ -153,8 +157,28 @@
         "state": {
           "type": "notebook-navigator-calendar",
           "state": {},
-          "icon": "notebook-navigator",
-          "title": "Kalender"
+          "icon": "lucide-ghost",
+          "title": "notebook-navigator-calendar"
+        }
+      },
+      {
+        "id": "b2131c338a283265",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {},
+          "icon": "calendar-with-checkmark",
+          "title": "Calendar"
+        }
+      },
+      {
+        "id": "a6cbe390b705020b",
+        "type": "leaf",
+        "state": {
+          "type": "review-queue-list-view",
+          "state": {},
+          "icon": "lucide-ghost",
+          "title": "review-queue-list-view"
         }
       }
     ],
@@ -162,17 +186,26 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "daily-notes:Open today's daily note": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "note_uid_generator:Create uid if missing": false,
+      "obsidian-git:Open Git source control": false,
+      "homepage:Open homepage": false,
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "generate-hash:Hash": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "templater-obsidian:Templater": false,
-      "notebook-navigator:Notebook Navigator": false,
       "periodic-notes:Open today": false
     }
   },
-  "active": "bc4fe242c6640502",
-  "lastOpenFiles": []
+  "active": "a6cbe390b705020b",
+  "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-26 Sunday.md"
+  ]
 }
