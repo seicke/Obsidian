@@ -54,3 +54,4 @@ if (day.isSame(today, 'day') || day.isAfter(today)) {
 	}
 }
 %>- <% tp.file.cursor() %>
+Computername: <% tp.user.computername %>
