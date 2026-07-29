@@ -52,6 +52,7 @@ if (day.isSame(today, 'day') || day.isAfter(today)) {
 		}
 		if ([3].includes(day.isoWeekday())) {
 			tR += `- [ ] MX-Talk Stuff checken [MX-Talk Videos](https://www.plattform-i40.de/SiteGlobals/IP/Forms/Listen/Downloads/DE/Downloads_Formular.html?cl2Categories_Typ_name=video) / [MX-Talk Veröffentlichungen](https://www.plattform-i40.de/SiteGlobals/IP/Forms/Listen/Downloads/DE/Downloads_Formular.html?cl2Categories_Typ_name=veroeffentlichung) ➕ ${day.format('YYYY-MM-DD')}  📅 ${day.format('YYYY-MM-DD')}\n`
+			tR += `- [ ] [internen Stellenanzeigen](https://hcm55.sapsf.eu/sf/careers/jobsearch?bplte_company=hartingsti&_s.crb=aaT2Y5495AbWrHakbBpKEqRo7JfaY3q2dsKpCIQixzE%3d) checken ➕ ${day.format('YYYY-MM-DD')}  📅 ${day.format('YYYY-MM-DD')}\n`;
 		}
 		if ([5].includes(day.isoWeekday())) {
 			tR += `- [ ] 00 Inbox leeren ⏫ ➕ ${day.format('YYYY-MM-DD')}  📅 ${day.format('YYYY-MM-DD')}\n`;
