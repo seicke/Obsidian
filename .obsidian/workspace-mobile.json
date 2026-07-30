@@ -11,14 +11,10 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Journal/2026/2026-07 July/2026-07-26 Sunday.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-07-26 Sunday"
+              "title": "New tab"
             }
           }
         ]
@@ -206,6 +202,7 @@
   },
   "active": "a6cbe390b705020b",
   "lastOpenFiles": [
+    "01 Journal/2026/2026-07 July/2026-07-27 Monday.md",
     "01 Journal/2026/2026-07 July/2026-07-26 Sunday.md"
   ]
 }

@@ -5,6 +5,7 @@
   "nativeMenus": true,
   "cssTheme": "GitHub Theme",
   "enabledCssSnippets": [
-    "cancelled-tasks"
+    "cancelled-tasks",
+    "tasks"
   ]
 }
