@@ -32,7 +32,7 @@ updated:
 <%* // ❮❮ YYYY-MM-DD dddd | YYYY | MMMM YYYY | W[WW] gggg | YYYY-MM-DD dddd  ❯❯
 %>❮❮ [[<% day_before.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY|YYYY') %>]] | [[<% day.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM MMMM|MMMM YYYY') %>]] | [[<% day.format('[01 Journal]/gggg/gggg [W]WW|[W]WW gggg') %>]] | [[<% day_after.format('[01 Journal]/YYYY/YYYY-MM MMMM/YYYY-MM-DD dddd|YYYY-MM-DD dddd') %>]] ❯❯
 
-> [!todo] Today
+> [!todo]- Tasks Today
 >```tasks
 >not done
 >(due before <% day.format('YYYY-MM-DD') %>) OR (due on <% day.format('YYYY-MM-DD') %>) OR (scheduled before <% day.format('YYYY-MM-DD') %>) OR (scheduled on <% day.format('YYYY-MM-DD') %>)
