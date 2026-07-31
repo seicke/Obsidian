@@ -24,5 +24,8 @@
   "colored-text",
   "code-styler",
   "calendar",
-  "table-editor-obsidian"
+  "table-editor-obsidian",
+  "obsidian-git",
+  "obsidian-epub-plugin",
+  "file-explorer-note-count"
 ]

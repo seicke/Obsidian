@@ -184,6 +184,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "omnisearch:Omnisearch": false,
       "note_uid_generator:Create uid if missing": false,
       "switcher:Schnellauswahl öffnen": false,
