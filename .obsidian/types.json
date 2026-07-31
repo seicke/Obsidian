@@ -30,6 +30,7 @@
     "Data volume received": "number",
     "birthday": "date",
     "date": "date",
-    "assigned": "date"
+    "assigned": "date",
+    "TQ_show_toolbar": "checkbox"
   }
 }
