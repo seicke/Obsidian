@@ -3,7 +3,7 @@
   "showRibbon": true,
   "showViewHeader": true,
   "nativeMenus": true,
-  "cssTheme": "GitHub Theme",
+  "cssTheme": "",
   "enabledCssSnippets": [
     "cancelled-tasks",
     "tasks",
