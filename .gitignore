@@ -1,9 +1,17 @@
 *
+
+# Un-ignore all directories so Git can traverse them  
+!**/
+
 !.gitignore
+
 !.obsidian
 !.obsidian/**
+
 !09 Templates
 !09 Templates/**
+
+!_MOC_Tasks.md
 
 # Obsidian workspace state (local per machine)
 .obsidian/workspace.json
@@ -19,7 +27,8 @@
 # Files that might appear on external disks
 .Spotlight-V100
 .Trashes
-.obsidian/plugins/remember-cursor-position/cursor-positions.json
+
+# Obsidian text extractor cache (local per machine)
 .obsidian/plugins/text-extractor/cache
 
 # Obsidian mobile workspace state (local per machine)
