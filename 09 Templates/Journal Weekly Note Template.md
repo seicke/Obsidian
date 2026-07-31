@@ -34,9 +34,7 @@ updated:
 <%* // ❮❮ gggg [W]WW | gggg | MMMM gggg | gggg [W]WW  ❯❯
 %>❮❮ [[<% week_before.format('[01 Journal]/gggg/gggg [W]WW|gggg [W]WW') %>]] | [[<% week.format('[01 Journal]/gggg/gggg|gggg') %>]] | [[<% week.format('[01 Journal]/gggg/gggg-MM MMMM/gggg-MM MMMM|MMMM gggg') %>]] | [[<% week_after.format('[01 Journal]/gggg/gggg [W]WW|gggg [W]WW') %>]] ❯❯
 
-- <% tp.file.cursor() %>
-
-<%*
+- <% tp.file.cursor() %><%*
 if (!(tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
 tR += `## Motto\n`;
 tR += `- Weniger Dinge machen, dafür die Dinge, sehr gut machen (skrupellos sein bei Dingen, die man machen bzw. nicht machen will)\n`;
@@ -49,14 +47,7 @@ tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 
 %>
 
 - Was ist mir in dieser Woche wichtig?
-<%*
-if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
-	tR += `\t- Mittagspausen genommen, ggf. Mittagsspaziergang\n`;
-	tR += `\t- Zeit (mind. XX Stunden) zum Fortbilden genommen\n`;
-} else {
-	tR += `\t- täglich lesen\n`;
-}
-%>
+	- 
 - Wie sieht eine perfekte Woche für mich aus?
 <%*
 if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
@@ -67,7 +58,6 @@ if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes(
 	tR += `\t- ~ jeden 2. Tag Sport gemacht\n`;
 }
 %>
-
 > [!todo]- Tasks
 > ```tasks
 > not done
