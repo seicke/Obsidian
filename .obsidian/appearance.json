@@ -6,6 +6,7 @@
   "cssTheme": "GitHub Theme",
   "enabledCssSnippets": [
     "cancelled-tasks",
-    "tasks"
+    "tasks",
+    "hide-tasks-toolbar"
   ]
 }
