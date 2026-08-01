@@ -1,9 +1,9 @@
 ---
 created: 2026-07-10 09:09:51
-updated: 2026-07-29 08:14:28
+updated: 2026-07-31 16:58:06
 ---
 
->[!todo] Today
+>[!info] Tasks
 >```tasks
 >not done
 >(due before today) OR (due on today) OR (scheduled on today)  OR (scheduled before today) 
