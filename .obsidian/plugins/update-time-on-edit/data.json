@@ -172,9 +172,7 @@
     "01 Journal/2015/2015-11 November/2015-11-14 Saturday.md": "785b446a72d07845025d67e615cdafcb24e6b986341cb0732ca9656304cf3a46",
     "01 Journal/2022/2022-11 November/2022-11-25 Friday.md": "152271dff8a3cc3fc09cdd0cd1f628d9c744d49175c3f01bcebfd80c40c4b8b8",
     "02 Notes/fraenk.md": "20be5bb75384123d36eeef0c49341ca1bb75dc4b97fb4db38f8b8b3636e59409",
-    "02 Notes/Finanzen.md": "8bcf2afc73e2e5aefaa5cb16c6193367b6ee3966f9194be99fbc6742c525981c",
-    "02 Notes/VW Caddy MI-SJ1711.md": "2f22a857827ebc4b720fbbcd80fbaf373102f985ffa1770589e033b5a9d75cf9",
-    "02 Notes/VW Grand California MI - CA 171.md": "6b33b0a30811f4cb793884908299f374bd42bf11f286362bf2111b60d4ece9ea",
+    "02 Notes/Finanzen.md": "ecb966330ba34560f8b49e566c8774037a414dacf8804647eb3e4ab1c944136c",
     "02 Notes/Zitate.md": "e78121c933e42d0d67a2ee70f16032d721feee570397f7add286f7e25576c6b9",
     "08 People/Eicke, Sebastian.md": "aee62c4cb88108b357988ad9dbbd26d83ba49a95558af862c877bfcaa789c347",
     "02 Notes/Kleidung.md": "e2382ee392aec103b11d1c7a3bf09bd2ac251b3a17c116e75ef385db9251d902",
@@ -191,12 +189,14 @@
     "01 Journal/2026/2026-08 August/2026-08-05 Wednesday.md": "3dfe6b939c1ad912ce1080533252c3743ab8354fba3ad0a2eac401be91a7fb3e",
     "01 Journal/2026/2026-08 August/2026-08-06 Thursday.md": "3e1955ac768556b523fa46e44ef54868aa1fc7eaea78e4e575c61aac4f8673f7",
     "01 Journal/2026/2026-07 July/2026-07-31 Friday.md": "97a223c5990c32e5e1777e932f2fb8f4cc46be0429387dd7acf39cc64dfde35f",
-    "05 Projects/2026-09 VW GC600 Inspektionsluke für Hauptschalter.md": "ee52ce94d2d9c7a0bc4634487d29807821ed90b6c9f9d3318ec45f6d6259369f",
-    "01 Journal/2026/2026-08 August/2026-08-29 Saturday.md": "d7306018f4f0feac6d934a08f71d93121e6acdc56f965ff9ab188151c9c35686",
-    "05 Projects/2026-09 VW GC600 Kühlschrank Trennstangen.md": "f5e3b46123c4e201b2b7177ceb84c72f9062b723c3b45b5983526d343c0f7ffb",
-    "05 Projects/2026-09 VW GC600 Kühlschrank Isolierung für Abtropfschale.md": "79041d690269377a53a8680bbc34120fcc71f2daf2a6ad890b3d2e0b753ba4a0",
+    "05 Projects/2026-09 VW GC600 Inspektionsluke für Hauptschalter.md": "338c3b7ac25fdd0fd32746e21ad667940e479b306013a9bc51216234686e7cf9",
+    "01 Journal/2026/2026-08 August/2026-08-29 Saturday.md": "5cd4144f563441109c8b90b96fced04b042a7bb82cd978c4c57b1aebaab566dd",
+    "05 Projects/2026-09 VW GC600 Kühlschrank Trennstangen.md": "9b6f65120acbdd2d472ef6992f545845cac0a5d3654a3fd4464499412ed514b9",
+    "05 Projects/2026-09 VW GC600 Kühlschrank Isolierung für Abtropfschale.md": "beac8ae2af2383eefa53c468051af97b4c07e422161907787a7c7e88f04206f6",
     "01 Journal/2026/2026-08 August/2026-08-30 Sunday.md": "71d95a27f720bf5bebcbcb6b61afe3069f638f9a5fd707aae5f9f810ccb8e1f3",
     "01 Journal/2026/2026-08 August/2026-08-27 Thursday.md": "86ac97e1125c0a1d4d3844f87be2bd3622cb91ee2959b258b0a89ff915bcc16b",
-    "04 Assets/Things/DeLonghi ECAM350.55.B Kaffeevollautomat/DeLonghi ECAM350.55.B Kaffeevollautomat.md": "084be6ea818b15a1aa1a76a7eb01281e84b41f8bc4ea92ce074a48761a39deaf"
+    "04 Assets/Things/DeLonghi ECAM350.55.B Kaffeevollautomat/DeLonghi ECAM350.55.B Kaffeevollautomat.md": "56ed446a56ea2bf266a1e59f228da70be36826189b0380b8e6dda24592fa9197",
+    "04 Assets/Cars/VW Grand California MI - CA 171.md": "d3f4db0adb631df907fb3af16eee9440dcb7e6090b01b137da1c3142ff4593ff",
+    "04 Assets/Cars/VW Caddy MI-SJ1711.md": "20910d1c555d3f2f8c4e2034911c0cbf4fdbf3b3d8734ed4f5d5478c40f09483"
   }
 }
