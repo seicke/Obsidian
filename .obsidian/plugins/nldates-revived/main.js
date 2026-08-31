@@ -1056,7 +1056,7 @@ var i18n$1 = {exports: {}};
 
 var i18n = i18n$1.exports;
 
-const dict$a = {
+const dict$b = {
     today: "Today",
     tomorrow: "Tomorrow",
     yesterday: "Yesterday",
@@ -1093,6 +1093,7 @@ const dict$a = {
     week: "Week|Weeks|w",
     month: "Month|Months|M|mo",
     year: "Year|Years|y|yr|yrs",
+    quarter: "Quarter|Quarters|Q|qtr",
     and: "And",
     at: "At",
     from: "From",
@@ -1101,7 +1102,7 @@ const dict$a = {
     first: "first",
 };
 
-const dict$9 = {
+const dict$a = {
     today: "今日",
     tomorrow: "明日",
     yesterday: "昨日",
@@ -1138,6 +1139,7 @@ const dict$9 = {
     week: "週|週間|しゅう|しゅうかん",
     month: "月|ヶ月|かげつ|がつ",
     year: "年|ねん",
+    quarter: "四半期",
     of: "の",
     first: "最初|第一|初|最初の",
     and: "と|および",
@@ -1146,7 +1148,7 @@ const dict$9 = {
     to: "まで|までに",
 };
 
-const dict$8 = {
+const dict$9 = {
     today: "Aujourd'hui",
     tomorrow: "Demain",
     yesterday: "Hier",
@@ -1183,6 +1185,7 @@ const dict$8 = {
     week: "semaine|semaines|s|w",
     month: "mois|M|mo",
     year: "année|années|an|ans|a|y",
+    quarter: "trimestre|trimestres",
     and: "et",
     at: "à|a",
     from: "de|depuis|du",
@@ -1191,7 +1194,7 @@ const dict$8 = {
     first: "premier|première",
 };
 
-const dict$7 = {
+const dict$8 = {
     today: "Hoje",
     tomorrow: "Amanhã",
     yesterday: "Ontem",
@@ -1229,6 +1232,7 @@ const dict$7 = {
     week: "semana|semanas|s|w",
     month: "mês|meses|M|mo",
     year: "ano|anos|a|y",
+    quarter: "trimestre|trimestres",
     and: "e",
     at: "às|as|à|a",
     from: "de|desde",
@@ -1237,7 +1241,7 @@ const dict$7 = {
     first: "primeiro|primeira",
 };
 
-const dict$6 = {
+const dict$7 = {
     today: "Heute",
     tomorrow: "Morgen",
     yesterday: "Gestern",
@@ -1274,6 +1278,7 @@ const dict$6 = {
     week: "Woche|Wochen|w",
     month: "Monat|Monate|Monats|M|mo",
     year: "Jahr|Jahre|j|y",
+    quarter: "Quartal|Quartale|Quartals",
     and: "und",
     at: "um",
     from: "von|ab",
@@ -1282,12 +1287,15 @@ const dict$6 = {
     first: "erster|erste|erstes",
 };
 
-const dict$5 = {
+const dict$6 = {
     today: "Vandaag",
     tomorrow: "Morgen",
     yesterday: "Gisteren",
-    next: "volgende",
-    last: "vorige|laatste",
+    // "volgende"/"vorige" agree with common-gender ("de") nouns like "week"/"maand";
+    // neuter ("het") nouns like "jaar"/"kwartaal" drop the final "-e" ("volgend jaar", not
+    // "volgende jaar"), so both forms are listed here.
+    next: "volgende|volgend",
+    last: "vorige|vorig|laatste",
     this: "deze|dit",
     in: "over",
     sunday: "zondag",
@@ -1319,6 +1327,7 @@ const dict$5 = {
     week: "week|weken|w",
     month: "maand|maanden|M|mo",
     year: "jaar|jaren|j|y",
+    quarter: "kwartaal|kwartalen",
     and: "en",
     at: "om",
     from: "van|vanaf",
@@ -1327,7 +1336,7 @@ const dict$5 = {
     first: "eerste",
 };
 
-const dict$4 = {
+const dict$5 = {
     today: "Hoy",
     tomorrow: "Mañana",
     yesterday: "Ayer",
@@ -1365,6 +1374,7 @@ const dict$4 = {
     week: "semana|semanas|s|w",
     month: "mes|meses|M|mo",
     year: "año|años|a|y",
+    quarter: "trimestre|trimestres",
     and: "y",
     at: "a las|a la|a|en",
     from: "de|desde",
@@ -1373,7 +1383,7 @@ const dict$4 = {
     first: "primer|primera",
 };
 
-const dict$3 = {
+const dict$4 = {
     today: "Oggi",
     tomorrow: "Domani",
     yesterday: "Ieri",
@@ -1410,6 +1420,7 @@ const dict$3 = {
     week: "settimana|settimane|s|w",
     month: "mese|mesi|M|mo",
     year: "anno|anni|a|y",
+    quarter: "trimestre|trimestri",
     and: "e",
     at: "alle|alla|a",
     from: "da|dal|dalla",
@@ -1418,7 +1429,7 @@ const dict$3 = {
     first: "primo|prima",
 };
 
-const dict$2 = {
+const dict$3 = {
     today: "Сегодня",
     tomorrow: "Завтра",
     yesterday: "Вчера",
@@ -1455,6 +1466,7 @@ const dict$2 = {
     week: "неделя|недели|недель|н|нед",
     month: "месяц|месяца|месяцев|мес|м",
     year: "год|года|лет|г|л",
+    quarter: "квартал|квартала|кварталов|кв",
     and: "и",
     at: "в",
     from: "с|от",
@@ -1463,7 +1475,7 @@ const dict$2 = {
     first: "первый|первая|первое|первые",
 };
 
-const dict$1 = {
+const dict$2 = {
     today: "Сьогодні",
     tomorrow: "Завтра",
     yesterday: "Вчора",
@@ -1500,6 +1512,7 @@ const dict$1 = {
     week: "тиждень|тижні|тижнів|т|тиж",
     month: "місяць|місяці|місяців|міс|м",
     year: "рік|роки|років|р",
+    quarter: "квартал|кварталу|кварталів|кв",
     and: "і",
     at: "о",
     from: "з|від",
@@ -1508,7 +1521,7 @@ const dict$1 = {
     first: "перший|перша|перше|перші",
 };
 
-const dict = {
+const dict$1 = {
     today: "今天",
     tomorrow: "明天",
     yesterday: "昨天",
@@ -1559,6 +1572,7 @@ const dict = {
     week: "週|周|星期|個星期|个星期|禮拜|礼拜|個禮拜|个礼拜",
     month: "月|個月|个月",
     year: "年",
+    quarter: "季度|個季度|个季度",
     and: "和",
     at: "在",
     from: "從|从|自",
@@ -1567,23 +1581,98 @@ const dict = {
     first: "第一|第一個|第一个",
 };
 
+// Korean support. Vocabulary for today/tomorrow/yesterday, weekdays,
+// this/next/last, the hour/minute/day/week/month/year units, and the
+// "later"/"agosuffix" relative-expression markers is taken directly from
+// CreamNuts' translateKoreanToEnglish() dictionary
+// (https://github.com/CreamNuts/nldates-obsidian-korean, MIT), since it's
+// vocabulary a real Korean-speaking user base has already been using.
+//
+// Korean phrases numbers in a suffix position (number + unit + marker, e.g.
+// "3일 후" = "3 days" + "후" ("later") = "in 3 days"), not English's prefix
+// "in 3 days" -- so inminutes/indays/etc. and daysago/weeksago/etc. below are
+// built suffix-style, the same mechanism already used for Chinese (see
+// zh.ts's "later"/"agosuffix" comments), rather than mirroring the English
+// template literally.
+//
+// UNVERIFIED: "and"/"at"/"from"/"to"/"of" below don't have an equivalent in
+// CreamNuts' file (his translator doesn't support combined durations,
+// weekday+time, or date ranges) and are my own best-effort picks, not
+// checked by a Korean speaker. Korean normally attaches particles like 에
+// ("at")/부터("from")/까지("to")/의("of") directly to the previous word with
+// no space, while this plugin's regex patterns require them as a
+// space-separated standalone word -- so "next Monday at 3pm"-, "from Monday
+// to Friday"-, "in 2 weeks and 3 days"-, and "the 15th of next month"-style
+// combined expressions may not match natural Korean phrasing even though the
+// simple expressions above do. Tracked in #40.
+const dict = {
+    today: "오늘",
+    tomorrow: "내일",
+    yesterday: "어제",
+    next: "다음",
+    last: "지난",
+    this: "이번",
+    in: "앞으로",
+    sunday: "일요일",
+    monday: "월요일",
+    tuesday: "화요일",
+    wednesday: "수요일",
+    thursday: "목요일",
+    friday: "금요일",
+    saturday: "토요일",
+    inminutes: "%{timeDelta}분 후",
+    inhours: "%{timeDelta}시간 후",
+    indays: "%{timeDelta}일 후",
+    inweeks: "%{timeDelta}주 후",
+    inmonths: "%{timeDelta}개월 후",
+    daysago: "%{timeDelta}일 전",
+    weeksago: "%{timeDelta}주 전",
+    monthsago: "%{timeDelta}개월 전",
+    minutesago: "%{timeDelta}분 전",
+    hoursago: "%{timeDelta}시간 전",
+    // Suffix markers for "N unit" + marker (e.g. "3일 후" = "in 3 days",
+    // "2주 전" = "2 weeks ago") -- verified against CreamNuts' handleNativeDateExpressions()/processNumberPattern().
+    later: "후|뒤",
+    agosuffix: "전",
+    time: "시간",
+    now: "지금",
+    plusminutes: "+%{timeDelta}분",
+    minusminutes: "-%{timeDelta}분",
+    plushour: "+%{timeDelta}시간",
+    minushour: "-%{timeDelta}시간",
+    minute: "분",
+    hour: "시간",
+    day: "일",
+    week: "주",
+    month: "개월|달",
+    year: "년",
+    quarter: "분기",
+    and: "그리고",
+    at: "에",
+    from: "부터",
+    to: "까지",
+    of: "의",
+    first: "첫",
+};
+
 const notFoundDefault = "NOTFOUND";
 // Cache des traducteurs pour éviter de les recréer à chaque appel
 // Performance optimization: translators are created once and reused
 const translatorCache = {};
 // Map des modules de langue pour faciliter l'accès
 const languageModules = {
-    en: dict$a,
-    ja: dict$9,
-    fr: dict$8,
-    pt: dict$7,
-    de: dict$6,
-    nl: dict$5,
-    es: dict$4,
-    it: dict$3,
-    ru: dict$2,
-    uk: dict$1,
-    'zh.hant': dict,
+    en: dict$b,
+    ja: dict$a,
+    fr: dict$9,
+    pt: dict$8,
+    de: dict$7,
+    nl: dict$6,
+    es: dict$5,
+    it: dict$4,
+    ru: dict$3,
+    uk: dict$2,
+    'zh.hant': dict$1,
+    ko: dict,
 };
 /**
  * Obtient un traducteur pour une langue donnée (avec cache)
@@ -1602,7 +1691,7 @@ function getTranslator(lang) {
         else {
             // Fallback vers l'anglais si la langue n'est pas trouvée
             if (!translatorCache['en']) {
-                translatorCache['en'] = i18n.create({ values: dict$a });
+                translatorCache['en'] = i18n.create({ values: dict$b });
             }
             return translatorCache['en'];
         }
@@ -2128,9 +2217,13 @@ const DEFAULT_SETTINGS = {
     russian: false,
     ukrainian: false,
     chinese: false,
-    modalToggleTime: false,
+    korean: false,
     modalToggleLink: false,
-    modalMomentFormat: "YYYY-MM-DD HH:mm",
+    modalMomentFormat: "YYYY-MM-DD",
+    weekFormat: "",
+    monthFormat: "",
+    quarterFormat: "",
+    yearFormat: "",
     // Smart suggestions
     enableSmartSuggestions: true,
     enableHistorySuggestions: true,
@@ -2216,6 +2309,7 @@ class NLDSettingsTab extends require$$0.PluginSettingTab {
         this.createLanguageSetting(containerEl, "Russian", "russian", "ru");
         this.createLanguageSetting(containerEl, "Ukrainian", "ukrainian", "uk");
         this.createLanguageSetting(containerEl, "Chinese (Traditional)", "chinese", "zh.hant", "partially supported");
+        this.createLanguageSetting(containerEl, "Korean", "korean", "ko", "partially supported");
         new require$$0.Setting(containerEl).setHeading().setName("Hotkey formatting settings");
         const timeFormatSetting = new require$$0.Setting(containerEl)
             .setName("Time format")
@@ -2344,6 +2438,46 @@ class NLDSettingsTab extends require$$0.PluginSettingTab {
             this.plugin.settings.omitDateForShortRelative = value;
             await this.plugin.saveSettings();
         }));
+        new require$$0.Setting(containerEl).setHeading().setName("Periodic notes");
+        this.createPeriodicFormatSetting(containerEl, "Week format", "weekFormat", "GGGG-[W]WW", "next week");
+        this.createPeriodicFormatSetting(containerEl, "Month format", "monthFormat", "YYYY-MM", "next month");
+        this.createPeriodicFormatSetting(containerEl, "Quarter format", "quarterFormat", "YYYY-[Q]Q", "next quarter, Q3");
+        this.createPeriodicFormatSetting(containerEl, "Year format", "yearFormat", "YYYY", "next year");
+    }
+    createPeriodicFormatSetting(containerEl, name, settingKey, placeholder, examples) {
+        const baseDesc = `Used instead of the daily Date format when an expression resolves to a whole period (e.g. "${examples}"). Leave empty to keep using the daily Date format for these too.`;
+        const setting = new require$$0.Setting(containerEl)
+            .setName(name)
+            .setDesc(baseDesc)
+            .addMomentFormat((text) => text
+            .setPlaceholder(placeholder)
+            .setValue(this.plugin.settings[settingKey])
+            .onChange(async (value) => {
+            const trimmed = value.trim();
+            if (!trimmed) {
+                this.plugin.settings[settingKey] = "";
+                await this.plugin.saveSettings();
+                setting.setDesc(baseDesc);
+                return;
+            }
+            const validated = validateMomentFormat(trimmed);
+            if (validated.valid) {
+                this.plugin.settings[settingKey] = trimmed;
+                await this.plugin.saveSettings();
+                setting.setDesc(`${baseDesc}${validated.preview ? ` (Preview: ${validated.preview})` : ""}`);
+            }
+            else {
+                setting.setDesc(`${baseDesc} - ⚠️ ${validated.error || "Format invalide"}`);
+                text.setValue(this.plugin.settings[settingKey]);
+            }
+        }));
+        if (this.plugin.settings[settingKey]) {
+            const initialValidation = validateMomentFormat(this.plugin.settings[settingKey]);
+            if (initialValidation.valid && initialValidation.preview) {
+                setting.setDesc(`${baseDesc} (Preview: ${initialValidation.preview})`);
+            }
+        }
+        return setting;
     }
     createLanguageSetting(containerEl, text, settingKey, code, note) {
         note = note ? ` (${note})` : "";
@@ -2385,7 +2519,13 @@ class DatePickerModal extends require$$0.Modal {
         this.keyboardHandler = null;
         this.updateSelectedDateFn = null;
         this.plugin = plugin;
-        this.selectedDate = moment();
+        // Normalized to midnight: this is a date picker, not a time picker, and
+        // nothing in the UI lets the user set a time-of-day. Carrying the real
+        // current wall-clock time here (moment()) meant that opening the modal
+        // and immediately inserting produced whatever the clock happened to
+        // read, not a clean date -- and getDateStr() below formats *some*
+        // moment with a format string that includes "HH:mm" by default.
+        this.selectedDate = moment().startOf("day");
         this.currentMonth = moment();
         // Détecter le mode sombre
         this.isDarkMode = activeDocument.body.classList.contains("theme-dark");
@@ -2401,21 +2541,50 @@ class DatePickerModal extends require$$0.Modal {
         let momentFormat = this.plugin.settings.modalMomentFormat;
         let insertAsLink = this.plugin.settings.modalToggleLink;
         let dateInput = "";
-        const getDateStr = () => {
-            let cleanDateInput = dateInput;
-            let shouldIncludeAlias = false;
-            if (dateInput.endsWith("|")) {
-                shouldIncludeAlias = true;
-                cleanDateInput = dateInput.slice(0, -1);
+        // Strips the trailing "|" that marks "keep as alias" (see shouldIncludeAlias
+        // below) -- shared so the input's onChange handler and getDateStr() agree
+        // on exactly what text gets parsed/cached.
+        const stripAliasSuffix = (text) => text.endsWith("|") ? text.slice(0, -1) : text;
+        let cachedManualParse = null;
+        // Parses manually-typed text via the NLP parser, caching the result.
+        // Called from both the input's onChange handler (to validate/update the
+        // calendar selection) and getDateStr() (to build the preview/output) --
+        // without the cache, typing a single character invoked
+        // plugin.parseDate() 2-3 times (onChange's own validation call, then
+        // updateSelectedDate -> updatePreview -> getDateStr, plus onChange's
+        // trailing updatePreview() call), which matters since NLP parsing isn't
+        // free.
+        const parseManualInput = (cleanText) => {
+            if (cachedManualParse && cachedManualParse.input === cleanText) {
+                return cachedManualParse.moment;
             }
-            // Utiliser la date sélectionnée dans le calendrier si disponible
-            const dateToParse = cleanDateInput || this.selectedDate.format("YYYY-MM-DD");
-            const parsedDate = this.plugin.parseDate(dateToParse);
+            const parsedMoment = this.plugin.parseDate(cleanText).moment;
+            cachedManualParse = { input: cleanText, moment: parsedMoment };
+            return parsedMoment;
+        };
+        const getDateStr = () => {
+            const shouldIncludeAlias = dateInput.endsWith("|");
+            const cleanDateInput = stripAliasSuffix(dateInput);
             // Valider le format avant utilisation
             const formatValidation = validateMomentFormat(momentFormat);
             const formatToUse = formatValidation.valid ? momentFormat : DEFAULT_SETTINGS.modalMomentFormat;
-            let parsedDateString = parsedDate.moment.isValid()
-                ? parsedDate.moment.format(formatToUse)
+            // Only round-trip through the NLP parser when the user actually typed
+            // something in the manual field (e.g. "next friday") -- this.selectedDate
+            // (calendar clicks, quick-select buttons) is already a resolved moment
+            // with nothing left to parse.
+            const parsedMoment = cleanDateInput
+                ? parseManualInput(cleanDateInput)
+                : this.selectedDate;
+            // This is a date picker, not a time picker -- there's no time-of-day
+            // control anywhere in this modal's UI, so any time the NLP parser
+            // might have inferred from typed text (e.g. "today at 3pm") is
+            // deliberately discarded here, not just left at whatever default
+            // chrono-node happened to produce. Cloned first: parsedMoment may be
+            // the cached result from parseManualInput(), and moment's mutating
+            // .startOf() would otherwise corrupt that cache entry.
+            const momentToFormat = parsedMoment.isValid() ? parsedMoment.clone().startOf("day") : parsedMoment;
+            let parsedDateString = momentToFormat.isValid()
+                ? momentToFormat.format(formatToUse)
                 : "";
             if (insertAsLink) {
                 parsedDateString = generateMarkdownLink(this.app, parsedDateString, shouldIncludeAlias ? cleanDateInput : undefined);
@@ -2519,9 +2688,14 @@ class DatePickerModal extends require$$0.Modal {
             textEl.onChange((value) => {
                 dateInput = value;
                 if (value) {
-                    const parsed = this.plugin.parseDate(value);
-                    if (parsed.moment.isValid()) {
-                        updateSelectedDate(parsed.moment, false);
+                    const parsedMoment = parseManualInput(stripAliasSuffix(value));
+                    if (parsedMoment.isValid()) {
+                        // updateSelectedDate() already calls updatePreview() itself;
+                        // an unconditional call below on top of this would just
+                        // re-run getDateStr() (and, before parseManualInput()'s
+                        // caching, re-invoke the NLP parser) for no reason.
+                        updateSelectedDate(parsedMoment, false);
+                        return;
                     }
                 }
                 updatePreview();
@@ -2535,12 +2709,12 @@ class DatePickerModal extends require$$0.Modal {
             .setName("Date format")
             .setDesc("Moment format to be used")
             .addMomentFormat((momentEl) => {
-            momentEl.setPlaceholder("YYYY-MM-DD HH:mm");
+            momentEl.setPlaceholder("YYYY-MM-DD");
             momentEl.setValue(momentFormat);
             momentEl.onChange((value) => {
-                const validated = validateMomentFormat(value.trim() || "YYYY-MM-DD HH:mm");
+                const validated = validateMomentFormat(value.trim() || "YYYY-MM-DD");
                 if (validated.valid) {
-                    momentFormat = value.trim() || "YYYY-MM-DD HH:mm";
+                    momentFormat = value.trim() || "YYYY-MM-DD";
                     this.plugin.settings.modalMomentFormat = momentFormat;
                     void this.plugin.saveSettings();
                     updatePreview();
@@ -2604,30 +2778,35 @@ class DatePickerModal extends require$$0.Modal {
             // Prendre la première variante si plusieurs (séparées par |)
             return translation.split("|")[0].trim();
         };
+        // .startOf("day") on every option: without it these carried the real
+        // current wall-clock time (e.g. clicking "Tomorrow" at 14:32 selected
+        // tomorrow at 14:32, not a clean date), inconsistent with calendar-grid
+        // clicks (already midnight-based) and liable to the same "unexpected
+        // time baked into the output" confusion as the getDateStr() bug above.
         const quickOptions = [
             {
                 label: getFirstVariant("today"),
-                moment: moment()
+                moment: moment().startOf("day")
             },
             {
                 label: getFirstVariant("tomorrow"),
-                moment: moment().add(1, "day")
+                moment: moment().add(1, "day").startOf("day")
             },
             {
                 label: getFirstVariant("yesterday"),
-                moment: moment().subtract(1, "day")
+                moment: moment().subtract(1, "day").startOf("day")
             },
             {
                 label: `${getFirstVariant("next")} ${getFirstVariant("week")}`,
-                moment: moment().add(1, "week")
+                moment: moment().add(1, "week").startOf("day")
             },
             {
                 label: `${getFirstVariant("next")} ${getFirstVariant("month")}`,
-                moment: moment().add(1, "month")
+                moment: moment().add(1, "month").startOf("day")
             },
             {
                 label: `${getFirstVariant("next")} ${getFirstVariant("year")}`,
-                moment: moment().add(1, "year")
+                moment: moment().add(1, "year").startOf("day")
             },
         ];
         const buttonsContainer = this.quickButtonsEl.createDiv("nld-quick-buttons-grid");
@@ -2749,7 +2928,7 @@ class DatePickerModal extends require$$0.Modal {
                     break;
                 case "Home":
                     e.preventDefault();
-                    updateSelectedDate(moment());
+                    updateSelectedDate(moment().startOf("day"));
                     this.currentMonth = moment();
                     this.renderCalendar();
                     break;
@@ -14720,6 +14899,25 @@ class NLDParser {
         else {
             this.regexAgoSuffix = null;
         }
+        // Period-granularity shortcuts: "this/next/last week|month|quarter|year",
+        // e.g. "next quarter", "cette semaine", "来月", "다음 분기". Both word
+        // orders are needed -- most languages put the prefix first ("next
+        // quarter"), but French postposes "prochain"/"dernier" after the noun
+        // ("le trimestre prochain", "l'année prochaine", never "prochain
+        // trimestre"), the same inversion the ordinal-of-month/next-week-range
+        // patterns elsewhere in this file already account for. Verified
+        // empirically per language in tests/parser.test.ts.
+        const periodOnlyKeys = ['week', 'month', 'year'];
+        const periodOnlyWords = periodOnlyKeys.flatMap(key => this.tc.collectWords(key));
+        const quarterWords = this.tc.collectWords("quarter");
+        const periodPatternWithQuarter = this.tc.buildAlternation([...periodOnlyWords, ...quarterWords]);
+        this.regexPeriodPrefix = new RegExp(`^\\s*(${prefixPattern})\\s*(${periodPatternWithQuarter})\\s*$`, 'i');
+        this.regexPeriodSuffix = new RegExp(`^\\s*(${periodPatternWithQuarter})\\s*(${prefixPattern})\\s*$`, 'i');
+        // Language-neutral explicit forms -- "Q3"/"q3" works regardless of active
+        // language, the same way a bare ISO date string does.
+        this.regexQuarterExplicit = /^\s*q\s*([1-4])(?:\s+(\d{4}))?\s*$/i;
+        this.regexQuarterExplicitYearFirst = /^\s*(\d{4})\s*[-\s]\s*q\s*([1-4])\s*$/i;
+        this.regexWeekExplicit = /^\s*(\d{4})-w(\d{1,2})\s*$/i;
     }
     // Initializes keywords for fast detection
     initializeKeywords() {
@@ -14744,6 +14942,12 @@ class NLDParser {
                 this.timeUnitMap.set(word, mapping.momentUnit);
             }
         }
+        this.periodWords = {
+            week: new Set(this.tc.collectWords("week", { lowercase: true })),
+            month: new Set(this.tc.collectWords("month", { lowercase: true })),
+            quarter: new Set(this.tc.collectWords("quarter", { lowercase: true })),
+            year: new Set(this.tc.collectWords("year", { lowercase: true })),
+        };
     }
     // --- UTILITY FUNCTION: DAY NAME → NUMERIC INDEX CONVERSION ---
     // Converts day names from all languages to numeric indices (0-6)
@@ -15460,11 +15664,126 @@ class NLDParser {
                     endMoment: endMoment.clone(),
                     isRange: true,
                     dateList: dateList,
+                    granularity: "week",
                 };
                 return result;
             }
         }
         return null;
+    }
+    // ============================================================
+    // PERIOD GRANULARITY: "this/next/last week|month|quarter|year", explicit
+    // "Q3"/"2026-Q3"/"2026-W02" -- resolves to a representative date within the
+    // period, for callers that want to format the whole period (e.g. a
+    // Periodic-Notes-style weekly/monthly/quarterly/yearly note link) instead
+    // of a single day.
+    // ============================================================
+    tryPeriod(cleanedText) {
+        // Explicit quarter: "Q3", "Q3 2026", "2026 Q3", "2026-Q3".
+        const quarterMatch = cleanedText.match(this.regexQuarterExplicit) ?? cleanedText.match(this.regexQuarterExplicitYearFirst);
+        if (quarterMatch) {
+            // regexQuarterExplicit captures [quarter, year?]; regexQuarterExplicitYearFirst
+            // captures [year, quarter] -- tell them apart by which group is 1-4 digits long.
+            const [g1, g2] = [quarterMatch[1], quarterMatch[2]];
+            const isYearFirst = g1.length === 4;
+            const quarterNum = parseInt(isYearFirst ? g2 : g1, 10);
+            const year = isYearFirst ? parseInt(g1, 10) : (g2 ? parseInt(g2, 10) : moment().year());
+            const target = moment().year(year).quarter(quarterNum).startOf('quarter');
+            return { date: target, granularity: 'quarter' };
+        }
+        // Explicit ISO week: "2026-W02".
+        const weekMatch = cleanedText.match(this.regexWeekExplicit);
+        if (weekMatch) {
+            const year = parseInt(weekMatch[1], 10);
+            const week = parseInt(weekMatch[2], 10);
+            const target = moment().isoWeekYear(year).isoWeek(week).startOf('isoWeek');
+            return { date: target, granularity: 'week' };
+        }
+        // "this/next/last week|month|quarter|year" (most languages), or the
+        // postposed order "week|month|quarter|year this/next/last" (French).
+        const prefixMatch = cleanedText.match(this.regexPeriodPrefix);
+        const suffixMatch = prefixMatch ? null : cleanedText.match(this.regexPeriodSuffix);
+        const periodMatch = prefixMatch
+            ? { prefix: prefixMatch[1], period: prefixMatch[2] }
+            : suffixMatch
+                ? { prefix: suffixMatch[2], period: suffixMatch[1] }
+                : null;
+        if (periodMatch) {
+            const prefix = periodMatch.prefix.toLowerCase();
+            const period = periodMatch.period.toLowerCase();
+            const direction = this.prefixKeywords.next.has(prefix) ? 'next' :
+                this.prefixKeywords.last.has(prefix) ? 'last' :
+                    'this';
+            // Duration units ("week" is fine here -- a week is 7 days regardless
+            // of ISO-ness, this only affects arithmetic, not day-of-week anchoring).
+            const addUnitByGranularity = {
+                week: 'week',
+                month: 'month',
+                quarter: 'quarter',
+                year: 'year',
+            };
+            // startOf() units: "isoWeek" (not "week") for week granularity --
+            // startOf('week') uses the locale week start (Sunday by default),
+            // which can land on the wrong side of an ISO week boundary near the
+            // edges of a week, mismatching the ISO GGGG-WW format callers use for
+            // week-format output.
+            const startOfUnitByGranularity = {
+                week: 'isoWeek',
+                month: 'month',
+                quarter: 'quarter',
+                year: 'year',
+            };
+            const granularity = this.periodWords.week.has(period) ? 'week' :
+                this.periodWords.month.has(period) ? 'month' :
+                    this.periodWords.quarter.has(period) ? 'quarter' :
+                        this.periodWords.year.has(period) ? 'year' :
+                            null;
+            if (!granularity)
+                return null;
+            const addUnit = addUnitByGranularity[granularity];
+            const startOfUnit = startOfUnitByGranularity[granularity];
+            const target = moment();
+            if (direction === 'next') {
+                target.add(1, addUnit).startOf(startOfUnit);
+            }
+            else if (direction === 'last') {
+                target.subtract(1, addUnit).startOf(startOfUnit);
+            }
+            else if (granularity !== 'week') {
+                // "this week" stays on today (any day within the current week is
+                // fine for week-format output); "this month/quarter/year" normalizes
+                // to the start of the period for consistency with next/last.
+                target.startOf(startOfUnit);
+            }
+            return { date: target, granularity };
+        }
+        return null;
+    }
+    /**
+     * Parses a natural language date string, additionally reporting the
+     * calendar granularity the expression referred to (day/week/month/quarter/year).
+     *
+     * Falls back to {@link getParsedDate} (granularity "day") for anything
+     * that isn't a whole-period reference.
+     *
+     * @param selectedText - Natural language date string (e.g., "next quarter", "Q3 2026", "tomorrow")
+     * @param weekStartPreference - Day of week to consider as week start
+     * @returns The resolved date plus its granularity
+     *
+     * @example
+     * ```typescript
+     * const parser = new NLDParser(['en']);
+     * const { date, granularity } = parser.getParsedPeriod("next quarter", "monday");
+     * console.log(granularity); // "quarter"
+     * ```
+     */
+    getParsedPeriod(selectedText, weekStartPreference) {
+        const cleanedText = selectedText.trim().replace(/[!?.]+$/, '');
+        const periodResult = this.tryPeriod(cleanedText);
+        if (periodResult) {
+            return { date: periodResult.date.toDate(), granularity: periodResult.granularity };
+        }
+        return { date: this.getParsedDate(selectedText, weekStartPreference), granularity: 'day' };
     }
     // --- UTILITY FUNCTION: WHO HAS THE BEST SCORE? ---
     // Returns null (rather than a "now" placeholder) when chrono-node found no
@@ -16003,7 +16322,83 @@ class DateSuggest extends require$$0.EditorSuggest {
         ].filter(item => fuzzyMatchesQuery(item, inputStr));
     }
     renderSuggestion(suggestion, el) {
-        el.setText(suggestion);
+        const preview = this.resolvePreviewText(suggestion);
+        if (!preview || preview === suggestion) {
+            el.setText(suggestion);
+            return;
+        }
+        // Obsidian recycles suggestion-row elements across renders (virtualized
+        // list), so a stale previous render's content must be cleared before
+        // appending new spans -- otherwise old text/spans stack up on top of
+        // each other on the reused element.
+        el.empty();
+        el.addClass("nld-suggestion-item");
+        el.createSpan({ cls: "nld-suggestion-text", text: suggestion });
+        el.createSpan({ cls: "nld-suggestion-preview", text: preview });
+    }
+    // Resolves a suggestion to the plain-text date/time it would actually
+    // insert (no [[links]], no alias) -- shown next to the suggestion in the
+    // dropdown so the user can see the resolved value before picking one.
+    // Deliberately mirrors selectSuggestion()'s own date/time resolution
+    // (time-suggestion / date-range / hybrid-date-time branches) so the
+    // preview can never show something different from what selecting the
+    // suggestion actually produces -- and, unlike selectSuggestion(), never
+    // touches the editor or history and can't throw: a parsing failure here
+    // just means no preview is shown, not a broken suggestion list.
+    resolvePreviewText(suggestion) {
+        try {
+            if (this.suggestionIsTime(suggestion)) {
+                const timePart = suggestion.substring(this.getTimePrefixLength(suggestion));
+                const parsedTime = this.plugin.parseTime(timePart);
+                // parseDate()/parseTime() never throw -- on unparseable input they
+                // return an NLDResult with formattedString "Invalid date" and an
+                // invalid moment, not an exception. Checking isValid() explicitly is
+                // what actually catches that case (the try/catch below is only a
+                // safety net for genuinely unexpected errors elsewhere in this method).
+                if (!parsedTime.moment.isValid()) {
+                    return null;
+                }
+                return parsedTime.formattedString;
+            }
+            const dateRange = this.plugin.parseDateRange(suggestion);
+            if (dateRange) {
+                if (dateRange.dateList && dateRange.dateList.length > 0) {
+                    return dateRange.dateList.map(m => m.format(this.plugin.settings.format)).join(', ');
+                }
+                const startFormatted = dateRange.startMoment.format(this.plugin.settings.format);
+                const endFormatted = dateRange.endMoment.format(this.plugin.settings.format);
+                const primaryLang = this.plugin.settings.languages[0] || 'en';
+                const toTranslation = t("to", primaryLang).split('|')[0];
+                return `${startFormatted} ${toTranslation} ${endFormatted}`;
+            }
+            let hasTime = this.plugin.hasTimeComponent(suggestion);
+            if (!hasTime) {
+                const explicitTimeRegex = /\d+\s*(min|mins|minute|minutes|h|hour|hours|heure|heures|sec|second|seconds)(?![a-z])/i;
+                if (suggestion.match(explicitTimeRegex)) {
+                    hasTime = true;
+                }
+            }
+            const parsedResult = this.plugin.parseDate(suggestion);
+            if (!parsedResult.moment.isValid()) {
+                return null;
+            }
+            if (hasTime) {
+                const isToday = parsedResult.moment.isSame(moment(), 'day');
+                const isRelativeShortTerm = shouldOmitDateForShortRelative(suggestion, this.plugin.settings.languages);
+                const shouldOmitDate = this.plugin.settings.omitDateForShortRelative && isToday && isRelativeShortTerm;
+                const timePart = parsedResult.moment.format(this.plugin.settings.timeFormat || "HH:mm");
+                if (shouldOmitDate) {
+                    return timePart;
+                }
+                const datePart = parsedResult.moment.format(this.plugin.settings.format);
+                return `${datePart} ${timePart}`;
+            }
+            return parsedResult.formattedString;
+        }
+        catch (error) {
+            logger.warn('DateSuggest: failed to resolve autosuggest preview', { suggestion, error });
+            return null;
+        }
     }
     selectSuggestion(suggestion, event) {
         // Utiliser l'éditeur du contexte si disponible, sinon chercher l'éditeur actif
@@ -16214,9 +16609,15 @@ function getParseCommand(plugin, mode) {
     // adjustCursor()'s offset math to the pre-expansion position instead of
     // the edge of the text that's about to be replaced.
     const cursor = editor.getCursor("to");
-    // Vérifier d'abord si c'est une plage de dates
+    // Vérifier d'abord si c'est une plage de dates. A "next week"-style period
+    // reference (dateRange.granularity === "week") is skipped here when a week
+    // periodic-note format is configured -- it falls through to plugin.parseDate()
+    // below instead, which resolves it to a single week-format value (e.g.
+    // "2026-W03") rather than a 7-day link list. An explicit weekday-to-weekday
+    // range (e.g. "from Monday to Friday", no granularity tag) always keeps the
+    // list behavior regardless of that setting.
     const dateRange = plugin.parseDateRange(selectedText);
-    if (dateRange) {
+    if (dateRange && !(dateRange.granularity === "week" && plugin.settings.weekFormat)) {
         // C'est une plage de dates
         let newStr = "";
         // Si on a une liste de dates, générer une liste de liens au lieu d'une plage
@@ -17280,6 +17681,26 @@ class NaturalLanguageDates extends require$$0.Plugin {
                 moment: moment(invalidDate),
             };
         }
+        if (!this.parser) {
+            this.resetParser();
+        }
+        // If this expression resolves to a whole week/month/quarter/year (e.g.
+        // "next quarter", "Q3 2026") and a periodic-note format is configured for
+        // that granularity, use it in place of the daily format -- skip the
+        // "Ask the parser if time is detected" dance entirely below, since a
+        // period reference has no time-of-day to carry.
+        const { date: periodDate, granularity } = this.parser.getParsedPeriod(sanitizedInput, this.settings.weekStart);
+        const granularityFormat = this.getPeriodicFormat(granularity);
+        if (granularityFormat) {
+            const granularityFormatValidation = validateMomentFormat(granularityFormat);
+            const formatToUse = granularityFormatValidation.valid ? granularityFormat : this.settings.format;
+            const formattedString = DateFormatter.format(periodDate, formatToUse);
+            return {
+                formattedString,
+                date: periodDate,
+                moment: moment(periodDate),
+            };
+        }
         // Valider le format de date
         const dateFormatValidation = validateMomentFormat(this.settings.format);
         if (!dateFormatValidation.valid) {
@@ -17310,6 +17731,19 @@ class NaturalLanguageDates extends require$$0.Plugin {
         }
         const result = this.parse(sanitizedInput, formatToUse);
         return result;
+    }
+    /**
+     * Returns the configured periodic-note format for a given granularity
+     * (week/month/quarter/year), or "" if unset or the granularity is "day".
+     */
+    getPeriodicFormat(granularity) {
+        switch (granularity) {
+            case "week": return this.settings.weekFormat;
+            case "month": return this.settings.monthFormat;
+            case "quarter": return this.settings.quarterFormat;
+            case "year": return this.settings.yearFormat;
+            default: return "";
+        }
     }
     /**
      * Parses a natural language date range string.
