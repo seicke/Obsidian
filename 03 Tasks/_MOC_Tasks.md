@@ -1,8 +1,7 @@
 ---
 created: 2026-07-10 09:09:51
-updated: 2026-08-01 07:42:15
+updated: 2026-09-02 13:29:26
 ---
-
 >[!info] Tasks
 >```tasks
 >not done
