@@ -52,7 +52,7 @@ tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 
 <%*
 if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
 	tR += `\t- Mittagspausen genommen, ggf. Mittagsspaziergang\n`;
-	tR += `\t- Zeit (mind. XX Stunden) zum Fortbilden genommen\n`;
+	tR += `\t- Zeit (mind. XX Stunden) zum Fortbilden (z.B. AI) genommen\n`;
 	tR += `\t- Treppen steigen; nicht den Fahrstuhl nehmen\n`;
 } else {
 	tR += `\t- ~ jeden 2. Tag Sport gemacht\n`;
@@ -61,7 +61,7 @@ if ((tp.user.computername() || require('os').hostname()).toLowerCase().includes(
 > [!todo]- Tasks
 > ```tasks
 > not done
-> filter by function !(task.scheduled.moment ?? task.due.moment) ? false : !(task.scheduled.moment ?? task.due.moment).isValid() ? false : !!(task.scheduled.moment ?? task.due.moment).isBetween( moment("<% week.format('gggg-MM-DD') %>").startOf('isoWeek'), moment("<% week.format('gggg-MM-DD') %>").endOf('isoWeek'), 'day', '[]' )
+> filter by function !(task.scheduled.moment ?? task.due.moment) ? false : !(task.scheduled.moment ?? task.due.moment).isValid() ? false : !!(task.scheduled.moment ?? task.due.moment).isBetween( moment("<% week.clone().format('gggg-MM-DD') %>").startOf('isoWeek'), moment("<% week.clone().format('gggg-MM-DD') %>").endOf('isoWeek'), 'day', '[]' )
 > group by function (task.scheduled.moment ?? task.due.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
 > sort by function task.scheduled.moment?.valueOf() ?? task.due.moment?.valueOf() ?? Infinity
 > sort by priority
