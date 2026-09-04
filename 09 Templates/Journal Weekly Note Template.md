@@ -43,7 +43,7 @@ tR += `- Weniger Dinge machen, dafür die Dinge, sehr gut machen (skrupellos sei
 
 ## Planning
 <%*
-tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
+tR += `- [ ] [[${week.format('[01 Journal]/gggg/gggg [W]WW')}|Weekly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}`;
 %>
 
 - Was ist mir in dieser Woche wichtig?
