@@ -42,7 +42,16 @@ updated:
 <%*
 tR += `- [ ] [[${month.format('[01 Journal]/YYYY/YYYY MMMM')}|Monthly Planning]] 🔺➕ ${today.format('YYYY-MM-DD')} ⏳ ${planning_day.format('YYYY-MM-DD')} 📅 ${planning_day.format('YYYY-MM-DD')}\n`;
 %>
-
+> [!todo]- Tasks
+> ```tasks
+> not done
+> filter by function !(task.scheduled.moment ?? task.due.moment) ? false : !(task.scheduled.moment ?? task.due.moment).isValid() ? false : !!(task.scheduled.moment ?? task.due.moment).isBetween( moment("<% month.clone().format('YYYY-MM-DD') %>").startOf('month'), moment("<% month.clone().format('YYYY-MM-DD') %>").endOf('month'), 'day', '[]' )
+> group by function (task.scheduled.moment ?? task.due.moment)?.format("YYYY-MM-DD dddd") ?? "No date"
+> sort by function task.scheduled.moment?.valueOf() ?? task.due.moment?.valueOf() ?? Infinity
+> sort by priority
+> hide created date
+> path does not include StudentTasks.md
+> ```
 <%*
 if (!(tp.user.computername() || require('os').hostname()).toLowerCase().includes('nbespel')) {
 	tR += `- Was ist mir in diesem Monat wichtig?\n`;
